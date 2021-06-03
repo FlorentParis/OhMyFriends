@@ -1,62 +1,40 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Oh My Friends.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Sommaire :
+* [Présentation du Projet](##PrésentationDuProjet)
+* [Gestion du Projet](##GestionDuProjet)
+* [Technologies](##Technologies)
+* [Les differentes versions](##LesDifférentesVersion)
+* [Team](##Team)
 
-## About Laravel
+## Présentation du Projet :
+Nous étions entrain de chercher un sujet original, et suite à de nombreux essais, nous sommes enfin parvenu à trouver le sujet suivant : Oh My Friends. La série Friends est célèbre et perdure malgré les années, notre but est de montrer l'impact qu'elle a eu sur notre culture, et plus en particulier, sur notre utilisation d'une expression connue de tous : "Oh My God".
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Gestion du Projet :
+[Lien vers notre Journal de Bord](https://docs.google.com/document/d/1SVluB98nolXFdN9Bu8X5h2iSZgUTnhcPCAZzIve_FHQ/edit?usp=sharing)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Technologies :
+#### Front :
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### Back :
 
-## Learning Laravel
+## Les differentes versions :
+#### V1 :
+* Fréquence d'utilisation de l'expression "Oh My God" dans les sources imprimés. [Data](https://books.google.com/ngrams/graph?content=oh+my+god&year_start=1800&year_end=2019&corpus=26&smoothing=3&case_insensitive=true)
+* Quantité de "Oh My God" dans la série Friends. [Data](https://www.fanfr.com/sagas/ohmygod.php) [Data2](https://towardsdatascience.com/oh-my-god-cb69dd74839c)
+* Audience de la série par épisode et par saison. [Data](https://friends.hypnoweb.net/friends/la-serie/audience.7.272/)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### V2 :
+* Type de public (age, genre, langues, ...) [data](https://osf.io/kdcj5/download) [data2]()
+* Audience Actuel sur les plateforme de streaming. [data]()
+* Fréquence d'utilisation de l'expression/abréviation "OMG" sur les réseaux sociaux. [data]()
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### V3 :
+* 
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Team :
+* Giselle MATIAS.
+* Johanna MACHADO.
+* Maxence NHO.
+* Benjamin SYMCHOWICZ.
+* Florent PARIS.
