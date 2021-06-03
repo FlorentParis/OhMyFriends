@@ -39,7 +39,7 @@ const animate = function () {
 animate();
 
 /* Sphere */
-const geometry2 = new THREE.SphereGeometry( 0.8, 30, 30 );
+const geometry2 = new THREE.SphereGeometry( 0.8, 45, 45 );
 const material2 = new THREE.MeshBasicMaterial( {color: 0x0000ff} );
 const sphere = new THREE.Mesh( geometry2, material2 );
 scene.add( sphere );
