@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <!-- Fichier CSS -->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- Fichier JS Source -->
-    <script src="../../three.js/build/three.js" defer></script>
-    <!-- Fichier JS -->
-    <script type="module" src="../js/script.js" defer></script>
     <title>Oh My Friends !</title>
 </head>
 <body>
-    
+
+
+<!-- Import Fichier JS -->
+    <!-- Fichier JS ThreeJS -->
+    <script src="../../three.js/build/three.js"></script>
+    <!-- Fichier JS Perso -->
+    <script type="module" src="../js/script.js"></script>
+<!-- Import Fichier JS -->
 </body>
 </html>

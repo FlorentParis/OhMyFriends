@@ -1,4 +1,6 @@
+import { Object3D } from '../../three.js/build/three.module.js';
 import { DragControls } from '../../three.js/examples/jsm/controls/DragControls.js';
+import { FBXLoader } from '../../three.js/examples/jsm/loaders/FBXLoader.js';
 
 /* Moteur de Rendu / Canvas */
 const renderer = new THREE.WebGLRenderer();
@@ -29,7 +31,7 @@ const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
-camera.position.z = 5;
+camera.position.z = 20;
 const animate = function () {
     requestAnimationFrame( animate );
     cube.rotation.x += 0.01;
@@ -43,6 +45,28 @@ const geometry2 = new THREE.SphereGeometry( 0.8, 45, 45 );
 const material2 = new THREE.MeshBasicMaterial( {color: 0x0000ff} );
 const sphere = new THREE.Mesh( geometry2, material2 );
 scene.add( sphere );
+
+
+
+/* Porte */
+const loader = new FBXLoader();
+
+loader.load('../assets/Obj-MonicaDoor.fbx',
+    function ( element ) {
+        console.log(element);
+        new THREE.Object3D.call(element);
+        console.log(element);
+        scene.add( element.scene );
+    },
+    // called while loading is progressing
+    function ( xhr ) {
+        console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+    },
+    // called when loading has errors
+    function ( error ) {
+        console.log( 'An error happened' );
+    }
+);
 
 /* liste des objets pour l'interaction */
 var objects = [];
