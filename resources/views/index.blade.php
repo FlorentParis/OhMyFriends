@@ -15,6 +15,6 @@
     <!-- Fichier JS Source-->
     <script src="{{ asset('assets/js/three.js/build/three.js') }}"></script>
    <!-- Fichier JS-->
-    <script type="module" src="{{ assets('asset/js/script.js') }}"></script>
+    <script type="module" src="{{ asset('assets/js/script.js') }}"></script>
 </body>
 </html>

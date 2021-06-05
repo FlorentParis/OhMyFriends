@@ -1,6 +1,6 @@
-import { Object3D } from '../../three.js/build/three.module.js';
-import { DragControls } from '../../three.js/examples/jsm/controls/DragControls.js';
-import { FBXLoader } from '../../three.js/examples/jsm/loaders/FBXLoader.js';
+import { Object3D } from './three.js/build/three.module.js';
+import { DragControls } from './three.js/examples/jsm/controls/DragControls.js';
+import { FBXLoader } from './three.js/examples/jsm/loaders/FBXLoader.js';
 
 /* Moteur de Rendu / Canvas */
 const renderer = new THREE.WebGLRenderer();
@@ -51,7 +51,7 @@ scene.add( sphere );
 /* Porte */
 const loader = new FBXLoader();
 
-loader.load('../assets/Obj-MonicaDoor.fbx',
+loader.load('assets/3d/Obj-MonicaDoor.fbx',
     function ( element ) {
         console.log(element);
         new THREE.Object3D.call(element);

@@ -1,3 +1,4 @@
+@import url("./fonts.css");
 body{
     background-color: #9B81BA;
 }
@@ -8,14 +9,25 @@ body{
     align-items: center;
 }
 #hero #postit{
-    width: 25vw;
+    width: 300px;
     top: 60vh;
     position: fixed;
-    left: -8%;
+    left: -75px;
     transform: rotateZ(15deg);
 }
 #hero #postit > *{
     width: 100%;
+}
+#hero #postit p{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Rock Salt";
+    position: absolute;
+    text-align: center;
+    width: 60%;
+    right: 25%;
+    top: 30%;
+    transform: rotateZ(-5deg);
 }
 #hero #cadre{
     position: relative;
@@ -52,12 +64,7 @@ body{
     left: -15px;
     z-index: 1;
 }
-
 .player {
-    max-width: 750px;
-    border: 5px solid rgba(0,0,0,0.2);
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    font-size: 0;
     overflow: hidden;
     position: absolute;
     top: 50%;

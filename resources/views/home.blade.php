@@ -7,27 +7,28 @@
     <!-- Reset CSS -->
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <!-- Fichier CSS -->
-    <link rel="stylesheet" href="../../public/assets/css/homeStyle.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/homeStyle.css') }}">
     <title>Oh My Friends</title>
 </head>
 <body>
     <section id="hero">
         <div id="postit">
-            <img src="../../public/assets/img/post-it.png" alt="">
+            <p>Aller chercher la dinde chez joey.</p>
+            <img src="{{ asset('assets/img/post-it.png') }}" alt="">
         </div>
         <div id="cadre">
-            <img src="../../public/assets/img/cadre.png" alt="">
+            <img src="{{ asset('assets/img/cadre.png') }}" alt="">
             <div class="player">
-                <video class="player__video viewer" src="../../public/assets/video/compilOMG.mp4"></video>
+                <video class="player__video viewer" src="{{ asset('assets/video/compilOMG.mp4') }}"></video>
             </div>
         </div>
         <div class="picture">
-            <img src="../../public/assets/img/scotch.png" alt="">
-            <img src="../../public/assets/img/pic1.jpg" alt="">
-            <img src="../../public/assets/img/scotch.png" alt="">
+            <img src="{{ asset('assets/img/scotch.png') }}" alt="">
+            <img src="{{ asset('assets/img/pic1.jpg') }}" alt="">
+            <img src="{{ asset('assets/img/scotch.png') }}" alt="">
         </div>
     </section>
 
-    <script src="../../public/assets/js/homeScript.js"></script>
+    <script src="{{ asset('assets/js/homeScript.js') }}"></script>
 </body>
 </html>
