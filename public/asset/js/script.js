@@ -1,4 +1,4 @@
-import { DragControls } from '../../three.js/examples/jsm/controls/DragControls.js';
+import { DragControls } from './three.js/examples/jsm/controls/DragControls';
 
 /* Moteur de Rendu / Canvas */
 const renderer = new THREE.WebGLRenderer();

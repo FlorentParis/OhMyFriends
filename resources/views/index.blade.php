@@ -7,14 +7,13 @@
     <!-- Reset CSS -->
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <!-- Fichier CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-    <!-- Fichier JS Source -->
-    <script src="../../three.js/build/three.js" defer></script>
-    <!-- Fichier JS -->
-    <script type="module" src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
+    <!-- Fichier JS Source-->
+    <script src="{{ asset('asset/js/three.js/build/three.js') }}" defer></script>
+   <!-- Fichier JS-->
+    <script type="module" src="{{ asset('asset/js/script.js') }}" defer></script>
     <title>Oh My Friends !</title>
 </head>
 <body>
-    
 </body>
 </html>
