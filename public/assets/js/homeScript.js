@@ -1,4 +1,5 @@
 /* Get Our Elements */
+const cadre = document.querySelector('#cadre');
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 
@@ -9,4 +10,4 @@ function togglePlay() {
 }
 
 /* Hook up the event listeners */
-video.addEventListener('click', togglePlay);
+cadre.addEventListener('click', togglePlay);

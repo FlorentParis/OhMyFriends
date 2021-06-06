@@ -2,67 +2,42 @@
 body{
     background-color: #9B81BA;
 }
+/* Burger */
+nav{
+    position: fixed;
+    padding: 30px 50px;
+}
+#burger{
+    height: 25px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bar{
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+}
+.bar:nth-of-type(2){
+    width: 60%;
+}
 #hero{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#hero #postit{
-    width: 300px;
-    top: 60vh;
-    position: fixed;
-    left: -75px;
-    transform: rotateZ(15deg);
-}
-#hero #postit > *{
-    width: 100%;
-}
-#hero #postit p{
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.6);
-    font-family: "Rock Salt";
-    position: absolute;
-    text-align: center;
-    width: 60%;
-    right: 25%;
-    top: 30%;
-    transform: rotateZ(-5deg);
-}
 #hero #cadre{
     position: relative;
     user-select: none;
 }
 #hero #cadre > img{
-    width: 40vw;
+    width: 42vw;
     transform: rotateZ(90deg);
     pointer-events: none;
-}
-#hero .picture{
-    position: fixed;
-    top: 20vh;
-    right: -100px;
-    width: 25vw;
-}
-#hero .picture > img:nth-of-type(1){
-    width: 5vw;
-    transform: rotateZ(-5deg);
-    position: absolute;
-    top: -5px;
-    left: -40px;
-    z-index: 1;
-}
-#hero .picture > img:nth-of-type(2){
-    width: 100%;
-    transform: rotateZ(-5deg);
-}
-#hero .picture > img:nth-of-type(3){
-    width: 4vw;
-    transform: rotateZ(-95deg);
-    position: absolute;
-    bottom: -35px;
-    left: -15px;
-    z-index: 1;
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
 }
 .player {
     overflow: hidden;

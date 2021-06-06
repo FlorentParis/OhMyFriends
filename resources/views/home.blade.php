@@ -11,21 +11,19 @@
     <title>Oh My Friends</title>
 </head>
 <body>
-    <section id="hero">
-        <div id="postit">
-            <p>Aller chercher la dinde chez joey.</p>
-            <img src="{{ asset('assets/img/post-it.png') }}" alt="">
+    <nav>
+        <div id="burger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
+    </nav>
+    <section id="hero">
         <div id="cadre">
             <img src="{{ asset('assets/img/cadre.png') }}" alt="">
             <div class="player">
                 <video class="player__video viewer" src="{{ asset('assets/video/compilOMG.mp4') }}"></video>
             </div>
-        </div>
-        <div class="picture">
-            <img src="{{ asset('assets/img/scotch.png') }}" alt="">
-            <img src="{{ asset('assets/img/pic1.jpg') }}" alt="">
-            <img src="{{ asset('assets/img/scotch.png') }}" alt="">
         </div>
     </section>
 
