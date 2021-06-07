@@ -15,7 +15,7 @@ class Livres extends Migration
     {
         Schema::create('livres', function (Blueprint $table) {
             $table->id();
-            $table->date('annee');
+            $table->integer('annee');
             $table->integer('omg_count');
             $table->integer('omg_total');
             $table->unsignedBigInteger('id_source');

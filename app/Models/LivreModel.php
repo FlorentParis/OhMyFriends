@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class LivreModel extends Model
 {
     protected $table = 'livres';
-
+    public $timestamps = false;
 }
