@@ -23,6 +23,7 @@ nav{
 .bar:nth-of-type(2){
     width: 60%;
 }
+/* Cadre */
 #hero{
     height: 100vh;
     display: flex;
@@ -51,8 +52,110 @@ nav{
     display: flex;
     justify-content: center;
     pointer-events: auto;
-  }
-  
-  .player__video {
+}
+.player__video {
     height: 100%;
-  }
+}
+/* Horloge */
+#horloge{
+    margin: 50px 90px;
+    width: calc(100% - 180px);
+    height: 500px;
+    background-color: #57210A;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#horloge > div:first-of-type{
+    position: relative;
+}
+#horloge > div:first-of-type > #montre{
+    position: relative;
+    display: flex;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    background-color: #fff;
+    border: 3px solid #000;
+    z-index: 2;
+}
+#horloge > div:first-of-type .line{
+    width: 220px;
+    background-color: #000;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
+#horloge > div:first-of-type > div:last-of-type{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: 3px solid #000;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+/* Books */
+#books{
+    display: flex;
+}
+#books #elePorte{
+    display: flex;
+    flex-direction: column;
+}
+/* Verrou */
+#books #elePorte #verrou{
+    position: relative;
+    left: -50px;
+    height: 200px;
+    width: 400px;
+    border-radius: 30px;
+    background-color: #312214;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#books #elePorte #verrou #verrouContent{
+    background: #3F2F1F;
+    box-shadow: 0px 0px 15px 5px #433222;
+    position: relative;
+    left: -20px;
+    width: 370px;
+    height: 150px;
+    border-radius: 20px;
+}
+/* poignee */
+#poignee{
+    height: 520px;
+    width: 180px;
+    background-color: #796934;
+    margin: 40px;
+}
+/* dataBooks */
+#books #dataBooks{
+    background-color: #fff;
+    height: 470px;
+    width: 700px;
+}
+/* Persos */
+/* Data Persos */
+section#persos #dataPersos{
+    height: 570px;
+    width: 850px;
+    background-color: #fff;
+}
+/* Footer */
+footer{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 150px;
+    width: 100%;
+    background-color: #8C72AB;
+    border-top: 3px solid #FEE565;
+    margin-top: 50px;
+    align-items: center;
+}

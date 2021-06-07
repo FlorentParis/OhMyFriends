@@ -11,3 +11,14 @@ function togglePlay() {
 
 /* Hook up the event listeners */
 cadre.addEventListener('click', togglePlay);
+
+
+/* Horloge */
+const line = document.querySelectorAll('.line');
+let deg = 18;
+
+line.forEach(element => {
+  element.style.transform = "rotateZ(" + deg + "deg)";
+  console.log(line);
+  deg += 36;
+})

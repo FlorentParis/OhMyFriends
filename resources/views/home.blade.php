@@ -26,7 +26,86 @@
             </div>
         </div>
     </section>
+    <section id="horloge">
+        <div>
+            <div id="montre">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span>S1</span>
+                <span>S2</span>
+                <span>S3</span>
+                <span>S4</span>
+                <span>S5</span>
+                <span>S6</span>
+                <span>S7</span>
+                <span>S8</span>
+                <span>S9</span>
+                <span>S10</span>
+            </div>
+            <div></div>
+        </div>
+        <div>
+            <span>Audience totale</span>
+            <div>
+                <span>759.3 M</span>
+            </div>
+        </div>
+        <div>
+            <span>Dans les livres</span>
+            <div>
+                <span>759.3 M</span>
+            </div>
+        </div>
+        <div>
+            <span>Dans la saison</span>
+            <div>
+                <span>759.3 M</span>
+            </div>
+        </div>
+    </section>
+    <div class="postit">
+        <p>Préparer une dinde pour Joey</p>
+    </div>
+    <section id="books">
+        <div id="elePorte">
+            <div id="verrou">
+                <div id="verrouContent">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="poignee">
 
+            </div>
+        </div>
+        <div class="postit">
+            <p>Préparer une dinde pour Joey</p>
+        </div>
+        <div id="dataBooks">
+
+        </div>
+    </section>
+    <section id="persos">
+        <div id="dataPersos">
+
+        </div>
+        <div>
+
+        </div>
+    </section>
+    <footer>
+        <div>
+        </div>
+        <div>
+        </div>
+    </footer>
     <script src="{{ asset('assets/js/homeScript.js') }}"></script>
 </body>
 </html>
