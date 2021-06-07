@@ -6,6 +6,7 @@ body{
 nav{
     position: fixed;
     padding: 30px 50px;
+    z-index: 3;
 }
 #burger{
     height: 25px;
@@ -89,6 +90,53 @@ nav{
     top: 50%;
     left: 15%;
 }
+#horloge > div:first-of-type span{
+    font-size: 24px;
+    color: #D2A82B;
+    font-family: sans-serif;
+    position: absolute;
+    transform: translateX(-50%);
+}
+#horloge > div:first-of-type span:nth-of-type(6){
+    top: 10px;
+    left: 50%;
+}
+#horloge > div:first-of-type span:nth-of-type(7){
+    top: 13%;
+    left: 78%;
+}
+#horloge > div:first-of-type span:nth-of-type(8){
+    top: 33%;
+    left: 92%;
+}
+#horloge > div:first-of-type span:nth-of-type(9){
+    top: 58%;
+    left: 92%;
+}
+#horloge > div:first-of-type span:nth-of-type(10){
+    bottom: 12%;
+    left: 78%;
+}
+#horloge > div:first-of-type span:nth-of-type(11){
+    bottom: 10px;
+    left: 50%;
+}
+#horloge > div:first-of-type span:nth-of-type(12){
+    bottom: 12%;
+    left: 22%;
+}
+#horloge > div:first-of-type span:nth-of-type(13){
+    top: 58%;
+    left: 8%;
+}
+#horloge > div:first-of-type span:nth-of-type(14){
+    top: 33%;
+    left: 8%;
+}
+#horloge > div:first-of-type span:nth-of-type(15){
+    top: 13%;
+    left: 22%;
+}
 #horloge > div:first-of-type > div:last-of-type{
     height: 30px;
     width: 30px;
@@ -98,6 +146,27 @@ nav{
     left: 50%;
     top: 0;
     transform: translate(-50%, -50%);
+}
+.horlogeTab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.horlogeTab > span{
+    font-size: 28px;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+}
+.horlogeTab > div{
+    display: flex;
+    height: 50px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: sans-serif;
 }
 /* Books */
 #books{

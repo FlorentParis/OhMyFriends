@@ -47,19 +47,19 @@
             </div>
             <div></div>
         </div>
-        <div>
+        <div class="horlogeTab">
             <span>Audience totale</span>
             <div>
                 <span>759.3 M</span>
             </div>
         </div>
-        <div>
+        <div class="horlogeTab">
             <span>Dans les livres</span>
             <div>
                 <span>759.3 M</span>
             </div>
         </div>
-        <div>
+        <div class="horlogeTab">
             <span>Dans la saison</span>
             <div>
                 <span>759.3 M</span>
