@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class SaisonModel extends Model
 {
     protected $table = 'saisons';
-
+    public $timestamps = false;
 }

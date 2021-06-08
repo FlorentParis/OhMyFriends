@@ -6,7 +6,7 @@ use App\Models\SourceModel;
 use Illuminate\Database\Seeder;
 use phpDocumentor\Reflection\DocBlock\Tags\Source;
 
-class SourceSeeder extends Seeder
+class SourcesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -23,6 +23,11 @@ class SourceSeeder extends Seeder
 
     public function run()
     {
-        //
+        self::createSource('tvm');
+        self::createSource('acad');
+        self::createSource('fic');
+        self::createSource('mag');
+        self::createSource('news');
+        self::createSource('spok');
     }
 }
