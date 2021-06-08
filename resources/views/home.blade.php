@@ -94,7 +94,9 @@
     </section>
     <section id="persos">
         <div id="dataPersos">
-
+            <canvas id="myCanvas">
+                <p>Add suitable fallback here.</p>
+            </canvas>
         </div>
         <div>
 
