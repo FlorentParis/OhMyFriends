@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     public function index(){
+        var_dump('hello');
         return view('index');
+
     }
 }

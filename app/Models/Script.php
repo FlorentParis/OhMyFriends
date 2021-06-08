@@ -13,8 +13,13 @@ class Script extends Model
 
     public $timestamps = false;
 
-/*     protected $primaryKey = ["id_saison", 'id_personnage']
- */
     //RelationShip :
+    public function personnage(){
+        return $this->hasOne(Personnage::class, 'id_personnage', 'id');
+    }
+
+    public function saison(){
+        return $this->hasMany(Saison::class, 'id_saison', 'id');
+    }
 
 }

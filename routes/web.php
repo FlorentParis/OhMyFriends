@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/test', [\App\Http\Controllers\testController::class, 'test']);
