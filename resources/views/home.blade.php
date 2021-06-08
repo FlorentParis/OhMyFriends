@@ -88,7 +88,29 @@
                 </div>
             </div>
             <div id="poignee">
+                <div></div> <!-- Haut de poignée -->
+                <div id="surface_poignee">
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
 
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
+                    <div id="boule"></div>
+                    <div id="cache"></div>
+                </div>
+                <div></div> <!-- Bas de poignée -->
+                <div id="poignee_bas"></div>
             </div>
         </div>
         <div class="postit">
