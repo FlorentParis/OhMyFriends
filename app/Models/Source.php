@@ -9,4 +9,7 @@ class Source extends Model
 {
     protected $table = 'sources';
     public $timestamps = false;
+    public function Livre(){
+        return $this->belongTo(Livre::class, 'id_source');
+    }
 }

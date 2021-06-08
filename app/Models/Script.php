@@ -13,10 +13,8 @@ class Script extends Model
 
     public $timestamps = false;
 
-    protected $primaryKey = ["id_saison", 'id_personnage']
-
-    public funtion script
-
+/*     protected $primaryKey = ["id_saison", 'id_personnage']
+ */
     //RelationShip :
 
 }

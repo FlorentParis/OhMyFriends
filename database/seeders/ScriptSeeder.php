@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\ScriptModel;
+use App\Models\Script;
 use Illuminate\Database\Seeder;
 
 class ScriptSeeder extends Seeder
@@ -13,7 +13,7 @@ class ScriptSeeder extends Seeder
      * @return void
      */
     private static function createScript(int $nbOmg, int $idPerso, int $idSaison){
-        $script = new ScriptModel();
+        $script = new Script();
         $script -> id_saison = $idSaison;
         $script -> id_personnage = $idPerso;
         $script -> nb_omg = $nbOmg;

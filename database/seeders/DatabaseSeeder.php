@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             SaisonSeeder::class,
             PersonnageSeeder::class,
             LivreSeeder::class,
-            ScriptSeeder::class
+            ScriptSeeder::class,
+            EpisodeSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
     }
