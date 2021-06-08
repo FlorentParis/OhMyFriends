@@ -3,11 +3,11 @@
     namespace Database\Seeders;
 
     use Illuminate\Database\Seeder;
-    use App\Models\PersonnageModel;
+    use App\Models\Personnage;
 
     class PersonnageSeeder extends Seeder
     {
-        public function run(){  
+        public function run(){
             self::createPersonnage('Rachel');
             self::createPersonnage('Monica');
             self::createPersonnage('Phoebe');
@@ -17,7 +17,7 @@
         }
 
         private static function createPersonnage(string $nom){
-            $Personnage = new PersonnageModel();
+            $Personnage = new Personnage();
             $Personnage->id;
             $Personnage->nom = $nom;
 

@@ -3,12 +3,12 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\SaisonModel;
+use App\Models\Saison;
 class SaisonSeeder extends Seeder
 {
 
     private static function createSource(){
-        $saison = new SaisonModel();
+        $saison = new Saison();
         $saison->id;
 
         assert($saison->save(),"Echec de l'insertion");
@@ -16,15 +16,8 @@ class SaisonSeeder extends Seeder
 
     public function run()
     {
-        self::createSource();
-        self::createSource();
-        self::createSource();
-        self::createSource();
-        self::createSource();
-        self::createSource();
-        self::createSource();
-        self::createSource();
-        self::createSource();
-        self::createSource();
+        for ($i = 1; $i < 11; $i++) {
+            self::createSource();
+        }
     }
 }

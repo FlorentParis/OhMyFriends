@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,7 +16,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             SourcesSeeder::class,
-            SaisonSeeder::class
+            SaisonSeeder::class,
+            PersonnageSeeder::class,
+            LivreSeeder::class,
+            ScriptSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
     }

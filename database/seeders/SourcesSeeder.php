@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\SourceModel;
+use App\Models\Source;
 use Illuminate\Database\Seeder;
-use phpDocumentor\Reflection\DocBlock\Tags\Source;
 
 class SourcesSeeder extends Seeder
 {
@@ -14,7 +13,7 @@ class SourcesSeeder extends Seeder
      * @return void
      */
     private static function createSource(string $nom){
-        $source = new SourceModel();
+        $source = new Source();
         $source->id;
         $source->libelle = $nom;
 

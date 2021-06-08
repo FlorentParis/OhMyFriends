@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SaisonModel extends Model
+class Livre extends Model
 {
-    protected $table = 'saisons';
+    protected $table = 'livres';
     public $timestamps = false;
 }
