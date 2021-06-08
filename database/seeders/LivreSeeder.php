@@ -3,11 +3,11 @@
     namespace Database\Seeders;
 
     use Illuminate\Database\Seeder;
-    use App\Models\LivreModel;
+    use App\Models\Livre;
 
     class LivreSeeder extends Seeder
     {
-        public function run(){  
+        public function run(){
             /* tvm */
             self::createLivre(1990, 451, 2162578, 1);
             self::createLivre(1991, 602, 2264982, 1);
@@ -198,11 +198,11 @@
             self::createLivre(2017, 266, 3090583, 6);
             self::createLivre(2018, 268,3211206, 6);
             self::createLivre(2019, 242, 3195461, 6);
-            
+
         }
 
         private static function createLivre($annee, $omg_count, $omg_total, $id_source){
-            $Livre = new LivreModel();
+            $Livre = new Livre();
             $Livre->annee = $annee;
             $Livre->omg_count = $omg_count;
             $Livre->omg_total = $omg_total;

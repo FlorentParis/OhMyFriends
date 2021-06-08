@@ -26,43 +26,49 @@
             </div>
         </div>
     </section>
-    <section id="horloge">
-        <div>
-            <div id="montre">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <span>S1</span>
-                <span>S2</span>
-                <span>S3</span>
-                <span>S4</span>
-                <span>S5</span>
-                <span>S6</span>
-                <span>S7</span>
-                <span>S8</span>
-                <span>S9</span>
-                <span>S10</span>
-            </div>
-            <div></div>
-        </div>
-        <div class="horlogeTab">
-            <span>Audience totale</span>
+    <section id="horlogeContainer">
+        <div id="horloge">
             <div>
-                <span>759.3 M</span>
+                <div id="montre">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span>S1</span>
+                    <span>S2</span>
+                    <span>S3</span>
+                    <span>S4</span>
+                    <span>S5</span>
+                    <span>S6</span>
+                    <span>S7</span>
+                    <span>S8</span>
+                    <span>S9</span>
+                    <span>S10</span>
+                    <div id="aiguille">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div></div>
             </div>
-        </div>
-        <div class="horlogeTab">
-            <span>Dans les livres</span>
-            <div>
-                <span>759.3 M</span>
+            <div class="horlogeTab">
+                <span>Audience totale</span>
+                <div>
+                    <span>759.3 M</span>
+                </div>
             </div>
-        </div>
-        <div class="horlogeTab">
-            <span>Dans la saison</span>
-            <div>
-                <span>759.3 M</span>
+            <div class="horlogeTab">
+                <span>Dans les livres</span>
+                <div>
+                    <span>759.3 M</span>
+                </div>
+            </div>
+            <div class="horlogeTab">
+                <span>Dans la saison</span>
+                <div>
+                    <span>759.3 M</span>
+                </div>
             </div>
         </div>
     </section>
@@ -82,7 +88,29 @@
                 </div>
             </div>
             <div id="poignee">
+                <div></div> <!-- Haut de poignée -->
+                <div id="surface_poignee">
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
 
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
+                    <div class="vis">
+                        <span class="trou_vis">+</span>
+                    </div>
+                    <div id="boule"></div>
+                    <div id="cache"></div>
+                </div>
+                <div></div> <!-- Bas de poignée -->
+                <div id="poignee_bas"></div>
             </div>
         </div>
         <div class="postit">
@@ -104,8 +132,10 @@
     </section>
     <footer>
         <div>
+            <img src="{{ asset('assets/img/Logo.png') }}" alt="">
         </div>
         <div>
+            <p>Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Grande Ecole de l’école HETIC. Les contenus et données présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera en aucun cas exploité à des fins commerciales</p>
         </div>
     </footer>
     <script src="{{ asset('assets/js/homeScript.js') }}"></script>

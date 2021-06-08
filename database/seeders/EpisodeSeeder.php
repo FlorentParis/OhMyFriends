@@ -1,18 +1,271 @@
 <?php
 
-namespace Database\Seeders;
+    namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
+    use Illuminate\Database\Seeder;
+    use App\Models\Episode;
 
-class EpisodeSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    class EpisodeSeeder extends Seeder
     {
-        //
+        public function run(){
+            
+            self::createEpisode(101, '1994-09-22', 21500000, 1);
+            self::createEpisode(102, '1994-09-29', 20000000, 1);
+            self::createEpisode(103, '1994-10-06', 19100000, 1);
+            self::createEpisode(104, '1994-10-13', 19100000, 1);
+            self::createEpisode(105, '1994-10-20', 18100000, 1);
+            self::createEpisode(106, '1994-10-27', 18000000, 1);
+            self::createEpisode(107, '1994-11-03', 23100000, 1);
+            self::createEpisode(108, '1994-11-10', 21100000, 1);
+            self::createEpisode(109, '1994-11-17', 23100000, 1);
+            self::createEpisode(110, '1994-12-15', 19900000, 1);
+            self::createEpisode(111, '1995-01-05', 26600000, 1);
+            self::createEpisode(112, '1995-01-12', 24000000, 1);
+            self::createEpisode(113, '1995-01-19', 25800000, 1);
+            self::createEpisode(114, '1995-02-09', 23800000, 1);
+            self::createEpisode(115, '1995-02-16', 24800000, 1);
+            self::createEpisode(116, '1995-02-23', 26100000, 1);
+            self::createEpisode(117, '1995-02-23', 30500000, 1);
+            self::createEpisode(118, '1995-03-02', 30400000, 1);
+            self::createEpisode(119, '1995-03-09', 29400000, 1);
+            self::createEpisode(120, '1995-04-06', 30000000, 1);
+            self::createEpisode(121, '1995-04-27', 28400000, 1);
+            self::createEpisode(122, '1995-05-04', 29900000, 1);
+            self::createEpisode(123, '1995-05-11', 28700000, 1);
+            self::createEpisode(124, '1995-05-18', 31300000, 1);
+             
+            self::createEpisode(201, '1995-09-21', 30100000, 2);
+            self::createEpisode(202, '1995-09-28', 29800000, 2);
+            self::createEpisode(203, '1995-10-05', 30200000, 2);
+            self::createEpisode(204, '1995-10-12', 28100000, 2);
+            self::createEpisode(205, '1995-10-19', 28300000, 2);
+            self::createEpisode(206, '1995-11-02', 30200000, 2);
+            self::createEpisode(207, '1995-11-09', 30500000, 2);
+            self::createEpisode(208, '1995-11-16', 32900000, 2);
+            self::createEpisode(209, '1995-12-15', 27800000, 2);
+            self::createEpisode(210, '1996-01-04', 32200000, 2);
+            self::createEpisode(211, '1996-01-18', 31600000, 2);
+            self::createEpisode(212, '1996-01-28', 52900000, 2);
+            self::createEpisode(213, '1996-01-28', 52900000, 2);
+            self::createEpisode(214, '1996-02-01', 33600000, 2);
+            self::createEpisode(215, '1996-02-08', 32900000, 2);
+            self::createEpisode(216, '1996-02-15', 31100000, 2);
+            self::createEpisode(217, '1996-02-22', 30200000, 2);
+            self::createEpisode(218, '1996-03-21', 30100000, 2);
+            self::createEpisode(219, '1996-03-28', 31200000, 2);
+            self::createEpisode(220, '1996-04-04', 27400000, 2);
+            self::createEpisode(221, '1996-04-25', 24700000, 2);
+            self::createEpisode(222, '1996-05-02', 25500000, 2);
+            self::createEpisode(223, '1996-05-09', 26100000, 2);
+            self::createEpisode(224, '1996-05-16', 29000000, 2);
+            
+            self::createEpisode(301, '1996-09-19', 26800000, 3);
+            self::createEpisode(302, '1996-09-26', 26700000, 3);
+            self::createEpisode(303, '1996-10-03', 25200000, 3);
+            self::createEpisode(304, '1996-10-10', 26100000, 3);
+            self::createEpisode(305, '1996-10-17', 23300000, 3);
+            self::createEpisode(306, '1996-10-31', 23300000, 3);
+            self::createEpisode(307, '1996-11-07', 27400000, 3);
+            self::createEpisode(308, '1996-11-14', 28700000, 3);
+            self::createEpisode(309, '1996-11-21', 29300000, 3);
+            self::createEpisode(310, '1996-12-12', 25100000, 3);
+            self::createEpisode(311, '1997-01-09', 29800000, 3);
+            self::createEpisode(312, '1997-01-16', 29600000, 3);
+            self::createEpisode(313, '1997-01-30', 28000000, 3);
+            self::createEpisode(314, '1997-02-06', 28900000, 3);
+            self::createEpisode(315, '1997-02-13', 27300000, 3);
+            self::createEpisode(316, '1997-02-20', 28300000, 3);
+            self::createEpisode(317, '1997-03-03', 25800000, 3);
+            self::createEpisode(318, '1997-03-13', 28100000, 3);
+            self::createEpisode(319, '1997-03-27', 23700000, 3);
+            self::createEpisode(320, '1997-04-10', 24400000, 3);
+            self::createEpisode(321, '1997-04-17', 23200000, 3);
+            self::createEpisode(322, '1997-04-24', 22600000, 3);
+            self::createEpisode(323, '1997-05-01', 24200000, 3);
+            self::createEpisode(324, '1997-05-08', 23100000, 3);
+            self::createEpisode(325, '1997-05-15', 28800000, 3);
+            
+            self::createEpisode(401, '1997-09-25', 29400000, 4);
+            self::createEpisode(402, '1997-10-02', 25500000, 4);
+            self::createEpisode(403, '1997-10-09', 24000000, 4);
+            self::createEpisode(404, '1997-10-16', 24300000, 4);
+            self::createEpisode(405, '1997-10-30', 24400000, 4);
+            self::createEpisode(406, '1997-11-06', 25700000, 4);
+            self::createEpisode(407, '1997-11-13', 26400000, 4);
+            self::createEpisode(408, '1997-11-20', 26800000, 4);
+            self::createEpisode(409, '1997-12-11', 23900000, 4);
+            self::createEpisode(410, '1997-12-18', 23200000, 4);
+            self::createEpisode(411, '1998-01-08', 23700000, 4);
+            self::createEpisode(412, '1998-01-15', 27100000, 4);
+            self::createEpisode(413, '1998-01-29', 25300000, 4);
+            self::createEpisode(414, '1998-02-05', 25100000, 4);
+            self::createEpisode(415, '1998-02-26', 24400000, 4);
+            self::createEpisode(416, '1998-03-19', 23100000, 4);
+            self::createEpisode(417, '1998-03-26', 23200000, 4);
+            self::createEpisode(418, '1998-04-02', 21700000, 4);
+            self::createEpisode(419, '1998-04-09', 21800000, 4);
+            self::createEpisode(420, '1998-04-16', 21900000, 4);
+            self::createEpisode(421, '1998-04-23', 21500000, 4);
+            self::createEpisode(422, '1998-04-30', 23200000, 4);
+            self::createEpisode(423, '1998-05-07', 31600000, 4);
+            self::createEpisode(424, '1998-05-07', 31600000, 4);
+            
+            self::createEpisode(501, '1998-09-24', 31100000, 5);
+            self::createEpisode(502, '1998-10-01', 25400000, 5);
+            self::createEpisode(503, '1998-10-08', 26800000, 5);
+            self::createEpisode(504, '1998-10-15', 24100000, 5);
+            self::createEpisode(505, '1998-10-29', 25900000, 5);
+            self::createEpisode(506, '1998-11-05', 25000000, 5);
+            self::createEpisode(507, '1998-11-12', 24400000, 5);
+            self::createEpisode(508, '1998-11-19', 23900000, 5);
+            self::createEpisode(509, '1998-12-10', 23000000, 5);
+            self::createEpisode(510, '1998-12-17', 23700000, 5);
+            self::createEpisode(511, '1999-01-07', 27000000, 5);
+            self::createEpisode(512, '1999-01-21', 24800000, 5);
+            self::createEpisode(513, '1999-02-04', 24900000, 5);
+            self::createEpisode(514, '1999-02-11', 27700000, 5);
+            self::createEpisode(515, '1999-02-18', 29300000, 5);
+            self::createEpisode(516, '1999-02-25', 26000000, 5);
+            self::createEpisode(517, '1999-03-18', 24500000, 5);
+            self::createEpisode(518, '1999-04-08', 21900000, 5);
+            self::createEpisode(519, '1999-04-22', 20900000, 5);
+            self::createEpisode(520, '1999-04-29', 19600000, 5);
+            self::createEpisode(521, '1999-05-06', 20900000, 5);
+            self::createEpisode(522, '1999-05-13', 21300000, 5);
+            self::createEpisode(523, '1999-05-20', 25900000, 5);
+            self::createEpisode(524, '1999-05-20', 25900000, 5);
+            
+            self::createEpisode(601, '1999-09-23', 27700000, 6);
+            self::createEpisode(602, '1999-09-30', 22900000, 6);
+            self::createEpisode(603, '1999-10-07', 21600000, 6);
+            self::createEpisode(604, '1999-10-14', 21100000, 6);
+            self::createEpisode(605, '1999-10-21', 22400000, 6);
+            self::createEpisode(606, '1999-11-04', 23600000, 6);
+            self::createEpisode(607, '1999-11-11', 22700000, 6);
+            self::createEpisode(608, '1999-11-18', 22100000, 6);
+            self::createEpisode(609, '1999-11-25', 19200000, 6);
+            self::createEpisode(610, '1999-12-16', 22400000, 6);
+            self::createEpisode(611, '2000-01-06', 22300000, 6);
+            self::createEpisode(612, '2000-01-13', 22300000, 6);
+            self::createEpisode(613, '2000-02-03', 24100000, 6);
+            self::createEpisode(614, '2000-02-10', 23800000, 6);
+            self::createEpisode(615, '2000-02-17', 20700000, 6);
+            self::createEpisode(616, '2000-02-17', 20700000, 6);
+            self::createEpisode(617, '2000-02-24', 22100000, 6);
+            self::createEpisode(618, '2000-03-09', 20500000, 6);
+            self::createEpisode(619, '2000-03-23', 21500000, 6);
+            self::createEpisode(620, '2000-04-13', 18800000, 6);
+            self::createEpisode(621, '2000-04-27', 20900000, 6);
+            self::createEpisode(622, '2000-05-04', 20000000, 6);
+            self::createEpisode(623, '2000-05-11', 20900000, 6);
+            self::createEpisode(624, '2000-05-18', 30700000, 6);
+            self::createEpisode(625, '2000-05-18', 30700000, 6);
+            
+            self::createEpisode(701, '2000-10-12', 25540000, 7);
+            self::createEpisode(702, '2000-10-12', 27930000, 7);
+            self::createEpisode(703, '2000-10-19', 22700000, 7);
+            self::createEpisode(704, '2000-10-26', 22660000, 7);
+            self::createEpisode(705, '2000-11-02', 24430000, 7);
+            self::createEpisode(706, '2000-11-09', 22010000, 7);
+            self::createEpisode(707, '2000-11-16', 23730000, 7);
+            self::createEpisode(708, '2000-11-23', 16570000, 7);
+            self::createEpisode(709, '2000-12-07', 21080000, 7);
+            self::createEpisode(710, '2000-12-14', 23260000, 7);
+            self::createEpisode(711, '2001-01-04', 24370000, 7);
+            self::createEpisode(712, '2001-01-11', 22860000, 7);
+            self::createEpisode(713, '2001-02-01', 22240000, 7);
+            self::createEpisode(714, '2001-02-08', 22400000, 7);
+            self::createEpisode(715, '2001-02-15', 21750000, 7);
+            self::createEpisode(716, '2001-02-22', 21220000, 7);
+            self::createEpisode(717, '2001-03-15', 20840000, 7);
+            self::createEpisode(718, '2001-03-29', 17810000, 7);
+            self::createEpisode(719, '2001-04-19', 16550000, 7);
+            self::createEpisode(720, '2001-04-26', 16300000, 7);
+            self::createEpisode(721, '2001-05-03', 15650000, 7);
+            self::createEpisode(722, '2001-05-10', 17230000, 7);
+            self::createEpisode(723, '2001-05-17', 30050000, 7);
+            self::createEpisode(724, '2001-05-17', 30050000, 7);
+            
+            self::createEpisode(801, '2001-09-27', 31700000, 8);
+            self::createEpisode(802, '2001-10-04', 30040000, 8);
+            self::createEpisode(803, '2001-10-11', 29200000, 8);
+            self::createEpisode(804, '2001-10-18', 25580000, 8);
+            self::createEpisode(805, '2001-10-25', 25640000, 8);
+            self::createEpisode(806, '2001-11-01', 26960000, 8);
+            self::createEpisode(807, '2001-11-08', 24240000, 8);
+            self::createEpisode(808, '2001-11-15', 26540000, 8);
+            self::createEpisode(809, '2001-11-22', 24240000, 8);
+            self::createEpisode(810, '2001-12-06', 22440000, 8);
+            self::createEpisode(811, '2001-12-13', 23850000, 8);
+            self::createEpisode(812, '2002-01-10', 25530000, 8);
+            self::createEpisode(813, '2002-01-17', 29240000, 8);
+            self::createEpisode(814, '2002-01-31', 28640000, 8);
+            self::createEpisode(815, '2002-02-07', 28640000, 8);
+            self::createEpisode(816, '2002-02-28', 27520000, 8);
+            self::createEpisode(817, '2002-03-07', 26300000, 8);
+            self::createEpisode(818, '2002-03-28', 22050000, 8);
+            self::createEpisode(819, '2002-04-04', 22590000, 8);
+            self::createEpisode(820, '2002-04-25', 22240000, 8);
+            self::createEpisode(821, '2002-05-02', 23970000, 8);
+            self::createEpisode(822, '2002-05-09', 24320000, 8);
+            self::createEpisode(823, '2002-05-16', 34910000, 8);
+            self::createEpisode(824, '2002-05-16', 34910000, 8);
+            
+            self::createEpisode(901, '2002-09-26', 34010000, 9);
+            self::createEpisode(902, '2002-10-03', 28930000, 9);
+            self::createEpisode(903, '2002-10-10', 26630000, 9);
+            self::createEpisode(904, '2002-10-17', 25820000, 9);
+            self::createEpisode(905, '2002-10-31', 24460000, 9);
+            self::createEpisode(906, '2002-11-07', 27510000, 9);
+            self::createEpisode(907, '2002-11-14', 25350000, 9);
+            self::createEpisode(908, '2002-11-21', 26760000, 9);
+            self::createEpisode(909, '2002-12-05', 25430000, 9);
+            self::createEpisode(910, '2002-12-12', 22290000, 9);
+            self::createEpisode(911, '2003-01-09', 23670000, 9);
+            self::createEpisode(912, '2003-01-16', 23660000, 9);
+            self::createEpisode(913, '2003-01-30', 25820000, 9);
+            self::createEpisode(914, '2003-02-06', 23370000, 9);
+            self::createEpisode(915, '2003-02-13', 20850000, 9);
+            self::createEpisode(916, '2003-02-20', 19520000, 9);
+            self::createEpisode(917, '2003-03-13', 21000000, 9);
+            self::createEpisode(918, '2003-04-03', 20790000, 9);
+            self::createEpisode(919, '2003-04-17', 18250000, 9);
+            self::createEpisode(920, '2003-04-24', 20710000, 9);
+            self::createEpisode(921, '2003-05-01', 19030000, 9);
+            self::createEpisode(922, '2003-05-08', 19550000, 9);
+            self::createEpisode(923, '2003-05-15', 25490000, 9);
+            self::createEpisode(924, '2003-05-15', 25490000, 9);
+            
+            self::createEpisode(1001, '2003-09-25', 24540000, 10);
+            self::createEpisode(1002, '2003-10-02', 22380000, 10);
+            self::createEpisode(1003, '2003-10-09', 21870000, 10);
+            self::createEpisode(1004, '2003-10-23', 18770000, 10);
+            self::createEpisode(1005, '2003-10-30', 19370000, 10);
+            self::createEpisode(1006, '2003-11-06', 20380000, 10);
+            self::createEpisode(1007, '2003-11-13', 20210000, 10);
+            self::createEpisode(1008, '2003-11-20', 20660000, 10);
+            self::createEpisode(1009, '2004-01-08', 25490000, 10);
+            self::createEpisode(1010, '2004-01-15', 26680000, 10);
+            self::createEpisode(1011, '2004-02-05', 24910000, 10);
+            self::createEpisode(1012, '2004-02-12', 25900000, 10);
+            self::createEpisode(1013, '2004-02-19', 24270000, 10);
+            self::createEpisode(1014, '2004-02-26', 22830000, 10);
+            self::createEpisode(1015, '2004-04-22', 22640000, 10);
+            self::createEpisode(1016, '2004-04-29', 24510000, 10);
+            self::createEpisode(1017, '2004-05-06', 36890000, 10);
+            self::createEpisode(1018, '2004-05-06', 52460000, 10);
+
+
+        }
+
+        private static function createEpisode($annee, $date_diffusion, $audience, $id_saison){
+            $Episode = new Episode();
+            $Episode->id;
+            $Episode->date_diffusion = $date_diffusion;
+            $Episode->audience = $audience;
+            $Episode->id_saison = $id_saison;
+
+            assert($Episode->save(),"Echec de l'insertion");
+
+        }
     }
-}

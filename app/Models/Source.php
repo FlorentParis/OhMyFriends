@@ -5,7 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SourceModel extends Model
+class Source extends Model
 {
     protected $table = 'sources';
+    public $timestamps = false;
+    public function Livre(){
+        return $this->belongTo(Livre::class, 'id_source');
+    }
 }
