@@ -1,17 +1,14 @@
-/* Get Our Elements */
+/* Cadre */
 const cadre = document.querySelector('#cadre');
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 
-/* Build out functions */
 function togglePlay() {
   const method = video.paused ? 'play' : 'pause';
   video[method]();
 }
 
-/* Hook up the event listeners */
 cadre.addEventListener('click', togglePlay);
-
 
 /* Horloge */
 const line = document.querySelectorAll('.line');
@@ -30,12 +27,8 @@ const width = canvas.width = fenetre.offsetWidth;
 const height = canvas.height = fenetre.offsetHeight;
 const ctx = canvas.getContext('2d');
 
-
 ctx.fillStyle = '#f2f2f2';
 ctx.fillRect(0,0,width,height);
-
-
-
 
 function degToRad(degrees) {
   return degrees * Math.PI / 180;
@@ -54,8 +47,7 @@ function courbe(courbe){
   }
 }
 
-points_y = [12, 45, 63, 24, 35, 57, 88, 7, 17, 75];
-
+points_y = [18, 27, 23, 25, 31, 37, 35, 26, 17, 25];
 
 function testpoint(points){
   ctx.beginPath();
