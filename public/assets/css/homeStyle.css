@@ -2,11 +2,15 @@
 body{
     background-color: #9B81BA;
 }
+.bodyStopScroll{
+    height: 100vh;
+    overflow: hidden;
+}
 /* Burger */
 nav{
     position: fixed;
     padding: 30px 50px;
-    z-index: 3;
+    z-index: 12;
 }
 #burger{
     height: 25px;
@@ -21,9 +25,20 @@ nav{
     background-color: #FEE565;
     display: block;
     border-radius: 10px;
+    transform-origin: 0px;
+    transition: all 0.3s;
 }
 .bar:nth-of-type(2){
     width: 60%;
+}
+/* Interphone */
+#interphone{
+    z-index: 10;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    background-color: #9B81BA;
 }
 /* Cadre */
 #hero{

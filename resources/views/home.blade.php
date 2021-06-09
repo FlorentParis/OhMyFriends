@@ -19,6 +19,9 @@
             <div class="bar"></div>
         </div>
     </nav>
+    <section id="interphone">
+        
+    </section>
     <section id="hero">
         <div id="cadre">
             <img src="{{ asset('assets/img/cadre.png') }}" alt="">
