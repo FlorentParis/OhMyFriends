@@ -5,44 +5,50 @@ namespace App\Http\Controllers;
 use App\Models\Episode;
 use App\Models\Personnage;
 use App\Models\Saison;
-use App\Models\Script;
-use App\Models\Source;
 use App\Models\Livre;
-use Illuminate\Support\Facades\DB;
 
 class testController extends Controller
 {
     public function test(){
-        //$personnage = Personnage::all();
-        //foreach ($personnage as $someone){
-        //    var_dump($someone['nom']);
-        //}
-        /*
-        $episodes = Saison::find(2)->episode;
-        foreach ($episodes as $episode){
-            echo "<pre>".$episode."</pre>";
-        }*/
-
-        /**/
-        //$scriptRachel = Personnage::find(1)->script;
-        //$scriptRachel = json_encode($scriptRachel);
-        //$scriptMonica = Personnage::find(2)->script;
-        $total_omg_saison = [
-            'saison1'=> Saison::getTotalNbOmgSaison(1),
-            'saison2'=> Saison::getTotalNbOmgSaison(2),
-            'saison3'=> Saison::getTotalNbOmgSaison(3)
+        $data=[
+            'omgSaison' => self::getTotalOmgPerSeason(),
+            'omgPersoSerie'=> self::getOmgCharacterSerie(),
+            'omgPersoSaison' => self::getOmgCharacterSeason(),
+            'qteOmgBooks'=>self::getQteOmgBooks(),
+            'audienceEpisode'=>self::getAudienceEpisode(),
+            'audienceSeason'=>self::getAudienceSeason()
         ];
+        return view('test')->with('data', $data);
+    }
 
-        $total_omg_personnage = [
-            'Rachel'=>Saison::getOmgPersonnageSerie(1)
+    //TODO for
+    public function getTotalOmgPerSeason(): array
+    {
+        return [
+            'saison 1'=> Saison::getTotalNbOmgSaison(1),
+            'saison 2'=> Saison::getTotalNbOmgSaison(2),
+            'saison 3'=> Saison::getTotalNbOmgSaison(3),
+            'saison 4'=> Saison::getTotalNbOmgSaison(4),
+            'saison 5'=> Saison::getTotalNbOmgSaison(5),
+            'saison 6'=> Saison::getTotalNbOmgSaison(6),
+            'saison 7'=> Saison::getTotalNbOmgSaison(7),
+            'saison 8'=> Saison::getTotalNbOmgSaison(8),
+            'saison 9'=> Saison::getTotalNbOmgSaison(9),
+            'saison 10'=> Saison::getTotalNbOmgSaison(10),
         ];
+    }
 
-        $scripts = Personnage::getAllScript(1);
-        foreach ($scripts as $script){
-            echo"<pre>".$script."</pre>";
-        }
+    //TODO ??
+    public function getOmgCharacterSerie(): array{
+        return [
+            'Rachel'=>Saison::getOmgPersonnageSerie(1),
+            'Monica'=> Saison::getOmgPersonnageSerie(2),
+        ];
+    }
 
-        $qteOmgBooks = [
+    //TODO for
+    public function getQteOmgBooks(): array{
+        return [
             'annee_1994'=> Livre::getVarNbOmgSource(1994),
             'annee_1995'=> Livre::getVarNbOmgSource(1995),
             'annee_1996'=> Livre::getVarNbOmgSource(1996),
@@ -70,13 +76,19 @@ class testController extends Controller
             'annee_2018'=> Livre::getVarNbOmgSource(2018),
             'annee_2019'=> Livre::getVarNbOmgSource(2019)
         ];
+    }
 
-        $audienceEpisode = [
+    //TODO for
+    public function getAudienceEpisode(): array{
+        return [
             'episode_1'=> Episode::getAudienceEpisode(1),
             'episode_2'=> Episode::getAudienceEpisode(2)
         ];
+    }
 
-        $audienceSaison = [
+    //TODO for
+    public function getAudienceSeason(): array{
+        return [
             'Saison_1'=> Saison::getAudienceSaison(1),
             'Saison_2'=> Saison::getAudienceSaison(2),
             'Saison_3'=> Saison::getAudienceSaison(3),
@@ -88,7 +100,24 @@ class testController extends Controller
             'Saison_9'=> Saison::getAudienceSaison(9),
             'Saison_10'=> Saison::getAudienceSaison(10)
         ];
+    }
 
-        return view('test', compact('total_omg_personnage', 'total_omg_saison', 'qteOmgBooks', 'audienceEpisode', 'audienceSaison'));//->with('scriptRachel', json_decode($scriptRachel, true));
+    public function getOmgCharacterSeason(): array{
+        $characters = Personnage::all();
+        $characOmg = [];
+        foreach ($characters as $character){
+            $scripts = Personnage::getAllScript($character->id);
+            $array = [
+                'nom'=>$character->nom,
+                'nb_omg'=>[]
+            ];
+            foreach ($scripts as $script){
+                array_push($array['nb_omg'], $script);
+                echo"<pre>".$script."</pre>";
+            }
+            array_push($characOmg, $array);
+            echo "-------";
+        }
+        return $characOmg;
     }
 }

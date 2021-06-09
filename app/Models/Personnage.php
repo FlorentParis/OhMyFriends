@@ -14,7 +14,8 @@ class Personnage extends Model
         return $this->hasMany(Script::class, 'id_personnage');
     }
 
-    public static function getAllScript($id_personnage){
+    public static function getAllScript($id_personnage): array
+    {
         $scripts = DB::table('scripts')
             ->select('nb_omg')
             ->where('id_personnage', $id_personnage)

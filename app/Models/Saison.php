@@ -20,25 +20,22 @@ class Saison extends Model
         return $this->hasMany(Script::class, 'id_saison');
     }
 
-    public static function getTotalNbOmgSaison($id){
-        $total = DB::table('scripts')
+    public static function getTotalNbOmgSaison($id): int
+    {
+        return DB::table('scripts')
             ->where('id_saison', $id)
             ->sum('nb_omg');
-        return $total;
     }
 
     public static function getOmgPersonnageSerie($id_personnage){
-        $total = Script::all()
+        return Script::all()
             ->where('id_personnage', $id_personnage)
             ->sum('nb_omg');
-        return $total;
     }
 
     public static function getAudienceSaison($id_saison){
-        $audienceSaison = DB::table('episodes')
+        return DB::table('episodes')
                     ->where('id', $id_saison)
                     ->avg('audience');
-
-        return $audienceSaison;
     }
 }
