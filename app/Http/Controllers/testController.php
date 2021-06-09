@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Episode;
 use App\Models\Personnage;
 use App\Models\Saison;
+use App\Models\Script;
 use App\Models\Source;
+use Illuminate\Support\Facades\DB;
 
 class testController extends Controller
 {
@@ -20,15 +22,22 @@ class testController extends Controller
             echo "<pre>".$episode."</pre>";
         }*/
 
-        /*
-        $scriptPerso = Personnage::find(1)->script;
-        foreach ($scriptPerso as $script){
-            echo "<pre>".$script."</pre>";
-        }
+        /**/
+        //$scriptRachel = Personnage::find(1)->script;
+        //$scriptRachel = json_encode($scriptRachel);
+        //$scriptMonica = Personnage::find(2)->script;
+        $total_omg_saison = [
+            'saison1'=> Saison::getSumNbOmg(1),
+            'saison2'=> Saison::getSumNbOmg(2),
+            'saison3'=> Saison::getSumNbOmg(3)
+        ];
 
-*/
-        $livres = Source::find(1)->livre;
+        $qteOmgBooks = DB::table('livres')
+            ->where('annee', 1994)
+            ->avg('omg_count');
 
-        return view('test', compact('livres'));
+
+
+        return view('test', compact('total_omg_saison'));//->with('scriptRachel', json_decode($scriptRachel, true));
     }
 }
