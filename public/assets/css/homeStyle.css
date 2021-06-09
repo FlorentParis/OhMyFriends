@@ -269,7 +269,7 @@ nav{
     justify-content: center;
 }
 #books #elePorte #verrou #verrouContent{
-    background: #3F2F1F;
+    background-color: #3F2F1F;
     box-shadow: 0px 0px 15px 5px #433222;
     position: relative;
     left: -20px;
@@ -277,7 +277,48 @@ nav{
     height: 150px;
     border-radius: 20px;
 }
-/* poignee */
+#bouton{
+    position: absolute;
+    background-color: #605028;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 150px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bouton > div{
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background-color: #605028;
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.25);
+}
+#ovale{
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #817038;
+    top: 50%;
+    transform: translateY(-50%) rotateZ(150deg); /* Fermer / Pour ouvert > 210° */
+    left: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 30px 50px;
+}
+#ovale > div{
+    width: 45px;
+    height: 85px;
+    border-radius: 100%;
+    background-color: #817038;
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.25);
+}
+/* Poignee */
 #poignee{
     height: 520px;
     width: 180px;
@@ -304,7 +345,7 @@ nav{
     position: absolute;
     width: 17px;
     height: 17px;
-    border-radius: 100px;
+    border-radius: 100%;
     background-color: #878787;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -343,14 +384,15 @@ nav{
     bottom: 4px;
 }
 #boule{
+    z-index: 4;
     position: absolute;
     top: 70px;
     left: 50%;
     transform: translateX(-50%);
     width: 150px;
     height: 150px;
-    border-radius: 100px;
-    background: #9C8A4E;
+    border-radius: 100%;
+    background-color: #9C8A4E;
     box-shadow: -3px 4px 4px rgba(0, 0, 0, 0.25), inset -3px 4px 4px rgba(255, 255, 255, 0.25);
 }
 #cache{
@@ -358,14 +400,33 @@ nav{
     position: absolute;
     top: 305px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotateZ(0deg);
     width: 120px;
     height: 120px;
-    border-radius: 100px;
-    background: #8E7C3E;
-    opacity: 0.3;
-    box-shadow: -2px 3px 4px rgba(0, 0, 0, 0.25), inset -1px 1px 0px rgba(255, 255, 255, 0.25);
-
+    border-radius: 100%;
+    background-color: #8E7C3E;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 2px rgba(255, 255, 255, 0.25);
+    transform-origin: 60px 15px;
+}
+#serrure > div:first-of-type{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #201108;
+    box-shadow: inset -3px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+    top: 345px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#serrure > div:last-of-type{
+    position: absolute;
+    top: 355px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 60px solid #201108;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
 }
 #poignee > div:last-of-type{
     height: 0;
@@ -375,7 +436,7 @@ nav{
     border-right: 7px solid transparent;
     box-shadow: inset 0px -3px 4px rgba(255, 255, 255, 0.1);
 }
-/* dataBooks */
+/* Data Books */
 #books #dataBooks{
     background-color: #fff;
     height: 470px;
