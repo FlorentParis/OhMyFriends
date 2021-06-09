@@ -2,3 +2,18 @@
     font-family: "Rock Salt";
     src: url("../fonts/rock-salt/RockSalt.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Open-Sans-Hebrew";
+    src: url("../fonts/open-sans-hebrew/OpenSansHebrew-Regular.ttf") format("truetype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Open-Sans-Hebrew";
+    src: url("../fonts/open-sans-hebrew/OpenSansHebrew-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Open-Sans-Hebrew";
+    src: url("../fonts/open-sans-hebrew/OpenSansHebrew-ExtraBold.ttf") format("truetype");
+    font-weight: 900;
+}

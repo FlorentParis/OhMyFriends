@@ -99,7 +99,7 @@ nav{
 #horloge > div:first-of-type span{
     font-size: 24px;
     color: #D2A82B;
-    font-family: sans-serif;
+    font-family: "Open-Sans-Hebrew";
     position: absolute;
     transform: translateX(-50%);
 }
@@ -179,10 +179,10 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Open-Sans-Hebrew";
 }
 .horlogeTab > span{
     font-size: 28px;
-    font-family: sans-serif;
     padding-bottom: 10px;
 }
 .horlogeTab > div{
@@ -194,7 +194,6 @@ nav{
     border: 3px solid #000;
     border-radius: 10px;
     font-size: 24px;
-    font-family: sans-serif;
 }
 /* Books */
 #books{
@@ -349,14 +348,14 @@ footer{
     margin-top: 50px;
     align-items: center;
 }
-<<<<<<< HEAD
-
-=======
 footer > div:first-of-type{
     padding-left: 40px;
 }
 footer > div:last-of-type > p{
     color: #FEE565;
     padding: 40px;
+    font-family: "Rock Salt";
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 2px;
 }
->>>>>>> 18e5fb1dfcc776411a7148d1cc13b0b499e3adc3
