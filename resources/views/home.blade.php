@@ -29,6 +29,14 @@
                 <video class="player__video viewer" src="{{ asset('assets/video/compilOMG.mp4') }}"></video>
             </div>
         </div>
+        <div class="gond">
+            <div class="vis">
+                <span class="trou_vis">+</span>
+            </div>
+            <div class="vis">
+                <span class="trou_vis">+</span>
+            </div>
+        </div>
     </section>
     <section id="horlogeContainer">
         <div id="horloge">
@@ -73,6 +81,18 @@
                 <div>
                     <span>759.3 M</span>
                 </div>
+            </div>
+            <div class="vis">
+                <span class="trou_vis">+</span>
+            </div>
+            <div class="vis">
+                <span class="trou_vis">+</span>
+            </div>
+            <div class="vis">
+                <span class="trou_vis">+</span>
+            </div>
+            <div class="vis">
+                <span class="trou_vis">+</span>
             </div>
         </div>
     </section>
@@ -125,7 +145,7 @@
         <div class="postit">
             <span></span>
             <span><span></span>Série</span>
-            <span><span></span>livres</span>
+            <span><span></span>Livres</span>
         </div>
         <div id="dataBooks">
 
@@ -139,6 +159,14 @@
         </div>
         <div>
 
+        </div>
+        <div class="gond">
+            <div class="vis">
+                <span class="trou_vis">+</span>
+            </div>
+            <div class="vis">
+                <span class="trou_vis">+</span>
+            </div>
         </div>
     </section>
     <footer>
