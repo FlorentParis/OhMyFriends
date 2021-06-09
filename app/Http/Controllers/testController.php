@@ -27,17 +27,20 @@ class testController extends Controller
         //$scriptRachel = json_encode($scriptRachel);
         //$scriptMonica = Personnage::find(2)->script;
         $total_omg_saison = [
-            'saison1'=> Saison::getSumNbOmg(1),
-            'saison2'=> Saison::getSumNbOmg(2),
-            'saison3'=> Saison::getSumNbOmg(3)
+            'saison1'=> Saison::getTotalNbOmgSaison(1),
+            'saison2'=> Saison::getTotalNbOmgSaison(2),
+            'saison3'=> Saison::getTotalNbOmgSaison(3)
         ];
 
-        $qteOmgBooks = DB::table('livres')
-            ->where('annee', 1994)
-            ->avg('omg_count');
+        $total_omg_personnage = [
+            'Rachel'=>Saison::getOmgPersonnageSerie(1)
+        ];
 
+        $scripts = Personnage::getAllScript(1);
+        foreach ($scripts as $script){
+            echo"<pre>".$script."</pre>";
+        }
 
-
-        return view('test', compact('total_omg_saison'));//->with('scriptRachel', json_decode($scriptRachel, true));
+        return view('test', compact('total_omg_personnage', 'total_omg_saison'));//->with('scriptRachel', json_decode($scriptRachel, true));
     }
 }

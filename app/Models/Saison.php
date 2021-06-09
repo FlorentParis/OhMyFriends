@@ -2,10 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use phpDocumentor\Reflection\Types\Self_;
 
 class Saison extends Model
 {
@@ -22,9 +20,16 @@ class Saison extends Model
         return $this->hasMany(Script::class, 'id_saison');
     }
 
-    public static function getSumNbOmg($id){
+    public static function getTotalNbOmgSaison($id){
         $total = DB::table('scripts')
             ->where('id_saison', $id)
+            ->sum('nb_omg');
+        return $total;
+    }
+
+    public static function getOmgPersonnageSerie($id_personnage){
+        $total = Script::all()
+            ->where('id_personnage', $id_personnage)
             ->sum('nb_omg');
         return $total;
     }
