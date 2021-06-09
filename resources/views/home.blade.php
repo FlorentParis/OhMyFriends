@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <!-- Fichier CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/homeStyle.css') }}">
+
     <title>Oh My Friends</title>
 </head>
 <body>

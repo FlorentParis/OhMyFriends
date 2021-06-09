@@ -59,7 +59,7 @@ function testpoint(points, color){
   ctx.lineWidth = "1";
   ctx.strokeStyle=color;
   var base = 577;
-  var x = 50;
+  var x = 60;
   ctx.moveTo(x,base - points[0]*12);
   for(let z = 0; z<points.length; z++){
     ctx.lineTo(x, base - points[z]*12);
@@ -69,9 +69,9 @@ function testpoint(points, color){
 }
 
 function testGrilleVertical(){
-  var x = 50;
-  var base = 577;
-  var fin = 37;
+  var x = 60;
+  var base = 587;
+  var fin = 47;
   for(let z = 0; z<10;z++){
     ctx.beginPath();
     ctx.lineWidth = "0.25";
@@ -84,9 +84,9 @@ function testGrilleVertical(){
 }
 
 function testGrilleHorizontal(){
-  var y = 577;
-  var base = 50;
-  var fin = 806
+  var y = 587;
+  var base = 60;
+  var fin = 816
   for(let z = 0; z<10; z++){
     ctx.beginPath();
     ctx.lineWidth = "0.25";
@@ -99,9 +99,9 @@ function testGrilleHorizontal(){
 }
 
 function testAbsisse(){
-  var y = 577;
-  var base = 50;
-  var fin = 806;
+  var y = 587;
+  var base = 60;
+  var fin = 816;
   ctx.beginPath();
   ctx.lineWidth = "1.5";
   ctx.strokeStyle="black";
@@ -116,9 +116,9 @@ function testAbsisse(){
 }
 
 function testOrdonnee(){
-  var x = 50;
-  var base = 577;
-  var fin = 37;
+  var x = 60;
+  var base = 587;
+  var fin = 47;
   ctx.beginPath();
   ctx.lineWidth = "1.5";
   ctx.strokeStyle="black";
@@ -134,8 +134,8 @@ function testOrdonnee(){
 }
 
 function testUniteOrdonnee(){
-  var x = 50;
-  var base = 577;
+  var x = 60;
+  var base = 587;
   for(let z = 0; z<45; z++){
     if(z%5 == 0){
       ctx.beginPath();
@@ -160,8 +160,8 @@ function testUniteOrdonnee(){
 }
 
 function testUniteAbcisse(){
-  var x = 50;
-  var base = 577;
+  var x = 60;
+  var base = 587;
   for(let z = 0; z<45; z++){
     if(z%5==0){
       ctx.beginPath();
@@ -176,8 +176,8 @@ function testUniteAbcisse(){
 }
 
 function testNumberAbcisse(){
-  var x = 47;
-  base = 600;
+  var x = 57;
+  base = 610;
   for(let z = 1; z<11; z++){
     if(z>8){
       text = z.toString();
@@ -196,8 +196,8 @@ function testNumberAbcisse(){
 }
 
 function testNumberOrdonnee(){
-  var x = 22.5;
-  base = 582;
+  var x = 32.5;
+  base = 592;
   for(let z = 0; z<45; z++){
     if(z%5==0){
       text = z.toString();
@@ -210,36 +210,38 @@ function testNumberOrdonnee(){
   }
 }
 
+
+
 function titre(){
   ctx.font='20px serif';
   ctx.lineWidth="1";
   text = "Evolution de la quantité de “Oh My God” au fil des saisons pour chaque personnage"
-  ctx.strokeStyle="black";
-  var x = 90;
-  var y = 25;
-  ctx.strokeText(text,x,y);
+  ctx.fillStyle="black";
+  var x = 100;
+  var y = 30;
+  ctx.fillText(text,x,y);
 }
 
 function saison(){
   ctx.font='16px serif';
   ctx.lineWidth="1";
   text = "Saisons"
-  ctx.strokeStyle="black";
-  var x = 760;
-  var y = 620;
-  ctx.strokeText(text,x,y);
+  ctx.fillStyle="black";
+  var x = 770;
+  var y = 630;
+  ctx.fillText(text,x,y);
 }
 
 function quantite(){
-  ctx.font='16px serif';
+  ctx.font='16px " serif';
   ctx.lineWidth="1";
   text = 'Quantité de "Oh my God"';
-  ctx.strokeStyle="black";
+  ctx.fillStyle="black";
   ctx.rotate(-90* Math.PI / 180);
-  var x = 0;
-  var y = 0;
+  var x =0;
+  var y = 10;
   ctx.translate(-200,12);
-  ctx.strokeText(text,x,y);
+  ctx.fillText(text,x,y);
 }
 
 
