@@ -15,6 +15,7 @@ class Saisons extends Migration
     {
         Schema::create('saisons', function (Blueprint $table) {
             $table->id();
+            $table->decimal('nb_avg_omg', 4, 2);
         });
     }
 

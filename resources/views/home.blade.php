@@ -22,7 +22,10 @@
     <section id="hero">
         <div id="cadre">
             <img src="{{ asset('assets/img/cadre.png') }}" alt="">
-            <div class="player">
+            <div id="player">
+                <div id="pause">
+                    <img src="{{ asset('assets/img/Logo.png') }}" alt="">
+                </div>
                 <video class="player__video viewer" src="{{ asset('assets/video/compilOMG.mp4') }}"></video>
             </div>
         </div>
@@ -74,16 +77,17 @@
         </div>
     </section>
     <div class="postit">
+        <span></span>
         <p>Préparer une dinde pour Joey</p>
     </div>
     <section id="books">
         <div id="elePorte">
             <div id="verrou">
                 <div id="verrouContent">
-                    <div>
+                    <div id="bouton">
                         <div></div>
                     </div>
-                    <div>
+                    <div id="ovale">
                         <div></div>
                     </div>
                 </div>
@@ -109,13 +113,19 @@
                     </div>
                     <div id="boule"></div>
                     <div id="cache"></div>
+                    <div id="serrure">
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
                 <div></div> <!-- Bas de poignée -->
                 <div id="poignee_bas"></div>
             </div>
         </div>
         <div class="postit">
-            <p>Préparer une dinde pour Joey</p>
+            <span></span>
+            <span><span></span>Série</span>
+            <span><span></span>livres</span>
         </div>
         <div id="dataBooks">
 
