@@ -2,21 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Episode;
 use App\Models\Personnage;
-use App\Models\Script;
-use Illuminate\Http\Request;
+use App\Models\Saison;
+use App\Models\Source;
 
 class testController extends Controller
 {
     public function test(){
-        $script = Script::all();
-        $script->find(1)->personnage;
-        var_dump($script);
-
         //$personnage = Personnage::all();
         //foreach ($personnage as $someone){
         //    var_dump($someone['nom']);
         //}
-        return view('test');
+        /*
+        $episodes = Saison::find(2)->episode;
+        foreach ($episodes as $episode){
+            echo "<pre>".$episode."</pre>";
+        }*/
+
+        /*
+        $scriptPerso = Personnage::find(1)->script;
+        foreach ($scriptPerso as $script){
+            echo "<pre>".$script."</pre>";
+        }
+
+*/
+        $livres = Source::find(1)->livre;
+
+        return view('test', compact('livres'));
     }
 }

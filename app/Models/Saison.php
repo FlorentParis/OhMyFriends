@@ -11,11 +11,14 @@ class Saison extends Model
 
     public $timestamps = false;
 
-    public function script(){
-        return $this->belongsTo(Script::class, 'id_saison');
+    //Une saison posséde plusieurs épisodes et plusieurs Scripts
+    public function episode(){
+        return $this->hasMany(Episode::class, 'id_saison');
     }
 
-    public function Episode(){
-        return $this->hasMany(Episode::class,'id_saison','id');
+    public function scripts(){
+        return $this->hasMany(Script::class, 'id_saison');
     }
+
+
 }
