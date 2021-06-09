@@ -79,10 +79,10 @@
         <div id="elePorte">
             <div id="verrou">
                 <div id="verrouContent">
-                    <div>
+                    <div id="bouton">
                         <div></div>
                     </div>
-                    <div>
+                    <div id="ovale">
                         <div></div>
                     </div>
                 </div>
@@ -108,6 +108,10 @@
                     </div>
                     <div id="boule"></div>
                     <div id="cache"></div>
+                    <div id="serrure">
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
                 <div></div> <!-- Bas de poignée -->
                 <div id="poignee_bas"></div>
