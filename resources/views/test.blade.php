@@ -1,2 +1,7 @@
-Saison 1: {{ $total_omg_saison['saison1'] }} <br>
-Saison 2: {{ $total_omg_saison['saison2'] }}
+<script>
+    var app = @json($data);
+
+    var app = @json($data, JSON_PRETTY_PRINT);
+
+    console.log(app);
+</script>
