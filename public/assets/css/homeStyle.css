@@ -195,9 +195,62 @@ nav{
     border-radius: 10px;
     font-size: 24px;
 }
+/* Post-it */
+.postit{
+    height: 240px;
+    width: 240px;
+    background: linear-gradient(224.86deg, #FFFFFF -26.73%, #FEE14A 2.52%, #FFEA7C 34.98%, #FEE353 62.37%, #FCEA80 79.44%, rgba(255, 255, 255, 0) 96.38%), #FCE14A;
+    border-radius: 0px 0px 2px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: "Rock Salt";
+    flex-direction: column;
+}
+.postit > span:first-of-type{
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    background-color: #f7d61d;
+    border-radius: 0px 2px 0px 20px;
+}
+.postit > p{
+    text-align: center;
+}
+.postit:first-of-type{
+    position: relative;
+    left: calc(100% - 370px);
+    transform: rotateZ(-15deg);
+}
+.postit:nth-of-type(2){
+    transform: rotateZ(15deg);
+}
+.postit:nth-of-type(2) > span:nth-of-type(2), .postit:nth-of-type(2) > span:nth-of-type(3){
+    display: flex;
+    justify-content: space-between;
+}
+.postit:nth-of-type(2) > span:nth-of-type(2) > span, .postit:nth-of-type(2) > span:nth-of-type(3) > span{
+    width: 60px;
+    height: 4px;
+    display: block;
+    background-color: #000;
+    margin-right: 20px;
+}
+.postit:nth-of-type(2) > span:nth-of-type(2) > span{
+    background-color: rgb(67, 67, 67);
+    margin-bottom: 50px;
+}
+.postit:nth-of-type(2) > span:nth-of-type(3) > span{
+    background-color: rgb(184, 184, 184);
+}
 /* Books */
 #books{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #books #elePorte{
     display: flex;
@@ -327,6 +380,7 @@ nav{
     background-color: #fff;
     height: 470px;
     width: 700px;
+    margin-right: 90px;
 }
 /* Persos */
 /* Data Persos */
@@ -336,7 +390,6 @@ section#persos #dataPersos{
     background-color: #fff;
     margin:0 90px;
 }
-
 /* Footer */
 footer{
     display: grid;

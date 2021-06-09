@@ -73,6 +73,7 @@
         </div>
     </section>
     <div class="postit">
+        <span></span>
         <p>Préparer une dinde pour Joey</p>
     </div>
     <section id="books">
@@ -114,7 +115,9 @@
             </div>
         </div>
         <div class="postit">
-            <p>Préparer une dinde pour Joey</p>
+            <span></span>
+            <span><span></span>Série</span>
+            <span><span></span>livres</span>
         </div>
         <div id="dataBooks">
 
