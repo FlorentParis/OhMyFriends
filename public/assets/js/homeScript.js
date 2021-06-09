@@ -1,10 +1,18 @@
 /* Cadre */
 const cadre = document.querySelector('#cadre');
-const player = document.querySelector('.player');
+const player = document.querySelector('#player');
 const video = player.querySelector('.viewer');
+const pause = document.querySelector('#pause');
+
+pause.style.display = "flex";
 
 function togglePlay() {
   const method = video.paused ? 'play' : 'pause';
+  if(pause.style.display == "flex"){
+    pause.style.display = "none";
+  }else{
+    pause.style.display = "flex";
+  }
   video[method]();
 }
 

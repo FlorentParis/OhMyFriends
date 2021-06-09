@@ -21,7 +21,10 @@
     <section id="hero">
         <div id="cadre">
             <img src="{{ asset('assets/img/cadre.png') }}" alt="">
-            <div class="player">
+            <div id="player">
+                <div id="pause">
+                    <img src="{{ asset('assets/img/Logo.png') }}" alt="">
+                </div>
                 <video class="player__video viewer" src="{{ asset('assets/video/compilOMG.mp4') }}"></video>
             </div>
         </div>
