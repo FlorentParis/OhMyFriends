@@ -13,13 +13,13 @@ class Script extends Model
 
     public $timestamps = false;
 
-    //RelationShip :
-    public function personnage(){
-        return $this->hasOne(Personnage::class, 'id_personnage', 'id');
+    //RelationShip : un script correspond a une saison et un personnage
+    public function saison(){
+        return $this->belongsTo(Saison::class, 'id_saison');
     }
 
-    public function saison(){
-        return $this->hasMany(Saison::class, 'id_saison', 'id');
+    public function personnage(){
+        return $this->belongsTo(Personnage::class, 'id_personnage');
     }
 
 }

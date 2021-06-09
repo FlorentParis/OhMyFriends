@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Livre extends Model
 {
     protected $table = 'livres';
+
     public $timestamps = false;
-/*     protected $primarykey['id', 'id_source'];
- */    public function Source(){
-        return $this->hasOne(Source::class,'id_source','id');
+
+    public function source(){
+        return $this->belongsTo(Source::class,'id_source');
     }
 }
 

@@ -11,6 +11,6 @@ class Personnage extends Model
     public $timestamps = false;
 
     public function script(){
-        return $this->belongsTo(Script::class, 'id_saison');
+        return $this->hasMany(Script::class, 'id_personnage');
     }
 }
