@@ -349,9 +349,6 @@ footer{
     margin-top: 50px;
     align-items: center;
 }
-<<<<<<< HEAD
-
-=======
 footer > div:first-of-type{
     padding-left: 40px;
 }
@@ -359,4 +356,3 @@ footer > div:last-of-type > p{
     color: #FEE565;
     padding: 40px;
 }
->>>>>>> 18e5fb1dfcc776411a7148d1cc13b0b499e3adc3
