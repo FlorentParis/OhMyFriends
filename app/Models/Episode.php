@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+
 
 class Episode extends Model
 {
@@ -16,4 +18,12 @@ class Episode extends Model
         return $this->belongsTo(Saison::class, 'id_saison');
     }
 
+    public static function getAudienceEpisode($id){
+        $audienceEpisodes = DB::table('episodes')
+                    ->select('audience')
+                    ->where('id', $id)
+                    ->get();
+
+        return $audienceEpisodes;
+    }
 }

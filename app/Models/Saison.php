@@ -34,5 +34,11 @@ class Saison extends Model
         return $total;
     }
 
+    public static function getAudienceSaison($id_saison){
+        $audienceSaison = DB::table('episodes')
+                    ->where('id', $id_saison)
+                    ->avg('audience');
 
+        return $audienceSaison;
+    }
 }
