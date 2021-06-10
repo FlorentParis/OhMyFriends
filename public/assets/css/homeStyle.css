@@ -307,16 +307,18 @@ nav{
 .horlogeTab > span{
     font-size: 28px;
     padding-bottom: 10px;
+    color: #fff;
 }
 .horlogeTab > div{
     display: flex;
     height: 50px;
-    width: 150px;
+    width: 180px;
     justify-content: center;
     align-items: center;
     border: 3px solid #000;
     border-radius: 10px;
     font-size: 24px;
+    background-color: #fff;
 }
 #horlogeContainer > #horloge > div:nth-of-type(5){
     top: 7px;

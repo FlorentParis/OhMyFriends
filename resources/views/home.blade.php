@@ -90,21 +90,21 @@
                 <div></div>
             </div>
             <div class="horlogeTab">
-                <span>Audience totale</span>
+                <span>Audience Moyenne</span>
                 <div>
-                    <span>759.3 M</span>
+                    <span class="horlogeData">759.3 M</span>
                 </div>
             </div>
             <div class="horlogeTab">
-                <span>Dans les livres</span>
+                <span>Dans les Livres</span>
                 <div>
-                    <span>759.3 M</span>
+                    <span class="horlogeData">759.3 M</span>
                 </div>
             </div>
             <div class="horlogeTab">
-                <span>Dans la saison</span>
+                <span>Dans la Saison</span>
                 <div>
-                    <span>759.3 M</span>
+                    <span class="horlogeData">759.3 M</span>
                 </div>
             </div>
             <div class="vis">
