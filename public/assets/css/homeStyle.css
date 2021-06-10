@@ -509,7 +509,22 @@ nav{
     height: 470px;
     width: 700px;
     margin-right: 90px;
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    
 }
+#OMGContainer{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#curseur{
+    padding:0;
+}
+
 /* Persos */
 #persos{
     position: relative;

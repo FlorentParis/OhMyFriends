@@ -148,7 +148,8 @@
             <span><span></span>Livres</span>
         </div>
         <div id="dataBooks">
-
+        <div id="OMGContainer"></div>
+            <input id="curseur" type="range" value="50">
         </div>
     </section>
     <section id="persos">

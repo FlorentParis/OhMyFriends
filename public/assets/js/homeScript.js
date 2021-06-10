@@ -272,3 +272,47 @@ testpoint(Joey, "#000AFF");
 titre();
 saison();
 quantite();
+
+
+
+/*OMG Book/Serie*/
+
+const tableau = document.querySelector('#dataBooks');
+const curseur = document.querySelector('#curseurDataBooks');
+
+const OMGWidth = tableau.width = tableau.offsetWidth;
+const OMGHeight = tableau.height = tableau.offsetHeight;
+
+console.log(OMGWidth);
+console.log(OMGHeight);
+
+const OMGContainer = document.querySelector("#OMGContainer");
+
+
+
+function generateOMG(amount, type){
+  for(let z =0; z<amount; z++){
+    let OMG = document.createElement("span");
+    if(type == "book"){
+      OMG.style.color = "#B8B8B8";
+      OMG.style.fontFamily = "Times New Roman";
+      OMG.style.fontSize = "36px";
+    }else if(type == "serie"){
+      OMG.style.color = "#434343";
+      OMG.style.fontFamily = "Rock Salt";
+      OMG.style.fontSize = "24px";
+    }
+    OMG.innerText = "OMG";
+    OMG.style.position ="absolute";
+    OMG.style.bottom = getRandomInt(OMGHeight * 0.79).toString() + "px";
+    OMG.style.left=getRandomInt(OMGWidth * 0.84).toString() + "px";
+    OMGContainer.appendChild(OMG);
+  }
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+generateOMG(10, "book");
+generateOMG(10, "serie");
