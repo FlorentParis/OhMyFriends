@@ -172,8 +172,9 @@
             <span><span></span>Livres</span>
         </div>
         <div id="dataBooks">
-        <div id="OMGContainer"></div>
-            <input id="curseur" type="range" value="50">
+            <div id="OMGContainer"></div>
+            <span id="valeur_cursor">Saison 1</span>
+            <input id="curseur" type="range" min="1" max="10" value="1">
             <div class="scotch"></div>
             <div class="scotch"></div>
 

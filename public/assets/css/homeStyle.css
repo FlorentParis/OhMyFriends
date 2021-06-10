@@ -590,7 +590,7 @@ nav{
 /* Data Books */
 #books #dataBooks{
     position: relative;
-    background-color: #fff;
+    background-color: #ECECEC;
     height: 470px;
     width: 700px;
     margin-right: 90px;
@@ -609,6 +609,21 @@ nav{
 #curseur{
     padding:0;
 }
+
+#valeur_cursor{
+    position: absolute;
+    height: 24px;
+    width: 100px;
+    font-size: 24px;
+    background-color: #66aff6;
+    color:#fff;
+    font-weight: bold;
+    top: 435px;
+    text-align: center;
+    z-index:2;
+}
+
+
 #dataBooks .scotch{
     position: absolute;
     width: 150px;

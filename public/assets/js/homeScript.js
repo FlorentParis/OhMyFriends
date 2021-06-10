@@ -29,7 +29,6 @@ burger.addEventListener('click', () => {
 
 const grillesContainer = document.querySelector('#grillesContainer');
 let nbrGrilles = grillesContainer.offsetHeight / 15;
-console.log(nbrGrilles);
 for(let i = 0; i < nbrGrilles - 5; i++){
   creaGrille();
 }
@@ -326,6 +325,8 @@ quantite();
 
 const tableau = document.querySelector('#dataBooks');
 const curseur = document.querySelector('#curseurDataBooks');
+const cursorValue = document.querySelector('#valeur_cursor');
+const cursor = document.querySelector('#curseur');
 
 const OMGWidth = tableau.width = tableau.offsetWidth;
 const OMGHeight = tableau.height = tableau.offsetHeight;
@@ -350,6 +351,7 @@ function generateOMG(amount, type){
     OMG.style.position ="absolute";
     OMG.style.bottom = getRandomInt(OMGHeight * 0.79).toString() + "px";
     OMG.style.left=getRandomInt(OMGWidth * 0.84).toString() + "px";
+    OMG.classList.toggle("OMGspan");
     OMGContainer.appendChild(OMG);
   }
 }
@@ -360,3 +362,98 @@ function getRandomInt(max) {
 
 generateOMG(10, "book");
 generateOMG(10, "serie");
+
+
+cursor.oninput = (()=>{
+  let value = cursor.value;
+  cursorValue.textContent = "Saison " + value;
+  cursorValue.style.left = "10%"; /*  <--   Sélectionner postion curseur pour être la même que la <span>*/
+  console.log(value);
+  let suppr = document.getElementsByClassName('OMGspan')
+  switch(value){
+    case "1":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    case "2":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    case "3":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    case "4":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    case "5":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    case "6":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    case "7":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    case "8":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    case "9":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    case "10":
+      while(suppr[0]){
+        suppr[0].parentNode.removeChild(suppr[0]);
+      };
+      generateOMG(10, "book");
+      generateOMG(10, "serie");
+      break;
+    default:
+      break;
+    
+  }
+
+})
+
+function elementPosition (a) {
+  let b = a.getBoundingClientRect();
+  return {
+    clientX: a.offsetLeft,
+    clientY: a.offsetTop,
+    viewportX: (b.x || b.left),
+    viewportY: (b.y || b.top)
+  }
+}
