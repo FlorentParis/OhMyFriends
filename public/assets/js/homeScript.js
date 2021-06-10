@@ -1,3 +1,32 @@
+/* Interphone */
+const interphone = document.querySelector('#interphone');
+const burger = document.querySelector('#burger');
+let bars = burger.querySelectorAll('.bar');
+
+let displayMenu = false;
+
+burger.addEventListener('click', () => {
+  if(displayMenu == false){
+    interphone.style.left = "0%";
+    bars[0].style.transform = "rotateZ(45deg)";
+    bars[0].style.width = "31px";
+    bars[1].style.opacity = "0";
+    bars[2].style.transform = "rotateZ(-45deg)";
+    bars[2].style.width = "31px";
+    displayMenu = true;
+    document.body.classList.add('bodyStopScroll');
+  }else if (displayMenu == true){
+    interphone.style.left = "-100%";
+    bars[0].style.transform = "rotateZ(0deg)";
+    bars[0].style.width = "40px";
+    bars[1].style.opacity = "1";
+    bars[2].style.transform = "rotateZ(0deg)";
+    bars[2].style.width = "40px";
+    displayMenu = false;
+    document.body.classList.remove('bodyStopScroll');
+  }
+});
+
 /* Cadre */
 const cadre = document.querySelector('#cadre');
 const player = document.querySelector('#player');
@@ -24,7 +53,6 @@ let deg = 18;
 
 line.forEach(element => {
   element.style.transform = "rotateZ(" + deg + "deg)";
-  console.log(line);
   deg += 36;
 })
 

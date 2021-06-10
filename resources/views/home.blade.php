@@ -19,6 +19,9 @@
             <div class="bar"></div>
         </div>
     </nav>
+    <section id="interphone">
+        
+    </section>
     <section id="hero">
         <div id="cadre">
             <img src="{{ asset('assets/img/cadre.png') }}" alt="">
@@ -150,16 +153,22 @@
         <div id="dataBooks">
         <div id="OMGContainer"></div>
             <input id="curseur" type="range" value="50">
+            <div class="scotch"></div>
+            <div class="scotch"></div>
+
         </div>
     </section>
     <section id="persos">
+        <div class="scotch"></div>
         <div id="dataPersos">
             <canvas id="myCanvas">
                 <p>Add suitable fallback here.</p>
             </canvas>
         </div>
-        <div>
-
+        <div id="photo">
+            <div class="scotch"></div>
+            <div class="scotch"></div>
+            <img src="{{ asset('assets/img/pic1.jpg') }}" alt="Photo">
         </div>
         <div class="gond">
             <div class="vis">
