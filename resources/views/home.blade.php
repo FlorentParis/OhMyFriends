@@ -50,16 +50,16 @@
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
-                    <span>S1</span>
-                    <span>S2</span>
-                    <span>S3</span>
-                    <span>S4</span>
-                    <span>S5</span>
-                    <span>S6</span>
-                    <span>S7</span>
-                    <span>S8</span>
-                    <span>S9</span>
-                    <span>S10</span>
+                    <span class="numberHorloge">S1</span>
+                    <span class="numberHorloge">S2</span>
+                    <span class="numberHorloge">S3</span>
+                    <span class="numberHorloge">S4</span>
+                    <span class="numberHorloge">S5</span>
+                    <span class="numberHorloge">S6</span>
+                    <span class="numberHorloge">S7</span>
+                    <span class="numberHorloge">S8</span>
+                    <span class="numberHorloge">S9</span>
+                    <span class="numberHorloge">S10</span>
                     <div id="aiguille">
                         <span></span>
                         <span></span>

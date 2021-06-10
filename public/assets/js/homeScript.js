@@ -37,12 +37,9 @@ pause.style.display = "flex";
 
 function togglePlay() {
   const method = video.paused ? 'play' : 'pause';
-  if(pause.style.display == "flex"){
-    pause.style.display = "none";
-  }else{
-    pause.style.display = "flex";
-  }
+  const rep = (pause.style.display === 'none') ? 'flex' : 'none';
   video[method]();
+  pause.style.display = rep;
 }
 
 cadre.addEventListener('click', togglePlay);
@@ -55,6 +52,15 @@ line.forEach(element => {
   element.style.transform = "rotateZ(" + deg + "deg)";
   deg += 36;
 })
+
+const numberHorloge = document.querySelectorAll('.numberHorloge');
+const aiguille = document.querySelector('#aiguille');
+
+numberHorloge.forEach(element => {
+  element.addEventListener('click', () => {
+    aiguille.style.transform = "rotateZ(" + 36 * (element.textContent.substr(1) - 1) + "deg)";
+  })
+});
 
 /*Canvas Perso*/
 const canvas = document.querySelector('#myCanvas');
