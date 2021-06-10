@@ -20,7 +20,28 @@
         </div>
     </nav>
     <section id="interphone">
-        
+        <div>
+            <div>
+                <div id="grillesContainer">
+
+                </div>
+                <div></div>
+            </div>
+            <div>
+                <div class="btnContainer">
+                    <span>NAME</span>
+                    <span></span>
+                </div>
+                <div class="btnContainer">
+                    <span>NAME</span>
+                    <span></span>
+                </div>
+                <div class="btnContainer">
+                    <span>NAME</span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="hero">
         <div id="cadre">
