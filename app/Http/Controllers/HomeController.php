@@ -7,9 +7,9 @@ use App\Models\Personnage;
 use App\Models\Saison;
 use App\Models\Livre;
 
-class testController extends Controller
+class HomeController extends Controller
 {
-    public function test(){
+    public function home(){
         $data=[
             'omgSaison' => self::getTotalOmgPerSeason(),
             'omgPersoSerie'=> self::getOmgCharacterSerie(),
@@ -19,7 +19,7 @@ class testController extends Controller
             'audienceSeason'=>self::getAudienceSeason()
         ];
         $data = json_encode($data);
-        return view('test', compact('data'));
+        return view('home', compact('data'));
     }
 
     public function getTotalOmgPerSeason(): array
@@ -79,10 +79,10 @@ class testController extends Controller
             ];
             foreach ($scripts as $script){
                 array_push($array['nb_omg'], $script);
-                echo"<pre>".$script."</pre>";
+                //echo"<pre>".$script."</pre>";
             }
             array_push($characOmg, $array);
-            echo "-------";
+            //echo "-------";
         }
         return $characOmg;
     }

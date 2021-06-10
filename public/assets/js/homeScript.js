@@ -1,3 +1,7 @@
+//Récuperation du JSON
+const test = document.getElementById('test').value;
+console.log(JSON.parse(test));
+
 /* Interphone */
 const interphone = document.querySelector('#interphone');
 const burger = document.querySelector('#burger');
@@ -196,7 +200,7 @@ function testUniteOrdonnee(){
       ctx.stroke();
       base = base - 12;
     }
-    
+
   }
 
 }
@@ -248,7 +252,7 @@ function testNumberOrdonnee(){
       ctx.strokeText(text,x,base);
       base = base - 60;
     }
-    
+
   }
 }
 

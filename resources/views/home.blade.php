@@ -12,6 +12,7 @@
     <title>Oh My Friends</title>
 </head>
 <body>
+    <input type="hidden" id="test" value="{{$data}}">
     <nav>
         <div id="burger">
             <div class="bar"></div>
@@ -20,7 +21,7 @@
         </div>
     </nav>
     <section id="interphone">
-        
+
     </section>
     <section id="hero">
         <div id="cadre">
