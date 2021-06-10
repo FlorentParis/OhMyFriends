@@ -31,6 +31,19 @@ burger.addEventListener('click', () => {
   }
 });
 
+const grillesContainer = document.querySelector('#grillesContainer');
+let nbrGrilles = grillesContainer.offsetHeight / 15;
+console.log(nbrGrilles);
+for(let i = 0; i < nbrGrilles - 5; i++){
+  creaGrille();
+}
+
+function creaGrille(){
+  let grille = document.createElement("div");
+  grille.className = "grille";
+  grillesContainer.appendChild(grille);
+}
+
 /* Cadre */
 const cadre = document.querySelector('#cadre');
 const player = document.querySelector('#player');
@@ -320,9 +333,6 @@ const curseur = document.querySelector('#curseurDataBooks');
 
 const OMGWidth = tableau.width = tableau.offsetWidth;
 const OMGHeight = tableau.height = tableau.offsetHeight;
-
-console.log(OMGWidth);
-console.log(OMGHeight);
 
 const OMGContainer = document.querySelector("#OMGContainer");
 
