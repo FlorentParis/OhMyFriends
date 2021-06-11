@@ -37,7 +37,7 @@ Un journal de bord, mis à jour quotidiennement, a permis de suivre notre avance
 #### Back :
 * Laravel
 * PHP
-* Lodash
+* MySQL
 </br>
 
 ## Les différentes versions :
