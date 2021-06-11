@@ -371,7 +371,7 @@ generateOMG(10, "serie");
 cursor.oninput = (()=>{
   let value = cursor.value;
   cursorValue.textContent = "Saison " + value;
-  cursorValue.style.left = "10%"; /*  <--   Sélectionner postion curseur pour être la même que la <span>*/
+  cursorValue.style.left = "10%"; /*  <--   Sélectionner position curseur pour être la même que la <span>*/
   console.log(value);
   let suppr = document.getElementsByClassName('OMGspan')
   switch(value){
