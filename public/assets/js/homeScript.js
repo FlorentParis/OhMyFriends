@@ -153,12 +153,12 @@ function courbe(courbe){
   }
 }
 
-Rachel = [18, 27, 23, 25, 31, 37, 35, 26, 17, 25];
-Monica = [14,27,23,31,16,25,19,20,28,36];
-Phoebe = [8,18,24,13,15,15,25,19,28,9];
-Ross =[6,9,6,8,9,12,12,9,25,21];
-Chandler = [9,3,7,7,11,18,8,7,4,5];
-Joey=[3,6,4,4,5,9,4,13,9,7];
+Rachel = data['omgPersoSaison'][0]['nb_omg'];
+Monica = data['omgPersoSaison'][1]['nb_omg'];
+Phoebe = data['omgPersoSaison'][2]['nb_omg']
+Ross =data['omgPersoSaison'][3]['nb_omg']
+Chandler =data['omgPersoSaison'][4]['nb_omg']
+Joey=data['omgPersoSaison'][5]['nb_omg']
 
 function testpoint(points, color){
   ctx.beginPath();
@@ -413,6 +413,7 @@ function generateOMG(amount, type){
       OMG.style.color = "#434343";
       OMG.style.fontFamily = "Rock Salt";
       OMG.style.fontSize = "24px";
+      OMG.style.zIndex=2;
     }
     OMG.innerText = "OMG";
     OMG.style.position ="absolute";
@@ -427,8 +428,29 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-generateOMG(10, "book");
-generateOMG(10, "serie");
+const dataOMGSaison = [];
+
+let year = 1994;
+
+for(let x = 0; x< data['omgSaison'].length; x++){
+  let temp = [];
+  temp[0] =data['omgSaison'][x][x+1];
+  temp[1] = "serie";
+  temp[2] = data['qteOmgBooks'][x][year];
+  temp[3] = "book";
+  dataOMGSaison[x] = temp;
+  year = year + 1
+}
+
+console.log(dataOMGSaison)
+
+
+function generateOMGS1(){
+  generateOMG(dataOMGSaison[0][0], dataOMGSaison[0][1]);
+  generateOMG(dataOMGSaison[0][2], dataOMGSaison[0][3]);
+}
+
+generateOMGS1();
 
 
 cursor.oninput = (()=>{
@@ -443,8 +465,8 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });
       markS1.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
+      generateOMG(dataOMGSaison[0][0], dataOMGSaison[0][1]);
+      generateOMG(dataOMGSaison[0][2], dataOMGSaison[0][3]);
       break;
     case "2":
       while(suppr[0]){
@@ -454,8 +476,8 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });
       markS2.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
+      generateOMG(dataOMGSaison[1][0], dataOMGSaison[1][1]);
+      generateOMG(dataOMGSaison[1][2], dataOMGSaison[1][3]);
       break;
     case "3":
       while(suppr[0]){
@@ -465,8 +487,8 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });      
       markS3.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
+      generateOMG(dataOMGSaison[2][0], dataOMGSaison[2][1]);
+      generateOMG(dataOMGSaison[2][2], dataOMGSaison[2][3]);
       break;
     case "4":
       while(suppr[0]){
@@ -476,8 +498,8 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });
       markS4.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
+      generateOMG(dataOMGSaison[3][0], dataOMGSaison[3][1]);
+      generateOMG(dataOMGSaison[3][2], dataOMGSaison[3][3]);
       break;
     case "5":
       while(suppr[0]){
@@ -487,8 +509,8 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });
       markS5.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
+      generateOMG(dataOMGSaison[4][0], dataOMGSaison[4][1]);
+      generateOMG(dataOMGSaison[4][2], dataOMGSaison[4][3]);
       break;
     case "6":
       while(suppr[0]){
@@ -498,8 +520,8 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });
       markS6.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
+      generateOMG(dataOMGSaison[5][0], dataOMGSaison[5][1]);
+      generateOMG(dataOMGSaison[5][2], dataOMGSaison[5][3]);
       break;
     case "7":
       while(suppr[0]){
@@ -509,9 +531,9 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });
       markS7.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
-      break;
+      generateOMG(dataOMGSaison[6][0], dataOMGSaison[6][1]);
+      generateOMG(dataOMGSaison[6][2], dataOMGSaison[6][3]);
+      break;5
     case "8":
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
@@ -520,8 +542,8 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });
       markS8.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
+      generateOMG(dataOMGSaison[7][0], dataOMGSaison[7][1]);
+      generateOMG(dataOMGSaison[7][2], dataOMGSaison[7][3]);
       break;
     case "9":
       while(suppr[0]){
@@ -531,8 +553,8 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });
       markS9.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
+      generateOMG(dataOMGSaison[8][0], dataOMGSaison[8][1]);
+      generateOMG(dataOMGSaison[8][2], dataOMGSaison[8][3]);
       break;
     case "10":
       while(suppr[0]){
@@ -542,8 +564,8 @@ cursor.oninput = (()=>{
         element.style.opacity = "0";
       });  
       markS10.style.opacity="100";
-      generateOMG(10, "book");
-      generateOMG(10, "serie");
+      generateOMG(dataOMGSaison[9][0], dataOMGSaison[9][1]);
+      generateOMG(dataOMGSaison[9][2], dataOMGSaison[9][3]);
       break;
     default:
       break;
