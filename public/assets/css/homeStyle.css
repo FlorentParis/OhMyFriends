@@ -599,6 +599,7 @@ nav{
     display: flex;
     flex-direction: column;
     padding:20px;
+    padding-bottom: 5px;
     
 }
 #OMGContainer{
@@ -610,6 +611,9 @@ nav{
 
 #curseur{
     padding:0;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #valeur_cursor{
@@ -624,6 +628,22 @@ nav{
     text-align: center;
     z-index:2;
 }
+
+#tickmarks{
+    display:flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.marksaison{
+    opacity: 0;
+}
+#markS1{
+    opacity: 100;
+}
+
 
 
 #dataBooks .scotch{

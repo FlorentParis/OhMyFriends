@@ -336,6 +336,21 @@ const tableau = document.querySelector('#dataBooks');
 const curseur = document.querySelector('#curseurDataBooks');
 const cursorValue = document.querySelector('#valeur_cursor');
 const cursor = document.querySelector('#curseur');
+const markS1 = document.querySelector('#markS1');
+const markS2 = document.querySelector('#markS2');
+const markS3 = document.querySelector('#markS3');
+const markS4 = document.querySelector('#markS4');
+const markS5 = document.querySelector('#markS5');
+const markS6 = document.querySelector('#markS6');
+const markS7 = document.querySelector('#markS7');
+const markS8 = document.querySelector('#markS8');
+const markS9 = document.querySelector('#markS9');
+const markS10 = document.querySelector('#markS10');
+
+const markALL = document.querySelectorAll('.marksaison');
+
+console.log(markALL);
+
 
 const OMGWidth = tableau.width = tableau.offsetWidth;
 const OMGHeight = tableau.height = tableau.offsetHeight;
@@ -358,8 +373,8 @@ function generateOMG(amount, type){
     }
     OMG.innerText = "OMG";
     OMG.style.position ="absolute";
-    OMG.style.bottom = getRandomInt(OMGHeight * 0.79).toString() + "px";
-    OMG.style.left=getRandomInt(OMGWidth * 0.84).toString() + "px";
+    OMG.style.bottom = getRandomInt(OMGHeight * 0.75).toString() + "px";
+    OMG.style.left=getRandomInt(OMGWidth * 0.82).toString() + "px";
     OMG.classList.toggle("OMGspan");
     OMGContainer.appendChild(OMG);
   }
@@ -375,15 +390,16 @@ generateOMG(10, "serie");
 
 cursor.oninput = (()=>{
   let value = cursor.value;
-  cursorValue.textContent = "Saison " + value;
-  cursorValue.style.left = "10%"; /*  <--   Sélectionner position curseur pour être la même que la <span>*/
-  console.log(value);
   let suppr = document.getElementsByClassName('OMGspan')
   switch(value){
     case "1":
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });
+      markS1.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -391,6 +407,10 @@ cursor.oninput = (()=>{
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });
+      markS2.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -398,6 +418,10 @@ cursor.oninput = (()=>{
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });      
+      markS3.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -405,6 +429,10 @@ cursor.oninput = (()=>{
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });
+      markS4.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -412,6 +440,10 @@ cursor.oninput = (()=>{
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });
+      markS5.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -419,6 +451,10 @@ cursor.oninput = (()=>{
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });
+      markS6.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -426,6 +462,10 @@ cursor.oninput = (()=>{
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });
+      markS7.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -433,6 +473,10 @@ cursor.oninput = (()=>{
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });
+      markS8.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -440,6 +484,10 @@ cursor.oninput = (()=>{
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });
+      markS9.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -447,6 +495,10 @@ cursor.oninput = (()=>{
       while(suppr[0]){
         suppr[0].parentNode.removeChild(suppr[0]);
       };
+      markALL.forEach(element =>{
+        element.style.opacity = "0";
+      });  
+      markS10.style.opacity="100";
       generateOMG(10, "book");
       generateOMG(10, "serie");
       break;
@@ -466,3 +518,5 @@ function elementPosition (a) {
     viewportY: (b.y || b.top)
   }
 }
+
+
