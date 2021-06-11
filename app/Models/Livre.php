@@ -19,7 +19,7 @@ class Livre extends Model
     public static function getVarNbOmgSource($annee){
         return DB::table('livres')
                     ->where('annee', $annee)
-                    ->orWhere('id_source', '!=', '6')
+                    ->Where('id_source', '!=', '6')                    
                     ->avg('omg_count');
     }
 }
