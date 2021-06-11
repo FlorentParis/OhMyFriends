@@ -1,0 +1,64 @@
+@media (max-width: 1024px){
+    /* Cadre */
+    #hero #cadre > img{
+        width: 60vw;
+    }
+    /* Horloge */
+    #horloge{
+        flex-direction: column;
+        width: auto;
+        height: 40%;
+        padding: 75px 50px;
+    }
+    .horlogeTab{
+        padding-top: 25px;
+    }
+    /* Books */
+    #books{
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        top: -200px;
+    }
+    #books .postit{
+        position: absolute;
+        left: calc(100% - 370px);
+        top: 450px;
+    }
+    #books #dataBooks{
+        align-self: center;
+        margin: 50px 0;
+    }
+    /* Persos */
+    #persos{
+        height: auto;
+        overflow: visible;
+    }
+    #persos #dataPersos{
+        position: relative;
+    }
+    #photo{
+        top: -230px;
+        right: 25px;
+    }
+    #photo > img{
+        width: 287.5px;
+        height: 200px;
+    }
+    #photo > .scotch:nth-of-type(1){
+        left: 220px;
+        width: 100px;
+        height: 35px;
+        transform: rotate(45deg);
+    }
+    #photo > .scotch:nth-of-type(2){
+        left: -40px;
+        width: 100px;
+        height: 35px;
+    }
+    /* Footer */
+    footer > div:last-of-type > p{
+        padding: 20px;
+        font-size: 8px;
+    }
+}
