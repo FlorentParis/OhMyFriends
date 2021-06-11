@@ -30,16 +30,16 @@
             </div>
             <div>
                 <div class="btnContainer">
-                    <span>NAME</span>
-                    <span></span>
+                    <span>Horloge</span>
+                    <a href='#horlogeContainer'></a>
                 </div>
                 <div class="btnContainer">
-                    <span>NAME</span>
-                    <span></span>
+                    <span>Impact culturel</span>
+                    <a href ='#books'></a>
                 </div>
                 <div class="btnContainer">
-                    <span>NAME</span>
-                    <span></span>
+                    <span>Personnages</span>
+                    <a href='#persos'></a>
                 </div>
             </div>
         </div>
@@ -92,19 +92,19 @@
             <div class="horlogeTab">
                 <span>Audience Moyenne</span>
                 <div>
-                    <span class="horlogeData"></span>
+                    <span class="horlogeData">759.3 M</span>
                 </div>
             </div>
             <div class="horlogeTab">
                 <span>Dans les Livres</span>
                 <div>
-                    <span class="horlogeData"></span>
+                    <span class="horlogeData">759.3 M</span>
                 </div>
             </div>
             <div class="horlogeTab">
                 <span>Dans la Saison</span>
                 <div>
-                    <span class="horlogeData"></span>
+                    <span class="horlogeData">759.3 M</span>
                 </div>
             </div>
             <div class="vis">
