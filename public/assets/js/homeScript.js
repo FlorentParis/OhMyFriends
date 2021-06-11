@@ -6,11 +6,12 @@ console.log(data);
 /* Interphone */
 const interphone = document.querySelector('#interphone');
 const burger = document.querySelector('#burger');
+const btnInterphone = document.querySelectorAll('a');
 let bars = burger.querySelectorAll('.bar');
 
 let displayMenu = false;
 
-burger.addEventListener('click', () => {
+function Menu(){
   if(displayMenu == false){
     interphone.style.left = "0%";
     bars[0].style.transform = "rotateZ(45deg)";
@@ -29,8 +30,18 @@ burger.addEventListener('click', () => {
     bars[2].style.width = "40px";
     displayMenu = false;
     document.body.classList.remove('bodyStopScroll');
-  }
+  };
+};
+
+burger.addEventListener('click', () => {
+  Menu();
 });
+
+for(let i=0; i<=2; i++){
+  btnInterphone[i].addEventListener('click', () => {
+    Menu();
+  });
+};
 
 const grillesContainer = document.querySelector('#grillesContainer');
 let nbrGrilles = grillesContainer.offsetHeight / 15;

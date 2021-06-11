@@ -97,7 +97,7 @@ nav{
     font-family: "Open-Sans-Hebrew";
     font-weight: 700;
 }
-#interphone .btnContainer > span:last-of-type{
+#interphone .btnContainer > a:last-of-type{
     margin-top: 10px;
     height: 30px;
     width: 80px;
