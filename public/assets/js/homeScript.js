@@ -126,7 +126,8 @@ cache.addEventListener("click", () => {
   }
 });
 
-/*Canvas Perso*/
+/*Canvas OMG Personnage*/
+/*Initialisation des varaibles et récupérations des éléments*/
 const canvas = document.querySelector('#myCanvas');
 const fenetre = document.querySelector('#dataPersos');
 const width = canvas.width = fenetre.offsetWidth;
@@ -136,23 +137,7 @@ const ctx = canvas.getContext('2d');
 ctx.fillStyle = '#f2f2f2';
 ctx.fillRect(0,0,width,height);
 
-function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
-
-function unite(point) {
-  return point * 10;
-}
-
-function courbe(courbe){
-  ctx.beginPath();
-  ctx.moveTo(courbe.points.x[0], courbe.points.y[0])
-  for(let z = 0; z<courbe.points.length  ; z++){
-    unite(courbe.points.x[z], courbe.points.y[z]);
-    ctx.lineTo(unite(courbe.points.x[z]),unite(courbe.points.y[z]));
-  }
-}
-
+/*Récupération de la data OMG pour chaque personnage en fonction des saisons */
 Rachel = data['omgPersoSaison'][0]['nb_omg'];
 Monica = data['omgPersoSaison'][1]['nb_omg'];
 Phoebe = data['omgPersoSaison'][2]['nb_omg']
@@ -160,7 +145,8 @@ Ross =data['omgPersoSaison'][3]['nb_omg']
 Chandler =data['omgPersoSaison'][4]['nb_omg']
 Joey=data['omgPersoSaison'][5]['nb_omg']
 
-function testpoint(points, color){
+/* Trace la courbe en fonction de la valeur des points donnés*/
+function point(points, color){
   ctx.beginPath();
   ctx.lineWidth = "1";
   ctx.strokeStyle=color;
@@ -174,7 +160,8 @@ function testpoint(points, color){
   ctx.stroke();
 }
 
-function testGrilleVertical(){
+/*Trace les lignes vertical du graphe*/
+function GrilleVertical(){
   var x = 60;
   var base = 587;
   var fin = 47;
@@ -189,7 +176,8 @@ function testGrilleVertical(){
   }
 }
 
-function testGrilleHorizontal(){
+/*Trace les lignes horizontal du graphe*/
+function GrilleHorizontal(){
   var y = 587;
   var base = 60;
   var fin = 816
@@ -204,7 +192,8 @@ function testGrilleHorizontal(){
   }
 }
 
-function testAbsisse(){
+/*Trace la ligne des abcisses du graphe*/
+function Absisse(){
   var y = 587;
   var base = 60;
   var fin = 816;
@@ -221,7 +210,8 @@ function testAbsisse(){
   ctx.stroke();
 }
 
-function testOrdonnee(){
+/*Trace la ligne des ordonnées du graphe*/
+function Ordonnee(){
   var x = 60;
   var base = 587;
   var fin = 47;
@@ -239,7 +229,8 @@ function testOrdonnee(){
   ctx.stroke();
 }
 
-function testUniteOrdonnee(){
+/*Trace les unités de la ligne des abcisses du graphe*/
+function UniteOrdonnee(){
   var x = 60;
   var base = 587;
   for(let z = 0; z<45; z++){
@@ -265,7 +256,8 @@ function testUniteOrdonnee(){
 
 }
 
-function testUniteAbcisse(){
+/*Trace les unités de la ligne des ordonnées du graphe*/
+function UniteAbcisse(){
   var x = 60;
   var base = 587;
   for(let z = 0; z<45; z++){
@@ -281,7 +273,8 @@ function testUniteAbcisse(){
   }
 }
 
-function testNumberAbcisse(){
+/*Trace les valeurs des unités de la ligne des abcisses du graphe*/
+function NumberAbcisse(){
   var x = 57;
   base = 610;
   for(let z = 1; z<11; z++){
@@ -301,7 +294,8 @@ function testNumberAbcisse(){
   }
 }
 
-function testNumberOrdonnee(){
+/*Trace les valeurs des unités de la ligne des ordonnées du graphe*/
+function NumberOrdonnee(){
   var x = 32.5;
   base = 592;
   for(let z = 0; z<45; z++){
@@ -317,7 +311,7 @@ function testNumberOrdonnee(){
 }
 
 
-
+/*Trace le titre du graphe*/
 function titre(){
   ctx.font='20px serif';
   ctx.lineWidth="1";
@@ -328,6 +322,8 @@ function titre(){
   ctx.fillText(text,x,y);
 }
 
+
+/*Trace la grandeur variable : les saisons*/
 function saison(){
   ctx.font='16px serif';
   ctx.lineWidth="1";
@@ -338,6 +334,7 @@ function saison(){
   ctx.fillText(text,x,y);
 }
 
+/*Trace la grandeur mesurées : la quantité de OMG*/
 function quantite(){
   ctx.font='16px " serif';
   ctx.lineWidth="1";
@@ -353,31 +350,32 @@ function quantite(){
 
 
 
-testGrilleVertical();
-testGrilleHorizontal();
-testOrdonnee();
-testAbsisse()
-testUniteOrdonnee();
-testUniteAbcisse();
-testNumberAbcisse();
-testNumberOrdonnee()
-testpoint(Rachel, "#FF0000");
-testpoint(Monica, "#0075FF");
-testpoint(Phoebe, "#009F10");
-testpoint(Ross, "#FFC700");
-testpoint(Chandler, "#EB00FF");
-testpoint(Joey, "#000AFF");
+GrilleVertical();
+GrilleHorizontal();
+Ordonnee();
+Absisse()
+UniteOrdonnee();
+UniteAbcisse();
+NumberAbcisse();
+NumberOrdonnee()
+point(Rachel, "#FF0000");
+point(Monica, "#0075FF");
+point(Phoebe, "#009F10");
+point(Ross, "#FFC700");
+point(Chandler, "#EB00FF");
+point(Joey, "#000AFF");
 titre();
 saison();
 quantite();
 
 
 
-/*OMG Book/Serie*/
 
+
+
+/*OMG Book/Serie*/
+/*Initialisation des varaibles et récupérations des éléments*/
 const tableau = document.querySelector('#dataBooks');
-const curseur = document.querySelector('#curseurDataBooks');
-const cursorValue = document.querySelector('#valeur_cursor');
 const cursor = document.querySelector('#curseur');
 const markS1 = document.querySelector('#markS1');
 const markS2 = document.querySelector('#markS2');
@@ -392,16 +390,29 @@ const markS10 = document.querySelector('#markS10');
 
 const markALL = document.querySelectorAll('.marksaison');
 
-console.log(markALL);
-
-
 const OMGWidth = tableau.width = tableau.offsetWidth;
 const OMGHeight = tableau.height = tableau.offsetHeight;
 
 const OMGContainer = document.querySelector("#OMGContainer");
 
+const dataOMGSaison = [];
 
+let year = 1994;
 
+/*Récupération de la data de la quantité de OMG dans la série par saison et dans les livres par années*/
+function dataRecup(){
+  for(let x = 0; x< data['omgSaison'].length; x++){
+    let temp = [];
+    temp[0] =data['omgSaison'][x][x+1];
+    temp[1] = "serie";
+    temp[2] = data['qteOmgBooks'][x][year];
+    temp[3] = "book";
+    dataOMGSaison[x] = temp;
+    year = year + 1
+  }
+}
+
+/*Générateur de OMG en fonction du nombre donné */
 function generateOMG(amount, type){
   for(let z =0; z<amount; z++){
     let OMG = document.createElement("span");
@@ -423,36 +434,19 @@ function generateOMG(amount, type){
     OMGContainer.appendChild(OMG);
   }
 }
-
+/* Fonction pour sortir une valeur aléatoire, ensuite utilisée dans le placement des OMG générés */
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-const dataOMGSaison = [];
-
-let year = 1994;
-
-for(let x = 0; x< data['omgSaison'].length; x++){
-  let temp = [];
-  temp[0] =data['omgSaison'][x][x+1];
-  temp[1] = "serie";
-  temp[2] = data['qteOmgBooks'][x][year];
-  temp[3] = "book";
-  dataOMGSaison[x] = temp;
-  year = year + 1
-}
-
-console.log(dataOMGSaison)
-
-
+/*Initialisation du cas 1 pour qu'il y est quelque chose d'afficher avant l'interraction de l'utilisateur / éviter un cadre blanc au début */
 function generateOMGS1(){
   generateOMG(dataOMGSaison[0][0], dataOMGSaison[0][1]);
   generateOMG(dataOMGSaison[0][2], dataOMGSaison[0][3]);
 }
 
-generateOMGS1();
 
-
+/*Changer le nombre de OMG affiché et la saison affichée en fonction de la saison sélectionner */
 cursor.oninput = (()=>{
   let value = cursor.value;
   let suppr = document.getElementsByClassName('OMGspan')
@@ -574,14 +568,5 @@ cursor.oninput = (()=>{
 
 })
 
-function elementPosition (a) {
-  let b = a.getBoundingClientRect();
-  return {
-    clientX: a.offsetLeft,
-    clientY: a.offsetTop,
-    viewportX: (b.x || b.left),
-    viewportY: (b.y || b.top)
-  }
-}
-
-
+dataRecup();
+generateOMGS1();

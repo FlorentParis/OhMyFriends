@@ -674,8 +674,6 @@ nav{
 #tickmarks{
     display:flex;
     flex-wrap: wrap;
-    margin-right: auto;
-    margin-left: auto;
     justify-content: space-between;
 }
 
