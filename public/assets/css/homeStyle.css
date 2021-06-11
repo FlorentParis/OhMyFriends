@@ -469,6 +469,35 @@ nav{
     background-color: #817038;
     box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.25);
 }
+.animO{
+    animation: animOvale 3s;
+}
+@keyframes animOvale{
+    0%{
+        transform: translateY(-50%) rotateZ(150deg);
+    }
+    20%{
+        transform: translateY(-50%) rotateZ(210deg);
+    }
+    30%{
+        transform: translateY(-50%) rotateZ(210deg);
+    }
+    45%{
+        transform: translateY(-50%) rotateZ(150deg);
+    }
+    55%{
+        transform: translateY(-50%) rotateZ(150deg);
+    }
+    70%{
+        transform: translateY(-50%) rotateZ(210deg);
+    }
+    80%{
+        transform: translateY(-50%) rotateZ(210deg);
+    }
+    100%{
+        transform: translateY(-50%) rotateZ(150deg);
+    }
+}
 /* Poignee */
 #poignee{
     height: 520px;

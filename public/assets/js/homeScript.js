@@ -54,7 +54,7 @@ pause.style.display = "flex";
 
 function togglePlay() {
   const method = video.paused ? 'play' : 'pause';
-  const rep = (pause.style.display === 'none') ? 'flex' : 'none';
+  const rep = video.paused ? 'none' : 'flex';
   video[method]();
   pause.style.display = rep;
 }
@@ -74,6 +74,10 @@ const numberHorloge = document.querySelectorAll('.numberHorloge');
 const aiguille = document.querySelector('#aiguille');
 const horlogeData = document.querySelectorAll('.horlogeData');
 
+horlogeData[0].textContent = data["audienceSeason"][numberHorloge[0].textContent.substr(1) - 1][numberHorloge[0].textContent.substr(1)];
+horlogeData[1].textContent = data["qteOmgBooks"][numberHorloge[0].textContent.substr(1) - 1][1993 + parseInt(numberHorloge[0].textContent.substr(1))];
+horlogeData[2].textContent = data["omgSaison"][numberHorloge[0].textContent.substr(1) - 1][numberHorloge[0].textContent.substr(1)];
+
 numberHorloge.forEach(element => {
   element.addEventListener('click', () => {
     aiguille.style.transform = "rotateZ(" + 36 * (element.textContent.substr(1) - 1) + "deg)";
@@ -81,6 +85,20 @@ numberHorloge.forEach(element => {
     horlogeData[1].textContent = data["qteOmgBooks"][element.textContent.substr(1) - 1][1993 + parseInt(element.textContent.substr(1))];
     horlogeData[2].textContent = data["omgSaison"][element.textContent.substr(1) - 1][element.textContent.substr(1)];
   })
+});
+
+/* Verrou Animation */
+const bouton = document.querySelector('#ovale');
+
+bouton.addEventListener("click", () => {
+  if(bouton.classList.contains('animO')){
+    bouton.classList.remove("animO");
+  }else{
+    bouton.classList.add("animO");
+    setTimeout(function(){
+      bouton.classList.remove("animO");
+    }, 3000);
+  }
 });
 
 /*Canvas Perso*/
