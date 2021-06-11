@@ -82,6 +82,7 @@ line.forEach(element => {
 })
 
 const numberHorloge = document.querySelectorAll('.numberHorloge');
+numberHorloge[0].style.color = "#ffd500";
 const aiguille = document.querySelector('#aiguille');
 const horlogeData = document.querySelectorAll('.horlogeData');
 
@@ -95,6 +96,10 @@ numberHorloge.forEach(element => {
     horlogeData[0].textContent = data["audienceSeason"][element.textContent.substr(1) - 1][element.textContent.substr(1)];
     horlogeData[1].textContent = data["qteOmgBooks"][element.textContent.substr(1) - 1][1993 + parseInt(element.textContent.substr(1))];
     horlogeData[2].textContent = data["omgSaison"][element.textContent.substr(1) - 1][element.textContent.substr(1)];
+    numberHorloge.forEach(element => {
+      element.removeAttribute("style");
+    });
+    element.style.color = "#ffd500";
   })
 });
 
@@ -109,6 +114,20 @@ bouton.addEventListener("click", () => {
     setTimeout(function(){
       bouton.classList.remove("animO");
     }, 3000);
+  }
+});
+
+/* Boule Animation */
+const boule = document.querySelector('#boule');
+
+boule.addEventListener("click", () => {
+  if(boule.classList.contains('animB')){
+    boule.classList.remove("animB");
+  }else{
+    boule.classList.add("animB");
+    setTimeout(function(){
+      boule.classList.remove("animB");
+    }, 1000);
   }
 });
 

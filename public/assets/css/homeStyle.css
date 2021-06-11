@@ -220,11 +220,16 @@ nav{
 }
 #horloge > div:first-of-type span{
     font-size: 24px;
-    color: #D2A82B;
+    color: #000;
     font-family: "Open-Sans-Hebrew";
     position: absolute;
     transform: translateX(-50%);
     cursor: pointer;
+}
+#horloge > div:first-of-type span:hover{
+    font-size: 24px;
+    color: #ffd500;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.30);
 }
 #horloge > div:first-of-type span:nth-of-type(6){
     top: 10px;
@@ -575,6 +580,44 @@ nav{
     background-color: #9C8A4E;
     box-shadow: -3px 4px 4px rgba(0, 0, 0, 0.25), inset -3px 4px 4px rgba(255, 255, 255, 0.25);
 }
+.animB{
+    animation: animBoule 1s;
+}
+@keyframes animBoule{
+    0%{
+        transform: translateX(-51%);
+    }
+    10%{
+        transform: translateX(-49%);
+    }
+    20%{
+        transform: translateX(-51%);
+    }
+    30%{
+        transform: translateX(-49%);
+    }
+    40%{
+        transform: translateX(-51%);
+    }
+    50%{
+        transform: translateX(-49%);
+    }
+    60%{
+        transform: translateX(-51%);
+    }
+    70%{
+        transform: translateX(-49%);
+    }
+    80%{
+        transform: translateX(-51%);
+    }
+    90%{
+        transform: translateX(-49%);
+    }
+    100%{
+        transform: translateX(-51%);
+    }
+}
 #cache{
     z-index: 2;
     position: absolute;
@@ -600,7 +643,7 @@ nav{
         transform: translateX(-50%) rotateZ(180deg);
     }
     100%{
-        transform: translateX(-50%) rotateZ(0deg);
+        transform: translateX(-50%) rotateZ(360deg);
     }
 }
 #serrure > div:first-of-type{
@@ -650,14 +693,12 @@ nav{
     width: 100%;
     margin-bottom: 20px;
 }
-
 #curseur{
     padding:0;
     width: 90%;
     margin-right: auto;
     margin-left: auto;
 }
-
 #valeur_cursor{
     position: absolute;
     height: 24px;
@@ -670,22 +711,17 @@ nav{
     text-align: center;
     z-index:2;
 }
-
 #tickmarks{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 .marksaison{
     opacity: 0;
 }
 #markS1{
     opacity: 100;
 }
-
-
-
 #dataBooks .scotch{
     position: absolute;
     width: 150px;
@@ -694,11 +730,11 @@ nav{
     opacity: 0.35;
     transform: rotate(-45deg);
 }
-#dataBooks .scotch:nth-of-type(1){
+#dataBooks div:nth-of-type(2){
     top: 0;
     left: -50px;
 }
-#dataBooks .scotch:nth-of-type(2){
+#dataBooks div:nth-of-type(3){
     bottom: 0;
     right: -50px;
 }
