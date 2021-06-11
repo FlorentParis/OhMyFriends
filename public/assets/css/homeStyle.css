@@ -574,7 +574,6 @@ nav{
     border-radius: 100%;
     background-color: #9C8A4E;
     box-shadow: -3px 4px 4px rgba(0, 0, 0, 0.25), inset -3px 4px 4px rgba(255, 255, 255, 0.25);
-    cursor: pointer;
 }
 #cache{
     z-index: 2;
@@ -589,6 +588,20 @@ nav{
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 2px rgba(255, 255, 255, 0.25);
     transform-origin: 60px 15px;
     cursor: pointer;
+}
+.animC{
+    animation: animCache 2s;
+}
+@keyframes animCache{
+    0%{
+        transform: translateX(-50%) rotateZ(0deg);
+    }
+    50%{
+        transform: translateX(-50%) rotateZ(180deg);
+    }
+    100%{
+        transform: translateX(-50%) rotateZ(0deg);
+    }
 }
 #serrure > div:first-of-type{
     position: absolute;

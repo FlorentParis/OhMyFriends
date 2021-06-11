@@ -101,6 +101,20 @@ bouton.addEventListener("click", () => {
   }
 });
 
+/* Cache Animation */
+const cache = document.querySelector('#cache');
+
+cache.addEventListener("click", () => {
+  if(cache.classList.contains('animC')){
+    cache.classList.remove("animC");
+  }else{
+    cache.classList.add("animC");
+    setTimeout(function(){
+      cache.classList.remove("animC");
+    }, 3000);
+  }
+});
+
 /*Canvas Perso*/
 const canvas = document.querySelector('#myCanvas');
 const fenetre = document.querySelector('#dataPersos');
