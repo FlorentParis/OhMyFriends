@@ -1,6 +1,7 @@
 //Récuperation du JSON
 const test = document.getElementById('test').value;
-console.log(JSON.parse(test));
+const data = JSON.parse(test);
+console.log(data);
 
 /* Interphone */
 const interphone = document.querySelector('#interphone');
@@ -71,10 +72,14 @@ line.forEach(element => {
 
 const numberHorloge = document.querySelectorAll('.numberHorloge');
 const aiguille = document.querySelector('#aiguille');
+const horlogeData = document.querySelectorAll('.horlogeData');
 
 numberHorloge.forEach(element => {
   element.addEventListener('click', () => {
     aiguille.style.transform = "rotateZ(" + 36 * (element.textContent.substr(1) - 1) + "deg)";
+    horlogeData[0].textContent = data["audienceSeason"][element.textContent.substr(1) - 1][element.textContent.substr(1)];
+    horlogeData[1].textContent = data["qteOmgBooks"][element.textContent.substr(1) - 1][1993 + parseInt(element.textContent.substr(1))];
+    horlogeData[2].textContent = data["omgSaison"][element.textContent.substr(1) - 1][element.textContent.substr(1)];
   })
 });
 
