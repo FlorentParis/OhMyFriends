@@ -3,6 +3,11 @@
     #hero #cadre > img{
         width: 60vw;
     }
+    /* Gond */
+    .gond{
+        height: 25vw;
+        width: 3vw;
+    }
     /* Horloge */
     #horloge{
         flex-direction: column;
@@ -58,6 +63,7 @@
     }
     /* Footer */
     footer > div:last-of-type > p{
+        line-height: 20px;
         padding: 20px;
         font-size: 8px;
     }

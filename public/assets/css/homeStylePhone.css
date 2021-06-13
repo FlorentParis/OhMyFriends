@@ -1,0 +1,105 @@
+@media (max-width: 425px){
+    #hero{
+        flex-direction: column;
+    }
+    #hero > img{
+        display: flex;
+    }
+    #hero > p{
+        display: flex;
+        font-size: 12px;
+        font-family: "Rock Salt";
+        width: 80vw;
+        text-align: center;
+        letter-spacing: 4px;
+        padding: 30px 0;
+    }
+    #hero > #btnScroll{
+        display: flex;
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        border: 2px solid var(--yellow);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        justify-content: center;
+        align-items: center;
+    }
+    #hero > #btnScroll span{
+        text-align: center;
+        color: var(--yellow);
+        font-family: "Rock Salt";
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 20px;
+    }
+    #horloge{
+        padding: 50px 25px;
+    }
+    .postit{
+        height: 120px;
+        width: 120px;
+    }
+    .postit:first-of-type {
+        left: calc(100% - 150px);
+    }
+    .postit:first-of-type p{
+        font-size: 12px;
+        width: 100px;
+        line-height: 25px;
+    }
+    #books #elePorte #verrou {
+        height: 100px;
+        width: 200px;
+        border-radius: 30px;
+    }
+    #books #elePorte #verrou #verrouContent {
+        height: 70px;
+    }
+    #ovale {
+        top: 25%;
+        position: absolute;
+        width: 30px;
+        height: 60px;
+        left: 135px;
+        transform-origin: 15px 40px;
+    }
+    #ovale > div{
+        width: 20px;
+        height: 50px;
+    }
+    #bouton {
+        width: 20px;
+        height: 20px;
+        left: 80px;
+    }
+    #bouton > div {
+        width: 12px;
+        height: 12px;
+    }
+    #poignee {
+        height: 275px;
+        width: 98px;
+    }
+    #poignee > div:first-of-type, #poignee > div:last-of-type {
+        width: 83px;
+    }
+    #surface_poignee {
+        width: 83px;
+        height: 245px;
+    }
+    #boule {
+        top: 40px;
+        width: 80px;
+        height: 80px;
+    }
+    #cache {
+        top: 155px;
+        width: 60px;
+        height: 60px;
+        transform-origin: 30px 10px;
+    }
+    #poignee .vis:nth-of-type(3) {
+        right: 37px;
+        top: 160px;
+    }
+}

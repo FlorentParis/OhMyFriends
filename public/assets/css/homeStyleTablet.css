@@ -1,0 +1,20 @@
+@media (max-width: 1024px){
+    /* Postit */
+    .postit:first-of-type{
+        left: calc(100% - 300px);
+    }
+    #books .postit{
+        left: calc(100% - 300px);
+    }
+    /* DataPersos */
+    #persos > #dataPersos{
+        margin: 0 30px;
+    }
+    /* Footer */
+    footer > div:first-of-type > img{
+        max-width: 200px;
+    }
+    footer > div:last-of-type > p{
+        line-height: 15px;
+    }
+}

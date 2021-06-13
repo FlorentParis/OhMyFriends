@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/homeStyle.css') }}">
     <!-- Fichier CSS - Style Laptop Homepage -->
     <link rel="stylesheet" href="{{ asset('assets/css/homeStyleLaptop.css') }}">
+    <!-- Fichier CSS - Style Tablet Homepage -->
+    <link rel="stylesheet" href="{{ asset('assets/css/homeStyleTablet.css') }}">
+    <!-- Fichier CSS - Style Phone Homepage -->
+    <link rel="stylesheet" href="{{ asset('assets/css/homeStylePhone.css') }}">
     <title>Oh My Friends</title>
 </head>
 <body>
@@ -56,6 +60,11 @@
                 </div>
                 <video class="player__video viewer" src="{{ asset('assets/video/compilOMG.mp4') }}"></video>
             </div>
+        </div>
+        <img src="{{ asset('assets/img/logoMobile.svg') }}" alt="">
+        <p>La série Friends et son impact sur notre culture.</p>
+        <div id="btnScroll">
+            <span>Scroll to continue</span>
         </div>
         <div class="gond">
             <div class="vis">
