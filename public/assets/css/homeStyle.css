@@ -389,22 +389,17 @@ nav{
     justify-content: space-between;
 }
 .postit:nth-of-type(2) > span:nth-of-type(2) > span, .postit:nth-of-type(2) > span:nth-of-type(3) > span{
-    width: 60px;
-    height: 4px;
-    display: block;
-    background-color: #000;
     margin-right: 20px;
 }
 .postit:nth-of-type(2) > span:nth-of-type(2) > span{
-    background-color: rgb(67, 67, 67);
-    margin-top: 5px;
-    margin-bottom: 50px;
-    border-radius: 50px;
+    color: #E7211E;
+    margin-bottom: 40px;
 }
 .postit:nth-of-type(2) > span:nth-of-type(3) > span{
-    background-color: rgb(184, 184, 184);
-    border-radius: 50px;
-    margin-top: 5px;
+    color: #0053D0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    line-height: 18px;
 }
 /* Books */
 #books{
@@ -654,7 +649,7 @@ nav{
 }
 #serrure{
     position: absolute;
-    top: 34vh;
+    top: 340px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;

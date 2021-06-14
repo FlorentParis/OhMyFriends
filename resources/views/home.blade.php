@@ -184,8 +184,8 @@
         </div>
         <div class="postit">
             <span></span>
-            <span><span></span>Série</span>
-            <span><span></span>Livres</span>
+            <span><span>OMG</span>Série</span>
+            <span><span>OMG</span>Livres</span>
         </div>
         <div id="dataBooks">
             <div id="OMGContainer"></div>
