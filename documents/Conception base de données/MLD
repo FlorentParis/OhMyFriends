@@ -1,0 +1,21 @@
+PERSONNAGES = (id_personnage INT, nom VARCHAR(50))
+Clé primaire : id_personnage
+
+SAISONS = (id_saison INT, nb_avg_omg VARCHAR(50));
+Clé primaire : id_saison
+
+EPISODES = (id_episode INT, date_diffusion DATE, audience INT, #id_saison);
+Clé primaire : id_episode
+Clé étrangère : id_saison en référence à id_saison de la table Saisons
+
+SOURCES = (id_source INT, libelle VARCHAR(50));
+Clé primaire : id_source
+
+LIVRES = (#id_source, annee SMALLINT, totalCount INT, omgcount VARCHAR(50));
+Clé primaire : id_source, annee
+Clé étrangère : id_source en référence à id_source de la table Sources
+
+SCRIPTS = (#id_personnage, #id_saison, nb_omg VARCHAR(50));
+Clé primaire : id_personnage, id_saison
+Clé étrangère : id_personnage en référence à id_personnage de la table Personnages
+                id_saison en référence à if_saison de la table Saisons
