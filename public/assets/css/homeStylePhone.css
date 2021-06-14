@@ -98,6 +98,24 @@
         height: 60px;
         transform-origin: 30px 10px;
     }
+    #serrure{
+        position: absolute;
+        top: 17.5vh;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+    #serrure > div:first-of-type{
+        width: 20px;
+        height: 20px;
+    }
+    #serrure > div:last-of-type{
+        top: 5px;
+        border-bottom: 30px solid #201108;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+    }
     #poignee .vis:nth-of-type(3) {
         right: 37px;
         top: 160px;
