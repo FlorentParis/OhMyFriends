@@ -6,6 +6,7 @@ use App\Models\Episode;
 use App\Models\Personnage;
 use App\Models\Saison;
 use App\Models\Livre;
+use App\Models\Script;
 
 class testController extends Controller
 {

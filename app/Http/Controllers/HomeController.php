@@ -22,6 +22,7 @@ class HomeController extends Controller
         return view('home', compact('data'));
     }
 
+    //retourne un tableau de chaque somme d'omg par saison
     public function getTotalOmgPerSeason(): array
     {
         $OmgSeasons = [];
@@ -31,7 +32,7 @@ class HomeController extends Controller
         return $OmgSeasons;
     }
 
-    //TODO ??
+    //retourne un tableau avec la somme total d'omg d'un personnage dans la série
     public function getOmgCharacterSerie(): array{
         return [
             'Rachel'=>Saison::getOmgPersonnageSerie(1),
@@ -40,10 +41,10 @@ class HomeController extends Controller
             'Ross'=> Saison::getOmgPersonnageSerie(4),
             'Chandler'=> Saison::getOmgPersonnageSerie(5),
             'Joey'=> Saison::getOmgPersonnageSerie(6)
-
         ];
     }
 
+    //Retourne un tableau des moyennes d'omg par année
     public function getQteOmgBooks(): array{
         $OmgsBooks = [];
         for ($i = 1994; $i <= 2019; $i++){
@@ -52,6 +53,7 @@ class HomeController extends Controller
         return $OmgsBooks;
     }
 
+    //Retourne un tableau avec l'audience de chaque episode
     public function getAudienceEpisode(): array{
         $AudienceEpisodes = [];
         for ($i = 1; $i <= 236; $i++){
@@ -60,6 +62,7 @@ class HomeController extends Controller
         return $AudienceEpisodes;
     }
 
+    //Retourne un tableau de l'audience par saison
     public function getAudienceSeason(): array{
         $AudienceSeasons = [];
         for ($i = 1; $i <= 10; $i++){
@@ -68,6 +71,7 @@ class HomeController extends Controller
         return $AudienceSeasons;
     }
 
+    //Retourne un tableau de avec tous les omg par saison de chaque personnage
     public function getOmgCharacterSeason(): array{
         $characters = Personnage::all();
         $characOmg = [];
