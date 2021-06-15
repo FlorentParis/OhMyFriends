@@ -380,9 +380,12 @@ nav{
 .postit:first-of-type{
     left: calc(100% - 370px);
     transform: rotateZ(-15deg);
+    top: 50px;
 }
 .postit:nth-of-type(2){
     transform: rotateZ(15deg);
+    top: 50px;
+    right: 50px;
 }
 .postit:nth-of-type(2) > span:nth-of-type(2), .postit:nth-of-type(2) > span:nth-of-type(3){
     display: flex;
@@ -396,7 +399,7 @@ nav{
     margin-bottom: 40px;
 }
 .postit:nth-of-type(2) > span:nth-of-type(3) > span{
-    color: #0053D0;
+    color: #3164CF;
     font-family: 'Times New Roman', Times, serif;
     font-size: 24px;
     line-height: 18px;
@@ -683,12 +686,12 @@ nav{
     background-color: #ECECEC;
     height: 470px;
     width: 700px;
-    margin-right: 90px;
+    margin-right: 50px;
     display: flex;
     flex-direction: column;
     padding:20px;
     padding-bottom: 5px;
-    
+    top: 50px;
 }
 #OMGContainer{
     position: relative;
@@ -743,7 +746,7 @@ nav{
 }
 /* Gond Section Perso */
 #persos  > .gond{
-    bottom: 20px;
+    bottom: 10px;
 }
 /* Persos */
 #persos{
@@ -751,6 +754,7 @@ nav{
     position: relative;
     height: 700px;
     overflow: hidden;
+    margin-top: 150px;
 }
 #persos > #dataPersos{
     z-index: 1;
@@ -759,7 +763,7 @@ nav{
     height: 660px;
     width: 880px;
     background-color: #fff;
-    margin:0 90px;
+    margin:0 70px;
 }
 #persos > .scotch{
     z-index: 2;
@@ -772,8 +776,8 @@ nav{
 }
 #photo{
     position: absolute;
-    top: 100px;
-    right: -140px;
+    top: 50px;
+    right: -150px;
     transform: rotate(350deg);
 }
 #photo > img{
@@ -810,7 +814,7 @@ footer{
     width: 100%;
     background-color: #8C72AB;
     border-top: 3px solid #FEE565;
-    margin-top: 50px;
+    margin-top: 100px;
     align-items: center;
 }
 footer > div:first-of-type{
@@ -826,4 +830,5 @@ footer > div:last-of-type > p{
     font-size: 12px;
     line-height: 25px;
     letter-spacing: 2px;
+    text-align: justify;
 }

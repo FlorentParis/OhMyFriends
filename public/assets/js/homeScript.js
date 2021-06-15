@@ -159,7 +159,6 @@ ctx.fillRect(0,0,width,height);*/
 
 function responsiveCanvas(tailleTelephone, tailleTablette) {
   if (tailleTelephone.matches) { // If media query matches
-    dataPersos.style.margin = "0";
 
     fenetre.style.width = "375px";
 
@@ -681,7 +680,7 @@ quantite();
 /*Initialisation des varaibles et récupérations des éléments*/
 const tableau = document.querySelector('#dataBooks');
 const cursor = document.querySelector('#curseur');
-const markS1 = document.querySelector('#markS1');
+/*const markS1 = document.querySelector('#markS1');
 const markS2 = document.querySelector('#markS2');
 const markS3 = document.querySelector('#markS3');
 const markS4 = document.querySelector('#markS4');
@@ -692,7 +691,9 @@ const markS8 = document.querySelector('#markS8');
 const markS9 = document.querySelector('#markS9');
 const markS10 = document.querySelector('#markS10');
 
-const markALL = document.querySelectorAll('.marksaison');
+const markALL = document.querySelectorAll('.marksaison');*/
+
+const saisonmarker = document.querySelector('#saisonmark');
 
 
 const OMGContainer = document.querySelector("#OMGContainer");
@@ -704,14 +705,9 @@ let year = 1994;
 function responsiveOMGGenerator(tailleTelephone, tailleTablette){
   if(tailleTelephone.matches) {
     tableau.style.width = "375px";
-    tableau.style.margin = "0";
-    tableau.style.padding = "0";
+    tableau.style.height = ""
     OMGWidth = tableau.width = tableau.offsetWidth;
     OMGHeight = tableau.height = tableau.offsetHeight;
-
-    console.log(OMGHeight);
-    console.log(OMGWidth);
-    console.log(tableau);
 
     ratioHeightGeneratorOMG = 0.73;
     ratioHWidthGeneratorOMG = 0.78; 
@@ -721,18 +717,11 @@ function responsiveOMGGenerator(tailleTelephone, tailleTablette){
     OMGWidth = tableau.width = tableau.offsetWidth;
     OMGHeight = tableau.height = tableau.offsetHeight;
 
-    console.log(OMGHeight);
-    console.log(OMGWidth);
-    console.log(tableau);
     ratioHeightGeneratorOMG = 0.75;
     ratioHWidthGeneratorOMG = 0.82;
   }else{
     OMGWidth = tableau.width = tableau.offsetWidth;
     OMGHeight = tableau.height = tableau.offsetHeight;
-
-    console.log(OMGHeight);
-    console.log(OMGWidth);
-    console.log(tableau);
 
     ratioHeightGeneratorOMG = 0.75;
     ratioHWidthGeneratorOMG = 0.82;
@@ -751,21 +740,24 @@ function dataRecup(){
     temp[1] = "serie";
     temp[2] = data['qteOmgBooks'][x][year];
     temp[3] = "book";
+    
     dataOMGSaison[x] = temp;
     year = year + 1
   }
 }
+console.log(dataOMGSaison);
 
 /*Générateur de OMG en fonction du nombre donné */
 function generateOMG(amount, type){
+  amount = amount / 4;
   for(let z =0; z<amount; z++){
     let OMG = document.createElement("span");
     if(type == "book"){
-      OMG.style.color = "#B8B8B8";
+      OMG.style.color = "#3164CF";
       OMG.style.fontFamily = "Times New Roman";
       OMG.style.fontSize = "36px";
     }else if(type == "serie"){
-      OMG.style.color = "#434343";
+      OMG.style.color = "#E7211E";
       OMG.style.fontFamily = "Rock Salt";
       OMG.style.fontSize = "24px";
       OMG.style.zIndex=2;
@@ -780,6 +772,75 @@ function generateOMG(amount, type){
 }
 
 
+function generateOMG3(amount, type){
+  amount = amount / 4;
+  if(type == "serie"){
+    if(compteurS>amount){
+      var supprS = document.getElementsByClassName('serie');
+      stackS = Math.round(compteurS - amount);
+      for(let m = 0; m<stackS; m++){
+        supprS[0].parentNode.removeChild(supprS[0]);
+      }
+    }else{
+      let comparS = amount - compteurS;
+      for(let z = 0; z<comparS; z++){ 
+        let OMG = document.createElement("span");
+        OMG.classList.toggle("serie");
+        OMG.style.color = "#E7211E";
+        OMG.style.fontFamily = "Rock Salt";
+        OMG.style.fontSize = "24px";
+        OMG.innerText = "OMG";
+        OMG.style.position ="absolute";
+        OMG.style.bottom = getRandomInt(OMGHeight * ratioHeightGeneratorOMG).toString() + "px";
+        OMG.style.left=getRandomInt(OMGWidth * ratioHWidthGeneratorOMG).toString() + "px";
+        OMG.classList.toggle("OMGspan");
+        OMGContainer.appendChild(OMG);
+      }
+    }
+  }
+  if(type == "book"){
+    if(compteurL>amount){
+      var supprL = document.getElementsByClassName('book');
+      stackL = Math.round(compteurL - amount);
+      for(let m = 0; m<stackL; m++){
+        supprL[0].parentNode.removeChild(supprL[0]);
+      }
+    }else{
+      let comparL = amount - compteurL;
+      for(let z = 0; z<comparL; z++){ 
+        let OMG = document.createElement("span");
+        OMG.classList.toggle("book");
+        OMG.style.color = "#3164CF";
+        OMG.style.fontFamily = "Times New Roman";
+        OMG.style.fontSize = "36px";
+        OMG.innerText = "OMG";
+        OMG.style.position ="absolute";
+        OMG.style.bottom = getRandomInt(OMGHeight * ratioHeightGeneratorOMG).toString() + "px";
+        OMG.style.left=getRandomInt(OMGWidth * ratioHWidthGeneratorOMG).toString() + "px";
+        OMG.classList.toggle("OMGspan");
+        OMGContainer.appendChild(OMG);
+      }
+    }
+  }
+
+}
+
+
+function generateS1(){
+  compteurSerie();
+  compteurBook();
+  generateOMG3(dataOMGSaison[0][0],dataOMGSaison[0][1]);
+  generateOMG3(dataOMGSaison[0][2],dataOMGSaison[0][3]);
+}
+
+function compteurSerie(){
+  compteurS = document.querySelectorAll('.serie').length;
+}
+function compteurBook(){
+  compteurL = document.querySelectorAll('.book').length;
+}
+
+
 
 /* Fonction pour sortir une valeur aléatoire, ensuite utilisée dans le placement des OMG générés */
 function getRandomInt(max) {
@@ -788,130 +849,82 @@ function getRandomInt(max) {
 
 /*Initialisation du cas 1 pour qu'il y est quelque chose d'afficher avant l'interraction de l'utilisateur / éviter un cadre blanc au début */
 function generateOMGS1(){
-  generateOMG(dataOMGSaison[0][0], dataOMGSaison[0][1]);
-  generateOMG(dataOMGSaison[0][2], dataOMGSaison[0][3]);
+  compteurSerie();
+  compteurBook();
+  generateOMG3(dataOMGSaison[0][0], dataOMGSaison[0][1]);
+
 }
+
 
 
 /*Changer le nombre de OMG affiché et la saison affichée en fonction de la saison sélectionner */
 cursor.oninput = (()=>{
   let value = cursor.value;
-  let suppr = document.getElementsByClassName('OMGspan')
   switch(value){
     case "1":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });
-      markS1.style.opacity="100";
-      generateOMG(dataOMGSaison[0][0], dataOMGSaison[0][1]);
-      generateOMG(dataOMGSaison[0][2], dataOMGSaison[0][3]);
+      compteurSerie();
+      compteurBook();
+      generateOMG3(dataOMGSaison[0][0], dataOMGSaison[0][1]);
+      generateOMG3(dataOMGSaison[0][2], dataOMGSaison[0][3]);
       break;
     case "2":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });
-      markS2.style.opacity="100";
-      generateOMG(dataOMGSaison[1][0], dataOMGSaison[1][1]);
-      generateOMG(dataOMGSaison[1][2], dataOMGSaison[1][3]);
+      compteurSerie();
+      compteurBook();
+      generateOMG3(dataOMGSaison[1][0], dataOMGSaison[1][1]);
+      generateOMG3(dataOMGSaison[1][2], dataOMGSaison[1][3]);
       break;
     case "3":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });      
-      markS3.style.opacity="100";
-      generateOMG(dataOMGSaison[2][0], dataOMGSaison[2][1]);
-      generateOMG(dataOMGSaison[2][2], dataOMGSaison[2][3]);
+      compteurSerie();
+      compteurBook();   
+      generateOMG3(dataOMGSaison[2][0], dataOMGSaison[2][1]);
+      generateOMG3(dataOMGSaison[2][2], dataOMGSaison[2][3]);
       break;
     case "4":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });
-      markS4.style.opacity="100";
-      generateOMG(dataOMGSaison[3][0], dataOMGSaison[3][1]);
-      generateOMG(dataOMGSaison[3][2], dataOMGSaison[3][3]);
+      compteurSerie();
+      compteurBook();
+      generateOMG3(dataOMGSaison[3][0], dataOMGSaison[3][1]);
+      generateOMG3(dataOMGSaison[3][2], dataOMGSaison[3][3]);
       break;
     case "5":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });
-      markS5.style.opacity="100";
-      generateOMG(dataOMGSaison[4][0], dataOMGSaison[4][1]);
-      generateOMG(dataOMGSaison[4][2], dataOMGSaison[4][3]);
+      compteurSerie();
+      compteurBook();
+      generateOMG3(dataOMGSaison[4][0], dataOMGSaison[4][1]);
+      generateOMG3(dataOMGSaison[4][2], dataOMGSaison[4][3]);
       break;
     case "6":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });
-      markS6.style.opacity="100";
-      generateOMG(dataOMGSaison[5][0], dataOMGSaison[5][1]);
-      generateOMG(dataOMGSaison[5][2], dataOMGSaison[5][3]);
+      generateOMG3(dataOMGSaison[5][0], dataOMGSaison[5][1]);
+      generateOMG3(dataOMGSaison[5][2], dataOMGSaison[5][3]);
       break;
     case "7":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });
-      markS7.style.opacity="100";
-      generateOMG(dataOMGSaison[6][0], dataOMGSaison[6][1]);
-      generateOMG(dataOMGSaison[6][2], dataOMGSaison[6][3]);
-      break;5
+      compteurSerie();
+      compteurBook();
+      generateOMG3(dataOMGSaison[6][0], dataOMGSaison[6][1]);
+      generateOMG3(dataOMGSaison[6][2], dataOMGSaison[6][3]);
+      break;
     case "8":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });
-      markS8.style.opacity="100";
-      generateOMG(dataOMGSaison[7][0], dataOMGSaison[7][1]);
-      generateOMG(dataOMGSaison[7][2], dataOMGSaison[7][3]);
+      compteurSerie();
+      compteurBook();
+      generateOMG3(dataOMGSaison[7][0],dataOMGSaison[7][1]);
+      generateOMG3(dataOMGSaison[7][2],dataOMGSaison[7][3]);
       break;
     case "9":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });
-      markS9.style.opacity="100";
-      generateOMG(dataOMGSaison[8][0], dataOMGSaison[8][1]);
-      generateOMG(dataOMGSaison[8][2], dataOMGSaison[8][3]);
+      compteurSerie();
+      compteurBook();
+      generateOMG3(dataOMGSaison[8][0], dataOMGSaison[8][1]);
+      generateOMG3(dataOMGSaison[8][2], dataOMGSaison[8][3]);
       break;
     case "10":
-      while(suppr[0]){
-        suppr[0].parentNode.removeChild(suppr[0]);
-      };
-      markALL.forEach(element =>{
-        element.style.opacity = "0";
-      });  
-      markS10.style.opacity="100";
-      generateOMG(dataOMGSaison[9][0], dataOMGSaison[9][1]);
-      generateOMG(dataOMGSaison[9][2], dataOMGSaison[9][3]);
+      compteurSerie();
+      compteurBook(); 
+      generateOMG3(dataOMGSaison[9][0], dataOMGSaison[9][1]);
+      generateOMG3(dataOMGSaison[9][2], dataOMGSaison[9][3]);
       break;
     default:
       break;
   }
 })
 
+
+
 dataRecup();
-generateOMGS1();
+generateS1();

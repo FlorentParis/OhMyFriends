@@ -190,7 +190,7 @@
         <div id="dataBooks">
             <div id="OMGContainer"></div>
             <input id="curseur" type="range" min="1" max="10" value="1" list="tickmarks">
-            <datalist id="tickmarks">
+            <!--<datalist id="tickmarks">
                 <option id="markS1" class="marksaison" value="1" label="Saison 1">
                 <option id="markS2" class="marksaison" value="2" label="Saison 2">
                 <option id="markS3" class="marksaison" value="3" label="Saison 3">
@@ -201,7 +201,8 @@
                 <option id="markS8" class="marksaison" value="8" label="Saison 8">
                 <option id="markS9" class="marksaison" value="9" label="Saison 9">
                 <option id="markS10" class="marksaison" value="10" label="Saison 10">
-            </datalist>
+            </datalist> -->
+            <span id="saisonmark">Saison</span
             <div class="scotch"></div>
             <div class="scotch"></div>
 
