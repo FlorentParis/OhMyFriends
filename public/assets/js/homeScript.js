@@ -86,16 +86,16 @@ numberHorloge[0].style.color = "#ffd500";
 const aiguille = document.querySelector('#aiguille');
 const horlogeData = document.querySelectorAll('.horlogeData');
 
-horlogeData[0].textContent = data["audienceSeason"][numberHorloge[0].textContent.substr(1) - 1][numberHorloge[0].textContent.substr(1)];
-horlogeData[1].textContent = data["qteOmgBooks"][numberHorloge[0].textContent.substr(1) - 1][1993 + parseInt(numberHorloge[0].textContent.substr(1))];
-horlogeData[2].textContent = data["omgSaison"][numberHorloge[0].textContent.substr(1) - 1][numberHorloge[0].textContent.substr(1)];
+horlogeData[0].textContent = Math.round(data["audienceSeason"][numberHorloge[0].textContent.substr(1) - 1][numberHorloge[0].textContent.substr(1)]) + " M";
+horlogeData[1].textContent = Math.round(data["qteOmgBooks"][numberHorloge[0].textContent.substr(1) - 1][1993 + parseInt(numberHorloge[0].textContent.substr(1))]) + " Livres";
+horlogeData[2].textContent = data["omgSaison"][numberHorloge[0].textContent.substr(1) - 1][numberHorloge[0].textContent.substr(1)] + " OMG";
 
 numberHorloge.forEach(element => {
   element.addEventListener('click', () => {
     aiguille.style.transform = "rotateZ(" + 36 * (element.textContent.substr(1) - 1) + "deg)";
-    horlogeData[0].textContent = data["audienceSeason"][element.textContent.substr(1) - 1][element.textContent.substr(1)];
-    horlogeData[1].textContent = data["qteOmgBooks"][element.textContent.substr(1) - 1][1993 + parseInt(element.textContent.substr(1))];
-    horlogeData[2].textContent = data["omgSaison"][element.textContent.substr(1) - 1][element.textContent.substr(1)];
+    horlogeData[0].textContent = Math.round(data["audienceSeason"][element.textContent.substr(1) - 1][element.textContent.substr(1)]) + " M";
+    horlogeData[1].textContent = Math.round(data["qteOmgBooks"][element.textContent.substr(1) - 1][1993 + parseInt(element.textContent.substr(1))]) + " Livres";
+    horlogeData[2].textContent = data["omgSaison"][element.textContent.substr(1) - 1][element.textContent.substr(1)] + " OMG";
     numberHorloge.forEach(element => {
       element.removeAttribute("style");
     });

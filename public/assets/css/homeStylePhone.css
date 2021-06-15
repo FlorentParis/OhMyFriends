@@ -1,4 +1,17 @@
 @media (max-width: 425px){
+    #interphone > div {
+        height: 70%;
+    }
+    #interphone > div > div:first-of-type > div:nth-of-type(2) {
+        height: 150px;
+        width: 150px;
+    }
+    #interphone .btnContainer > a:last-of-type {
+        margin-top: 5px;
+    }
+    #interphone > div > div:last-of-type {
+        flex-direction: column;
+    }
     #hero{
         position: relative;
         flex-direction: column;
