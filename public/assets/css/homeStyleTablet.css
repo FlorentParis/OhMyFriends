@@ -7,17 +7,23 @@
         left: calc(100% - 300px);
     }
     /* DataPersos */
+    #persos{
+        justify-content: center;
+    }
+    #persos > .scotch{
+        width: 180px;
+        left: auto;
+        top: 40px;
+    }
     #persos > #dataPersos{
-        margin: 0 30px;
+        margin: 40px 30px;
+    }
+    #photo{
+        right: 60px;
     }
     /* Footer */
     footer > div:last-of-type > p{
         line-height: 15px;
     }
-    #persos > .scotch{
-        left: 150px;
-    }
-    #persos > #dataPersos{
-        width: auto;
-    }
+    
 }

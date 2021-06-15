@@ -253,6 +253,7 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
 
   }else if(tailleTablette.matches) {
     fenetre.style.width = "425px";
+    fenetre.style.margin = "auto";
 
     width = canvas.width = fenetre.offsetWidth;
     height = canvas.height = fenetre.offsetHeight;
@@ -680,18 +681,6 @@ quantite();
 /*Initialisation des varaibles et récupérations des éléments*/
 const tableau = document.querySelector('#dataBooks');
 const cursor = document.querySelector('#curseur');
-/*const markS1 = document.querySelector('#markS1');
-const markS2 = document.querySelector('#markS2');
-const markS3 = document.querySelector('#markS3');
-const markS4 = document.querySelector('#markS4');
-const markS5 = document.querySelector('#markS5');
-const markS6 = document.querySelector('#markS6');
-const markS7 = document.querySelector('#markS7');
-const markS8 = document.querySelector('#markS8');
-const markS9 = document.querySelector('#markS9');
-const markS10 = document.querySelector('#markS10');
-
-const markALL = document.querySelectorAll('.marksaison');*/
 
 const saisonmarker = document.querySelector('#saisonmark');
 
@@ -706,25 +695,35 @@ function responsiveOMGGenerator(tailleTelephone, tailleTablette){
   if(tailleTelephone.matches) {
     tableau.style.width = "375px";
     tableau.style.height = ""
+    tableau.style.flexDirection = "row";
+
+    cursor.style = "appearance: slider-vertical";
+    cursor.style.transform = "rotateZ(180deg)";
+    cursor.style.width = "30px";
+
     OMGWidth = tableau.width = tableau.offsetWidth;
     OMGHeight = tableau.height = tableau.offsetHeight;
 
-    ratioHeightGeneratorOMG = 0.73;
-    ratioHWidthGeneratorOMG = 0.78; 
 
-  }else if (tailleTablette.matches) {
+    ratioHeightGeneratorOMG = 0.9;
+    ratioHWidthGeneratorOMG = 0.45; 
+
+  }else if(tailleTablette.matches){
     tableau.style.width = "425px";
     OMGWidth = tableau.width = tableau.offsetWidth;
     OMGHeight = tableau.height = tableau.offsetHeight;
 
-    ratioHeightGeneratorOMG = 0.75;
-    ratioHWidthGeneratorOMG = 0.82;
+    ratioHeightGeneratorOMG = 0.78;
+    ratioHWidthGeneratorOMG = 0.73;
+
+
   }else{
     OMGWidth = tableau.width = tableau.offsetWidth;
     OMGHeight = tableau.height = tableau.offsetHeight;
 
     ratioHeightGeneratorOMG = 0.75;
     ratioHWidthGeneratorOMG = 0.82;
+
   }
 }
 responsiveOMGGenerator(tailleTelephone, tailleTablette) // Call listener function at run time
@@ -855,6 +854,7 @@ function generateOMGS1(){
 
 }
 
+leftsaisonmarker = 10;
 
 
 /*Changer le nombre de OMG affiché et la saison affichée en fonction de la saison sélectionner */
@@ -866,65 +866,118 @@ cursor.oninput = (()=>{
       compteurBook();
       generateOMG3(dataOMGSaison[0][0], dataOMGSaison[0][1]);
       generateOMG3(dataOMGSaison[0][2], dataOMGSaison[0][3]);
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }      console.log(saisonmark.style.left);
       break;
     case "2":
       compteurSerie();
       compteurBook();
       generateOMG3(dataOMGSaison[1][0], dataOMGSaison[1][1]);
       generateOMG3(dataOMGSaison[1][2], dataOMGSaison[1][3]);
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }      console.log(saisonmark.style.left);
       break;
     case "3":
       compteurSerie();
       compteurBook();   
       generateOMG3(dataOMGSaison[2][0], dataOMGSaison[2][1]);
       generateOMG3(dataOMGSaison[2][2], dataOMGSaison[2][3]);
-      break;
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }      break;
     case "4":
       compteurSerie();
       compteurBook();
       generateOMG3(dataOMGSaison[3][0], dataOMGSaison[3][1]);
       generateOMG3(dataOMGSaison[3][2], dataOMGSaison[3][3]);
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }
       break;
     case "5":
       compteurSerie();
       compteurBook();
       generateOMG3(dataOMGSaison[4][0], dataOMGSaison[4][1]);
       generateOMG3(dataOMGSaison[4][2], dataOMGSaison[4][3]);
-      break;
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }      break;
     case "6":
       generateOMG3(dataOMGSaison[5][0], dataOMGSaison[5][1]);
       generateOMG3(dataOMGSaison[5][2], dataOMGSaison[5][3]);
-      break;
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }      break;
     case "7":
       compteurSerie();
       compteurBook();
       generateOMG3(dataOMGSaison[6][0], dataOMGSaison[6][1]);
       generateOMG3(dataOMGSaison[6][2], dataOMGSaison[6][3]);
-      break;
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }      break;
     case "8":
       compteurSerie();
       compteurBook();
       generateOMG3(dataOMGSaison[7][0],dataOMGSaison[7][1]);
       generateOMG3(dataOMGSaison[7][2],dataOMGSaison[7][3]);
-      break;
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }      break;
     case "9":
       compteurSerie();
       compteurBook();
       generateOMG3(dataOMGSaison[8][0], dataOMGSaison[8][1]);
       generateOMG3(dataOMGSaison[8][2], dataOMGSaison[8][3]);
-      break;
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }      break;
     case "10":
       compteurSerie();
       compteurBook(); 
       generateOMG3(dataOMGSaison[9][0], dataOMGSaison[9][1]);
       generateOMG3(dataOMGSaison[9][2], dataOMGSaison[9][3]);
-      break;
+      saisonmarker.innerText = "Saison " + value;
+      if(tailleTelephone.matches){
+        saisonmark.style.top = (leftsaisonmarker * (value - 1) + 2).toString() + "%";
+      }else{
+        saisonmarker.style.left = (leftsaisonmarker * (value-1)).toString() + "%";
+      }      break;
     default:
       break;
   }
 })
 
 
-
+responsiveOMGGenerator
 dataRecup();
 generateS1();
