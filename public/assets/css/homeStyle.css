@@ -705,28 +705,12 @@ nav{
     margin-right: auto;
     margin-left: auto;
 }
-#valeur_cursor{
-    position: absolute;
-    height: 24px;
-    width: 100px;
-    font-size: 24px;
-    background-color: #66aff6;
-    color:#fff;
-    font-weight: bold;
-    top: 435px;
-    text-align: center;
-    z-index:2;
-}
-#tickmarks{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.marksaison{
-    opacity: 0;
-}
-#markS1{
-    opacity: 100;
+
+
+#saisonmark{
+    position: relative;
+    width: 90px;
+    height: max-content;
 }
 #dataBooks .scotch{
     position: absolute;
