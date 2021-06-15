@@ -159,7 +159,6 @@ ctx.fillRect(0,0,width,height);*/
 
 function responsiveCanvas(tailleTelephone, tailleTablette) {
   if (tailleTelephone.matches) { // If media query matches
-    document.body.style.backgroundColor = "yellow";
     dataPersos.style.margin = "0";
 
     fenetre.style.width = "375px";
@@ -254,8 +253,6 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
 
 
   }else if(tailleTablette.matches) {
-    document.body.style.backgroundColor = "blue";
-
     fenetre.style.width = "425px";
 
     width = canvas.width = fenetre.offsetWidth;
@@ -340,10 +337,6 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
     ctxfontquantite = 16;
 
   } else {
-    document.body.style.backgroundColor = "pink";
-    
-    
-    
     width = canvas.width = fenetre.offsetWidth;
     height = canvas.height = fenetre.offsetHeight;
     ctx = canvas.getContext('2d');
@@ -424,10 +417,6 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
     translatexquantite = -200;
     translateyquantite = 12;
     ctxfontquantite = 16;
-
-
-
-
   }
 }
 
@@ -566,9 +555,7 @@ function UniteOrdonnee(){
       ctx.stroke();
       base = base - ajoutbaseUniteOrdonnee;
     }
-
   }
-
 }
 
 
@@ -626,7 +613,6 @@ function NumberOrdonnee(){
       ctx.strokeText(text,x,base);
       base = base - ajoutbaseNumberOrdonnee;
     }
-
   }
 }
 
@@ -672,18 +658,6 @@ function quantite(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 GrilleVertical();
 GrilleHorizontal();
 Ordonnee();
@@ -703,15 +677,6 @@ saison();
 quantite();
 
 
-
-
-
-
-
-
-
-
-
 /*OMG Book/Serie*/
 /*Initialisation des varaibles et récupérations des éléments*/
 const tableau = document.querySelector('#dataBooks');
@@ -728,7 +693,6 @@ const markS9 = document.querySelector('#markS9');
 const markS10 = document.querySelector('#markS10');
 
 const markALL = document.querySelectorAll('.marksaison');
-
 
 
 const OMGContainer = document.querySelector("#OMGContainer");
@@ -773,7 +737,6 @@ function responsiveOMGGenerator(tailleTelephone, tailleTablette){
     ratioHeightGeneratorOMG = 0.75;
     ratioHWidthGeneratorOMG = 0.82;
   }
-  
 }
 responsiveOMGGenerator(tailleTelephone, tailleTablette) // Call listener function at run time
 tailleTelephone.addListener(responsiveOMGGenerator) // Attach listener function on state changes
@@ -947,9 +910,7 @@ cursor.oninput = (()=>{
       break;
     default:
       break;
-    
   }
-
 })
 
 dataRecup();

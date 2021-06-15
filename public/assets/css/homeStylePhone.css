@@ -1,7 +1,6 @@
 @media (max-width: 425px){
     #hero{
         position: relative;
-        bottom: 100px;
         flex-direction: column;
     }
     #hero #cadre > img{
@@ -20,7 +19,6 @@
     }
     #hero > img{
         display: flex;
-        padding: 30px 0;
     }
     #hero > p{
         display: flex;
@@ -30,11 +28,11 @@
         text-align: center;
         letter-spacing: 4px;
         padding: 10px 0;
-        line-height: 30px;
+        line-height: 25px;
     }
     #hero > #btnScroll{
-        position: absolute;
-        bottom: 30px;
+        position: relative;
+        top: 15px;
         display: flex;
         height: 100px;
         width: 100px;
