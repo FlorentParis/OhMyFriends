@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Reset CSS -->
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
-    <!-- Fichier CSS -->
+    <!-- Fichier CSS - Style Main Homepage -->
     <link rel="stylesheet" href="{{ asset('assets/css/homeStyle.css') }}">
-
+    <!-- Fichier CSS - Style Laptop Homepage -->
+    <link rel="stylesheet" href="{{ asset('assets/css/homeStyleLaptop.css') }}">
+    <!-- Fichier CSS - Style Tablet Homepage -->
+    <link rel="stylesheet" href="{{ asset('assets/css/homeStyleTablet.css') }}">
+    <!-- Fichier CSS - Style Phone Homepage -->
+    <link rel="stylesheet" href="{{ asset('assets/css/homeStylePhone.css') }}">
     <title>Oh My Friends</title>
 </head>
 <body>
+    <!-- Element HTML en hidden, servant a la récupération des datas en JS -->
     <input type="hidden" id="test" value="{{$data}}">
+    <!-- Burger Menu -->
     <nav>
         <div id="burger">
             <div class="bar"></div>
@@ -20,12 +27,11 @@
             <div class="bar"></div>
         </div>
     </nav>
+    <!-- Menu De Navigation -->
     <section id="interphone">
         <div>
             <div>
-                <div id="grillesContainer">
-
-                </div>
+                <div id="grillesContainer"></div>
                 <div></div>
             </div>
             <div>
@@ -44,6 +50,7 @@
             </div>
         </div>
     </section>
+    <!-- Hero : cadre + gond sur la droite -->
     <section id="hero">
         <div id="cadre">
             <img src="{{ asset('assets/img/cadre.png') }}" alt="">
@@ -54,6 +61,11 @@
                 <video class="player__video viewer" src="{{ asset('assets/video/compilOMG.mp4') }}"></video>
             </div>
         </div>
+        <img src="{{ asset('assets/img/logoMobile.svg') }}" alt="">
+        <p>La série Friends et son impact sur notre culture.</p>
+        <div id="btnScroll">
+            <span>Scroll to continue</span>
+        </div>
         <div class="gond">
             <div class="vis">
                 <span class="trou_vis">+</span>
@@ -63,6 +75,7 @@
             </div>
         </div>
     </section>
+    <!-- Horloge : Représentation Audience Moyenne, OMG en Millions dans les livres et OMG dans la saison choisie -->
     <section id="horlogeContainer">
         <div id="horloge">
             <div>
@@ -121,10 +134,12 @@
             </div>
         </div>
     </section>
+    <!-- Post-it "fun" -->
     <div class="postit">
         <span></span>
         <p>Préparer une dinde pour Joey</p>
     </div>
+    <!-- Section Books : Verrou, poignée, post-it et représentation visuel de la moyenne des omg/saison et omg dans les livres -->
     <section id="books">
         <div id="elePorte">
             <div id="verrou">
@@ -163,7 +178,7 @@
                         <div></div>
                     </div>
                 </div>
-                <div></div> <!-- Bas de poignée -->
+                <div></div>
                 <div id="poignee_bas"></div>
             </div>
         </div>
@@ -192,6 +207,7 @@
 
         </div>
     </section>
+    <!-- Section Persos : Graphique canvas representant le nombre de omg/personnages, photo "fun" et gond sur la droite -->
     <section id="persos">
         <div class="scotch"></div>
         <div id="dataPersos">
@@ -213,6 +229,7 @@
             </div>
         </div>
     </section>
+    <!-- Footer -->
     <footer>
         <div>
             <img src="{{ asset('assets/img/Logo.png') }}" alt="">
@@ -221,6 +238,7 @@
             <p>Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Grande Ecole de l’école HETIC. Les contenus et données présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera en aucun cas exploité à des fins commerciales</p>
         </div>
     </footer>
+    <!-- Fichier JS - Script Main Homepage -->
     <script src="{{ asset('assets/js/homeScript.js') }}"></script>
 </body>
 </html>

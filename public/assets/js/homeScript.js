@@ -82,6 +82,7 @@ line.forEach(element => {
 })
 
 const numberHorloge = document.querySelectorAll('.numberHorloge');
+numberHorloge[0].style.color = "#ffd500";
 const aiguille = document.querySelector('#aiguille');
 const horlogeData = document.querySelectorAll('.horlogeData');
 
@@ -95,6 +96,10 @@ numberHorloge.forEach(element => {
     horlogeData[0].textContent = data["audienceSeason"][element.textContent.substr(1) - 1][element.textContent.substr(1)];
     horlogeData[1].textContent = data["qteOmgBooks"][element.textContent.substr(1) - 1][1993 + parseInt(element.textContent.substr(1))];
     horlogeData[2].textContent = data["omgSaison"][element.textContent.substr(1) - 1][element.textContent.substr(1)];
+    numberHorloge.forEach(element => {
+      element.removeAttribute("style");
+    });
+    element.style.color = "#ffd500";
   })
 });
 
@@ -109,6 +114,20 @@ bouton.addEventListener("click", () => {
     setTimeout(function(){
       bouton.classList.remove("animO");
     }, 3000);
+  }
+});
+
+/* Boule Animation */
+const boule = document.querySelector('#boule');
+
+boule.addEventListener("click", () => {
+  if(boule.classList.contains('animB')){
+    boule.classList.remove("animB");
+  }else{
+    boule.classList.add("animB");
+    setTimeout(function(){
+      boule.classList.remove("animB");
+    }, 1000);
   }
 });
 
@@ -130,12 +149,295 @@ cache.addEventListener("click", () => {
 /*Initialisation des varaibles et récupérations des éléments*/
 const canvas = document.querySelector('#myCanvas');
 const fenetre = document.querySelector('#dataPersos');
-const width = canvas.width = fenetre.offsetWidth;
+/*const width = canvas.width = fenetre.offsetWidth;
 const height = canvas.height = fenetre.offsetHeight;
 const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = '#f2f2f2';
-ctx.fillRect(0,0,width,height);
+ctx.fillRect(0,0,width,height);*/
+
+
+function responsiveCanvas(tailleTelephone, tailleTablette) {
+  if (tailleTelephone.matches) { // If media query matches
+    document.body.style.backgroundColor = "yellow";
+    dataPersos.style.margin = "0";
+
+    fenetre.style.width = "375px";
+
+    fenetre.style.marginLeft = "auto";
+    fenetre.style.marginRight = "auto";
+
+    
+    width = canvas.width = fenetre.offsetWidth;
+    height = canvas.height = fenetre.offsetHeight;
+    ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#f2f2f2';
+    ctx.fillRect(0,0,width,height);
+
+
+    basePoint = 597;
+    xPoint = 40.5;
+    multiplicateurPoint = 12;
+    ajoutxPoint = 35.7;
+
+    xGrilleVertical = 40.5;
+    baseGrilleVertical = 607;
+    finGrilleVertical = 67;
+    lineWidthGrilleVertical = 0.25;
+    ajoutxGrilleVertical = 35.7;
+
+    yGrilleHorizontal = 607;
+    baseGrilleHorizontal = 45.5;
+    finGrilleHorizontal=362.2;
+    lineWidthGrilleHorizontal = 0.25;
+    ajoutyGrilleHorizontal = 60;
+
+    yAbsisse = 607;
+    baseAbsisse = 45.5;
+    finAbsisse = 362.2;
+    lineWidthAbsisse = 1.5;
+    ajoutfinAbsisse = 10;
+
+    xOrdonnee = 40.5;
+    baseOrdonnee = 607;
+    finOrdonnee = 67;
+    lineWidthOrdonnee = 1.5;
+    ajoutxOrdonnee = 10;
+
+    xUniteAbcisse = 40.5;
+    baseUniteAbcisse = 607;
+    lineWidthUniteAbcisse = 2;
+    ajoutbaseUniteAbcisse = 10;
+    ajoutxUniteAbcisse = 35.7;
+
+    xUniteOrdonnee = 40.5;
+    baseUniteOrdonnee=607;
+    lineWidth1UniteOrdonnee = 2;
+    lineWidth2UniteOrdonnee = 1;
+    ajoutbaseUniteOrdonnee = 12;
+    ajoutx1UniteOrdonnee = 10;
+    ajoutx2UniteOrdonnee = 5;
+
+    xNumberOrdonnee = 15;
+    baseNumberOrdonnee = 612;
+    lineWidthNumberOrdonnee = 1.1;
+    ajoutbaseNumberOrdonnee = 60;
+
+    xNumberAbcisse = 35.5;
+    baseNumberAbcisse = 630;
+    lineWidthNumberAbcisse = 1.1;
+    ajoutx1NumberAbcisse = 34;
+    ajoutx2NumberAbcisse = 35.7;  
+
+    lineWidthtitre = 1;
+    xtitre = 20;
+    ytitre = 35;
+    ctxfontitre = 18;
+    texttitre1 = "Evolution de la quantité de “Oh My God” au fil";
+    texttitre2 = "des saisons pour chaque personnage";
+
+    lineWidthsaison = 1;
+    xsaison = 313.75;
+    ysaison = 645;
+    ctxfontsaison = 16;
+    
+    lineWidthquantite = 1;
+    xquantite = -20;
+    yquantite = 0;
+    translatexquantite = -200;
+    translateyquantite = 12;
+    ctxfontquantite = 16;
+
+
+
+
+
+  }else if(tailleTablette.matches) {
+    document.body.style.backgroundColor = "blue";
+
+    fenetre.style.width = "425px";
+
+    width = canvas.width = fenetre.offsetWidth;
+    height = canvas.height = fenetre.offsetHeight;
+    ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#f2f2f2';
+    ctx.fillRect(0,0,width,height);
+
+
+    basePoint = 597;
+    xPoint = 51.8;
+    multiplicateurPoint = 12;
+    ajoutxPoint = 37.5;
+
+    xGrilleVertical = 51.8;
+    baseGrilleVertical = 607;
+    finGrilleVertical = 67;
+    lineWidthGrilleVertical = 0.25;
+    ajoutxGrilleVertical = 37.5;
+
+    yGrilleHorizontal = 607;
+    baseGrilleHorizontal = 51.8;
+    finGrilleHorizontal=389.3;
+    lineWidthGrilleHorizontal = 0.25;
+    ajoutyGrilleHorizontal = 60;
+
+    yAbsisse = 607;
+    baseAbsisse = 51.8;
+    finAbsisse = 389.3;
+    lineWidthAbsisse = 1.5;
+    ajoutfinAbsisse = 10;
+
+    xOrdonnee = 51.8;
+    baseOrdonnee = 607;
+    finOrdonnee = 67;
+    lineWidthOrdonnee = 1.5;
+    ajoutxOrdonnee = 10;
+
+    xUniteAbcisse = 51.8;
+    baseUniteAbcisse = 607;
+    lineWidthUniteAbcisse = 2;
+    ajoutbaseUniteAbcisse = 10;
+    ajoutxUniteAbcisse = 37.5;
+
+    xUniteOrdonnee = 51.8;
+    baseUniteOrdonnee=607;
+    lineWidth1UniteOrdonnee = 2;
+    lineWidth2UniteOrdonnee = 1;
+    ajoutbaseUniteOrdonnee = 12;
+    ajoutx1UniteOrdonnee = 10;
+    ajoutx2UniteOrdonnee = 5;
+
+    xNumberOrdonnee = 27;
+    baseNumberOrdonnee = 612;
+    lineWidthNumberOrdonnee = 1.1;
+    ajoutbaseNumberOrdonnee = 60;
+
+    xNumberAbcisse = 48;
+    baseNumberAbcisse = 630;
+    lineWidthNumberAbcisse = 1.1;
+    ajoutx1NumberAbcisse = 35.7;
+    ajoutx2NumberAbcisse = 37.45;  
+
+    lineWidthtitre = 1;
+    xtitre = 45;
+    ytitre = 35;
+    ctxfontitre = 18;
+    texttitre1 = "Evolution de la quantité de “Oh My God” au fil";
+    texttitre2 = "des saisons pour chaque personnage";
+
+    lineWidthsaison = 1;
+    xsaison = 343.75;
+    ysaison = 645;
+    ctxfontsaison = 16;
+    
+    lineWidthquantite = 1;
+    xquantite = 0;
+    yquantite = 10;
+    translatexquantite = -200;
+    translateyquantite = 12;
+    ctxfontquantite = 16;
+
+  } else {
+    document.body.style.backgroundColor = "pink";
+    
+    
+    
+    width = canvas.width = fenetre.offsetWidth;
+    height = canvas.height = fenetre.offsetHeight;
+    ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#f2f2f2';
+    ctx.fillRect(0,0,width,height);
+
+
+    basePoint = 577;
+    xPoint = 60;
+    multiplicateurPoint = 12;
+    ajoutxPoint = 84;
+
+    xGrilleVertical = 60;
+    baseGrilleVertical = 587;
+    finGrilleVertical = 47;
+    lineWidthGrilleVertical = 0.25;
+    ajoutxGrilleVertical = 84;  
+
+    yGrilleHorizontal = 587;
+    baseGrilleHorizontal = 60;
+    finGrilleHorizontal=816;
+    lineWidthGrilleHorizontal = 0.25;
+    ajoutyGrilleHorizontal = 60;  
+
+    yAbsisse = 587;
+    baseAbsisse = 60;
+    finAbsisse = 816;
+    lineWidthAbsisse = 1.5;
+    ajoutfinAbsisse = 10;
+
+    xOrdonnee = 60;
+    baseOrdonnee = 587;
+    finOrdonnee = 47;
+    lineWidthOrdonnee = 1.5;
+    ajoutxOrdonnee = 10;
+
+    xUniteAbcisse = 60;
+    baseUniteAbcisse = 587;
+    lineWidthUniteAbcisse = 2;
+    ajoutbaseUniteAbcisse = 10;
+    ajoutxUniteAbcisse = 84;
+
+    xUniteOrdonnee = 60;
+    baseUniteOrdonnee=587;
+    lineWidth1UniteOrdonnee = 2;
+    lineWidth2UniteOrdonnee = 1;
+    ajoutbaseUniteOrdonnee = 12;
+    ajoutx1UniteOrdonnee = 10;
+    ajoutx2UniteOrdonnee = 5;
+
+    xNumberOrdonnee = 32.5;
+    baseNumberOrdonnee = 592;
+    lineWidthNumberOrdonnee = 1.1;
+    ajoutbaseNumberOrdonnee = 60;
+
+    xNumberAbcisse = 57;
+    baseNumberAbcisse = 610;
+    lineWidthNumberAbcisse = 1.1;
+    ajoutx1NumberAbcisse = 80;
+    ajoutx2NumberAbcisse = 83.9;  
+
+    lineWidthtitre = 1;
+    xtitre = 100;
+    ytitre = 30;
+    ctxfontitre = 20;
+    texttitre1 = "Evolution de la quantité de “Oh My God” au fil des saisons pour chaque personnage";
+    texttitre2 = ""
+
+    lineWidthsaison = 1;
+    xsaison = 770;
+    ysaison = 630;
+    ctxfontsaison = 16;
+    
+    lineWidthquantite = 1;
+    xquantite = 0;
+    yquantite = 10;
+    translatexquantite = -200;
+    translateyquantite = 12;
+    ctxfontquantite = 16;
+
+
+
+
+  }
+}
+
+
+var tailleTelephone = window.matchMedia("(max-width: 425px)")
+var tailleTablette = window.matchMedia("(max-width: 1024px)")
+responsiveCanvas(tailleTelephone, tailleTablette) // Call listener function at run time
+tailleTelephone.addListener(responsiveCanvas) // Attach listener function on state changes
+tailleTablette.addListener(responsiveCanvas) // Attach listener function on state changes
+
 
 /*Récupération de la data OMG pour chaque personnage en fonction des saisons */
 Rachel = data['omgPersoSaison'][0]['nb_omg'];
@@ -145,207 +447,239 @@ Ross =data['omgPersoSaison'][3]['nb_omg']
 Chandler =data['omgPersoSaison'][4]['nb_omg']
 Joey=data['omgPersoSaison'][5]['nb_omg']
 
+
+
 /* Trace la courbe en fonction de la valeur des points donnés*/
 function point(points, color){
   ctx.beginPath();
   ctx.lineWidth = "1";
   ctx.strokeStyle=color;
-  var base = 577;
-  var x = 60;
-  ctx.moveTo(x,base - points[0]*12);
+  var base = basePoint;
+  var x = xPoint;
+  ctx.moveTo(x,base - points[0]*multiplicateurPoint);
   for(let z = 0; z<points.length; z++){
-    ctx.lineTo(x, base - points[z]*12);
-    x = x+84;
+    ctx.lineTo(x, base - points[z]*multiplicateurPoint);
+    x = x+ajoutxPoint;
   }
   ctx.stroke();
 }
 
+
+
 /*Trace les lignes vertical du graphe*/
 function GrilleVertical(){
-  var x = 60;
-  var base = 587;
-  var fin = 47;
+  var x = xGrilleVertical;
+  var base = baseGrilleVertical;
+  var fin = finGrilleVertical;
   for(let z = 0; z<10;z++){
     ctx.beginPath();
-    ctx.lineWidth = "0.25";
+    ctx.lineWidth = lineWidthGrilleVertical.toString();
     ctx.strokeStyle="black";
     ctx.moveTo(x,base);
     ctx.lineTo(x,fin);
     ctx.stroke();
-    x = x + 84;
+    x = x + ajoutxGrilleVertical;
   }
 }
 
+
 /*Trace les lignes horizontal du graphe*/
 function GrilleHorizontal(){
-  var y = 587;
-  var base = 60;
-  var fin = 816
+  var y = yGrilleHorizontal;
+  var base = baseGrilleHorizontal;
+  var fin = finGrilleHorizontal
   for(let z = 0; z<10; z++){
     ctx.beginPath();
-    ctx.lineWidth = "0.25";
+    ctx.lineWidth = lineWidthGrilleHorizontal.toString();
     ctx.strokeStyle="black";
     ctx.moveTo(base,y);
     ctx.lineTo(fin,y);
     ctx.stroke();
-    y = y - 60;
+    y = y - ajoutyGrilleHorizontal;
   }
 }
 
+
+
+
 /*Trace la ligne des abcisses du graphe*/
 function Absisse(){
-  var y = 587;
-  var base = 60;
-  var fin = 816;
+  var y = yAbsisse;
+  var base = baseAbsisse;
+  var fin = finAbsisse;
   ctx.beginPath();
-  ctx.lineWidth = "1.5";
+  ctx.lineWidth = lineWidthAbsisse.toString();
   ctx.strokeStyle="black";
   ctx.moveTo(base,y);
   ctx.lineTo(fin,y);
   ctx.stroke();
   ctx.moveTo(fin, y);
-  ctx.lineTo(fin - 10, y - 10);
+  ctx.lineTo(fin - ajoutfinAbsisse, y - ajoutfinAbsisse);
   ctx.moveTo(fin, y);
-  ctx.lineTo(fin - 10, y + 10);
+  ctx.lineTo(fin - ajoutfinAbsisse, y + ajoutfinAbsisse);
   ctx.stroke();
 }
 
+
+
 /*Trace la ligne des ordonnées du graphe*/
 function Ordonnee(){
-  var x = 60;
-  var base = 587;
-  var fin = 47;
+  var x = xOrdonnee;
+  var base = baseOrdonnee;
+  var fin = finOrdonnee;
   ctx.beginPath();
-  ctx.lineWidth = "1.5";
+  ctx.lineWidth = lineWidthOrdonnee.toString();
   ctx.strokeStyle="black";
   ctx.moveTo(x,base);
   ctx.lineTo(x,fin);
   ctx.stroke();
   ctx.moveTo(x, fin);
-  ctx.lineTo(x - 10, fin + 10);
+  ctx.lineTo(x - ajoutxOrdonnee, fin + ajoutxOrdonnee);
   ctx.stroke();
   ctx.moveTo(x, fin);
-  ctx.lineTo(x + 10, fin + 10);
+  ctx.lineTo(x + ajoutxOrdonnee, fin + ajoutxOrdonnee);
   ctx.stroke();
 }
 
+
+
+
 /*Trace les unités de la ligne des abcisses du graphe*/
 function UniteOrdonnee(){
-  var x = 60;
-  var base = 587;
+  var x = xUniteOrdonnee;
+  var base = baseUniteOrdonnee;
   for(let z = 0; z<45; z++){
     if(z%5 == 0){
       ctx.beginPath();
       ctx.strokeStyle = "black";
-      ctx.lineWidth = "2";
+      ctx.lineWidth = lineWidth1UniteOrdonnee.toString();;
       ctx.moveTo(x, base);
-      ctx.lineTo(x-10, base);
+      ctx.lineTo(x-ajoutx1UniteOrdonnee, base);
       ctx.stroke();
-      base = base - 12;
+      base = base - ajoutbaseUniteOrdonnee;
     }else{
       ctx.beginPath();
       ctx.strokeStyle = "black";
-      ctx.lineWidth = "1";
+      ctx.lineWidth = lineWidth2UniteOrdonnee.toString();
       ctx.moveTo(x, base);
-      ctx.lineTo(x-5, base);
+      ctx.lineTo(x-ajoutx2UniteOrdonnee, base);
       ctx.stroke();
-      base = base - 12;
+      base = base - ajoutbaseUniteOrdonnee;
     }
 
   }
 
 }
 
+
+
+
 /*Trace les unités de la ligne des ordonnées du graphe*/
 function UniteAbcisse(){
-  var x = 60;
-  var base = 587;
+  var x = xUniteAbcisse;
+  var base = baseUniteAbcisse;
   for(let z = 0; z<45; z++){
     if(z%5==0){
       ctx.beginPath();
       ctx.strokeStyle = "black";
-      ctx.lineWidth = "2";
+      ctx.lineWidth = lineWidthUniteAbcisse.toString();
       ctx.moveTo(x,base);
-      ctx.lineTo(x, base + 10);
+      ctx.lineTo(x, base + ajoutbaseUniteAbcisse);
       ctx.stroke();
-      x = x + 84;
+      x = x + ajoutxUniteAbcisse;
     }
   }
 }
 
+
+
 /*Trace les valeurs des unités de la ligne des abcisses du graphe*/
 function NumberAbcisse(){
-  var x = 57;
-  base = 610;
+  var x = xNumberAbcisse;
+  var base = baseNumberAbcisse;
   for(let z = 1; z<11; z++){
     if(z>8){
       text = z.toString();
-      ctx.lineWidth="1.1";
+      ctx.lineWidth=lineWidthNumberAbcisse.toString();
       ctx.font = '16px serif';
       ctx.strokeText(text, x, base);
-      x = x + 80;
+      x = x + ajoutx1NumberAbcisse;
     }else{
       text = z.toString();
-      ctx.lineWidth="1.1";
+      ctx.lineWidth=lineWidthNumberAbcisse.toString();
       ctx.font = '16px serif';
       ctx.strokeText(text, x, base);
-      x = x + 83.9;
+      x = x + ajoutx2NumberAbcisse;
     }
   }
 }
 
 /*Trace les valeurs des unités de la ligne des ordonnées du graphe*/
 function NumberOrdonnee(){
-  var x = 32.5;
-  base = 592;
+  var x = xNumberOrdonnee;
+  base = baseNumberOrdonnee;
   for(let z = 0; z<45; z++){
     if(z%5==0){
       text = z.toString();
-      ctx.lineWidth="1.1";
+      ctx.lineWidth=lineWidthNumberOrdonnee.toString();
       ctx.font = '14px serif';
       ctx.strokeText(text,x,base);
-      base = base - 60;
+      base = base - ajoutbaseNumberOrdonnee;
     }
 
   }
 }
 
 
+
+
 /*Trace le titre du graphe*/
 function titre(){
-  ctx.font='20px serif';
-  ctx.lineWidth="1";
-  text = "Evolution de la quantité de “Oh My God” au fil des saisons pour chaque personnage"
+  ctx.font=  ctxfontitre.toString() +'px serif';
+  ctx.lineWidth=lineWidthtitre.toString();
+  text1 = texttitre1;
+  text2 = texttitre2;
   ctx.fillStyle="black";
-  var x = 100;
-  var y = 30;
-  ctx.fillText(text,x,y);
+  var x = xtitre;
+  var y = ytitre;
+  ctx.fillText(text1,x,y);
+  ctx.fillText(text2,x + 30,y + 12);
 }
-
 
 /*Trace la grandeur variable : les saisons*/
 function saison(){
-  ctx.font='16px serif';
-  ctx.lineWidth="1";
+  ctx.font= ctxfontsaison.toString() +'px serif';
+  ctx.lineWidth=lineWidthsaison.toString();
   text = "Saisons"
   ctx.fillStyle="black";
-  var x = 770;
-  var y = 630;
+  var x = xsaison;
+  var y = ysaison;
   ctx.fillText(text,x,y);
 }
 
+
 /*Trace la grandeur mesurées : la quantité de OMG*/
 function quantite(){
-  ctx.font='16px " serif';
-  ctx.lineWidth="1";
+  ctx.font= ctxfontquantite.toString() +'px serif';
+  ctx.lineWidth=lineWidthquantite.toString();
   text = 'Quantité de "Oh my God"';
   ctx.fillStyle="black";
   ctx.rotate(-90* Math.PI / 180);
-  var x =0;
-  var y = 10;
-  ctx.translate(-200,12);
+  var x =xquantite;
+  var y = yquantite;
+  ctx.translate(translatexquantite,translateyquantite);
   ctx.fillText(text,x,y);
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -373,6 +707,11 @@ quantite();
 
 
 
+
+
+
+
+
 /*OMG Book/Serie*/
 /*Initialisation des varaibles et récupérations des éléments*/
 const tableau = document.querySelector('#dataBooks');
@@ -390,14 +729,56 @@ const markS10 = document.querySelector('#markS10');
 
 const markALL = document.querySelectorAll('.marksaison');
 
-const OMGWidth = tableau.width = tableau.offsetWidth;
-const OMGHeight = tableau.height = tableau.offsetHeight;
+
 
 const OMGContainer = document.querySelector("#OMGContainer");
 
 const dataOMGSaison = [];
 
 let year = 1994;
+
+function responsiveOMGGenerator(tailleTelephone, tailleTablette){
+  if(tailleTelephone.matches) {
+    tableau.style.width = "375px";
+    tableau.style.margin = "0";
+    tableau.style.padding = "0";
+    OMGWidth = tableau.width = tableau.offsetWidth;
+    OMGHeight = tableau.height = tableau.offsetHeight;
+
+    console.log(OMGHeight);
+    console.log(OMGWidth);
+    console.log(tableau);
+
+    ratioHeightGeneratorOMG = 0.73;
+    ratioHWidthGeneratorOMG = 0.78; 
+
+  }else if (tailleTablette.matches) {
+    tableau.style.width = "425px";
+    OMGWidth = tableau.width = tableau.offsetWidth;
+    OMGHeight = tableau.height = tableau.offsetHeight;
+
+    console.log(OMGHeight);
+    console.log(OMGWidth);
+    console.log(tableau);
+    ratioHeightGeneratorOMG = 0.75;
+    ratioHWidthGeneratorOMG = 0.82;
+  }else{
+    OMGWidth = tableau.width = tableau.offsetWidth;
+    OMGHeight = tableau.height = tableau.offsetHeight;
+
+    console.log(OMGHeight);
+    console.log(OMGWidth);
+    console.log(tableau);
+
+    ratioHeightGeneratorOMG = 0.75;
+    ratioHWidthGeneratorOMG = 0.82;
+  }
+  
+}
+responsiveOMGGenerator(tailleTelephone, tailleTablette) // Call listener function at run time
+tailleTelephone.addListener(responsiveOMGGenerator) // Attach listener function on state changes
+tailleTablette.addListener(responsiveOMGGenerator) // Attach listener function on state changes
+
 
 /*Récupération de la data de la quantité de OMG dans la série par saison et dans les livres par années*/
 function dataRecup(){
@@ -428,12 +809,15 @@ function generateOMG(amount, type){
     }
     OMG.innerText = "OMG";
     OMG.style.position ="absolute";
-    OMG.style.bottom = getRandomInt(OMGHeight * 0.75).toString() + "px";
-    OMG.style.left=getRandomInt(OMGWidth * 0.82).toString() + "px";
+    OMG.style.bottom = getRandomInt(OMGHeight * ratioHeightGeneratorOMG).toString() + "px";
+    OMG.style.left=getRandomInt(OMGWidth * ratioHWidthGeneratorOMG).toString() + "px";
     OMG.classList.toggle("OMGspan");
     OMGContainer.appendChild(OMG);
   }
 }
+
+
+
 /* Fonction pour sortir une valeur aléatoire, ensuite utilisée dans le placement des OMG générés */
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
