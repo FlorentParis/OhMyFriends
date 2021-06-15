@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/homeStyleTablet.css') }}">
     <!-- Fichier CSS - Style Phone Homepage -->
     <link rel="stylesheet" href="{{ asset('assets/css/homeStylePhone.css') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/img/cadre.png') }}" type="image/x-icon">
     <title>Oh My Friends</title>
 </head>
 <body>

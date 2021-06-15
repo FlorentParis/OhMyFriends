@@ -192,7 +192,8 @@
     }
     #persos > .scotch{
         width: 300px;
-        top: 275px;
+        height: 25px;
+        top: 345px;
         left: 50%;
         transform: translateX(-50%);
     }

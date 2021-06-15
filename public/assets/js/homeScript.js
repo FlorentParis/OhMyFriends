@@ -22,7 +22,7 @@ function Menu(){
     displayMenu = true;
     document.body.classList.add('bodyStopScroll');
   }else if (displayMenu == true){
-    interphone.style.left = "-100%";
+    interphone.style.left = "-100vw";
     bars[0].style.transform = "rotateZ(0deg)";
     bars[0].style.width = "40px";
     bars[1].style.opacity = "1";

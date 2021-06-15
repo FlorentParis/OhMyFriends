@@ -18,6 +18,10 @@
     .horlogeTab{
         padding-top: 25px;
     }
+    .postit:first-of-type{
+        left: calc(100% - 500px);
+        top: 200px;
+    }
     /* Books */
     #books{
         flex-direction: column;
@@ -28,30 +32,38 @@
     #books .postit{
         position: absolute;
         left: calc(100% - 370px);
-        top: 450px;
+        top: 720px;
     }
     #books #dataBooks{
         align-self: center;
         margin: 50px 0;
+        top: 130px;
     }
     /* Persos */
     #persos{
         height: auto;
         overflow: visible;
+        margin-top: 50px;
+        margin-bottom: 150px;
+    }
+    #persos .scotch{
+        left: 175px;
+        width: 220px;
     }
     #persos #dataPersos{
         position: relative;
     }
     #photo{
-        top: -230px;
-        right: 25px;
+        top: 100px;
+        right: 80px;
     }
     #photo > img{
-        width: 287.5px;
-        height: 200px;
+        width: 410px;
+        height: 285px;
     }
     #photo > .scotch:nth-of-type(1){
-        left: 220px;
+        left: 350px;
+        top: -5px;
         width: 100px;
         height: 35px;
         transform: rotate(45deg);
