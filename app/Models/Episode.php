@@ -17,6 +17,7 @@ class Episode extends Model
         return $this->belongsTo(Saison::class, 'id_saison');
     }
 
+    //Récup l'audience par épisode
     public static function getAudienceEpisode($id_episode){
         return DB::table('episodes')
                     ->where('id', $id_episode)

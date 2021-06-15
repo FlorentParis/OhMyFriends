@@ -1,28 +1,49 @@
 @media (max-width: 425px){
     #hero{
+        position: relative;
+        bottom: 100px;
         flex-direction: column;
+    }
+    #hero #cadre > img{
+        width: 80vw;
+    }
+    .gond{
+        width: 4vw;
+    }
+    .gond > .vis:nth-of-type(1){
+        width: 7px;
+        height: 7px;
+    }
+    .gond > .vis:nth-of-type(2){
+        width: 7px;
+        height: 7px;
     }
     #hero > img{
         display: flex;
+        padding: 30px 0;
     }
     #hero > p{
         display: flex;
-        font-size: 12px;
+        font-size: 14px;
         font-family: "Rock Salt";
         width: 80vw;
         text-align: center;
         letter-spacing: 4px;
-        padding: 30px 0;
+        padding: 10px 0;
+        line-height: 30px;
     }
     #hero > #btnScroll{
+        position: absolute;
+        bottom: 30px;
         display: flex;
         height: 100px;
         width: 100px;
         border-radius: 100%;
         border: 2px solid var(--yellow);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
         justify-content: center;
         align-items: center;
+        animation: float 3s ease-in-out infinite;
     }
     #hero > #btnScroll span{
         text-align: center;
@@ -31,23 +52,48 @@
         font-size: 10px;
         letter-spacing: 2px;
         line-height: 20px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-15px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
     }
     #horloge{
         padding: 50px 25px;
     }
-    .postit{
-        height: 120px;
-        width: 120px;
+    .vis{
+        width: 12px;
+        height: 12px;
     }
-    .postit:first-of-type {
-        left: calc(100% - 150px);
+    .postit{
+        height: 150px;
+        width: 150px;
+    }
+    .postit:first-of-type{
+        top: 150px;
+        left: calc(100% - 180px);
     }
     .postit:first-of-type p{
-        font-size: 12px;
+        font-size: 15px;
         width: 100px;
         line-height: 25px;
     }
-    #books #elePorte #verrou {
+    #books .postit{
+        top: 280px;
+        left: calc(100% - 200px);
+    }
+    #books{
+        position: relative;
+        top: auto;
+    }
+    #books #elePorte #verrou{
         height: 100px;
         width: 200px;
         border-radius: 30px;
@@ -55,17 +101,20 @@
     #books #elePorte #verrou #verrouContent {
         height: 70px;
     }
-    #ovale {
-        top: 25%;
+    #books #elePorte #verrou #verrouContent #bouton div{
+        width: 14px;
+        height: 14px;
+    }
+    #ovale{
         position: absolute;
         width: 30px;
-        height: 60px;
-        left: 135px;
-        transform-origin: 15px 40px;
+        height: 50px;
+        left: 145px;
+        transform-origin: 15px 25px;
     }
     #ovale > div{
-        width: 20px;
-        height: 50px;
+        width: 22px;
+        height: 42px;
     }
     #bouton {
         width: 20px;
@@ -98,8 +147,61 @@
         height: 60px;
         transform-origin: 30px 10px;
     }
+    #serrure{
+        position: absolute;
+        top: 178px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+    #serrure > div:first-of-type{
+        width: 20px;
+        height: 20px;
+    }
+    #serrure > div:last-of-type{
+        top: 5px;
+        border-bottom: 30px solid #201108;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+    }
     #poignee .vis:nth-of-type(3) {
         right: 37px;
         top: 160px;
+    }
+    #persos{
+        flex-direction: column-reverse;
+        top: 350px;
+    }
+    #persos > .scotch{
+        width: 400px;
+        top: 275px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #persos > #dataPersos{
+        position: static;
+        display: flex;
+        align-self: center;
+        margin-top: 100px;
+    }
+    #photo{
+        position: static;
+        display: flex;
+        align-self: flex-end;
+    }
+    #photo > .scotch:nth-of-type(1){
+        left: 250px;
+        width: 70px;
+        height: 25px;
+    }
+    #photo > .scotch:nth-of-type(2){
+        left: -25px;
+        width: 70px;
+        height: 25px;
+    }
+    #photo > img{
+        width: 300px;
+        height: 210px;
     }
 }

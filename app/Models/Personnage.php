@@ -14,6 +14,7 @@ class Personnage extends Model
         return $this->hasMany(Script::class, 'id_personnage');
     }
 
+    //Récup le nombre d'omg par personnage, renvoie un tableau avec une valeur pour chaque saison
     public static function getAllScript($id_personnage): array
     {
         $scripts = DB::table('scripts')
