@@ -22,6 +22,11 @@ Par le biais d'une étude en DataViz, le projet permettra de centraliser des chi
 ![](https://github.com/FlorentParis/OhMyFriends/blob/master/public/assets/img/Screen_Hero.PNG)
 </br>
 
+## Hébergement :
+
+[Site hébergé](https://ohmyfriends.alwaysdata.net/)
+</br>
+
 ## Gestion du Projet :
 
 Un journal de bord, mis à jour quotidiennement, a permis de suivre notre avancement jour par jour. </br>
