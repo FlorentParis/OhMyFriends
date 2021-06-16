@@ -160,10 +160,7 @@ ctx.fillRect(0,0,width,height);*/
 function responsiveCanvas(tailleTelephone, tailleTablette) {
   if (tailleTelephone.matches) { // If media query matches
 
-    fenetre.style.width = "375px";
-
-    fenetre.style.marginLeft = "auto";
-    fenetre.style.marginRight = "auto";
+    /*fenetre.style.width = "375px";
 
     
     width = canvas.width = fenetre.offsetWidth;
@@ -245,15 +242,101 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
     yquantite = 0;
     translatexquantite = -200;
     translateyquantite = 12;
-    ctxfontquantite = 16;
+    ctxfontquantite = 16;*/
 
+    fenetre.style.width = "375px";
+    fenetre.style.height = "280px";
+    fenetre.style.margin = "0 70px";
+
+    width = canvas.width = fenetre.offsetWidth;
+    height = canvas.height = fenetre.offsetHeight;
+    ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#f2f2f2';
+    ctx.fillRect(0,0,width,height);
+
+
+    basePoint = 245.5;
+    xPoint = 25.5;
+    multiplicateurPoint = 5.1;
+    ajoutxPoint = 35.7;
+
+    xGrilleVertical = 25.5;
+    baseGrilleVertical = 249.8;
+    finGrilleVertical = 20;
+    lineWidthGrilleVertical = 0.1;
+    ajoutxGrilleVertical = 35.7;  
+
+    yGrilleHorizontal = 249.8;
+    baseGrilleHorizontal = 25.5;
+    finGrilleHorizontal=347.2;
+    lineWidthGrilleHorizontal = 0.1;
+    ajoutyGrilleHorizontal = 25.5;  
+
+    yAbsisse = 249.8;
+    baseAbsisse = 25.5;
+    finAbsisse = 347.2;
+    lineWidthAbsisse = 0.6;
+    ajoutfinAbsisse = 4.25;
+
+    xOrdonnee = 25.5;
+    baseOrdonnee = 249.8;
+    finOrdonnee = 20;
+    lineWidthOrdonnee = 0.6;
+    ajoutxOrdonnee = 4.25;
+
+    xUniteAbcisse = 25.5;
+    baseUniteAbcisse = 249.8;
+    lineWidthUniteAbcisse = 0.85;
+    ajoutbaseUniteAbcisse = 4.25;
+    ajoutxUniteAbcisse = 35.7;
+
+    xUniteOrdonnee = 25.5;
+    baseUniteOrdonnee=249.8;
+    lineWidth1UniteOrdonnee = 0.85;
+    lineWidth2UniteOrdonnee = 0.4;
+    ajoutbaseUniteOrdonnee = 5.1;
+    ajoutx1UniteOrdonnee = 4.25;
+    ajoutx2UniteOrdonnee = 2.1;
+
+    xNumberOrdonnee = 10;
+    baseNumberOrdonnee = 251.9;
+    lineWidthNumberOrdonnee = 0.5;
+    ajoutbaseNumberOrdonnee = 25.5;
+    ctxfontNumberOrdonnee = 10;
+
+    xNumberAbcisse = 23;
+    baseNumberAbcisse = 264;
+    lineWidthNumberAbcisse = 0.5;
+    ajoutx1NumberAbcisse = 34;
+    ajoutx2NumberAbcisse = 35.7; 
+    ctxfontNumberAbcisse = 12; 
+
+    lineWidthtitre = 0.4;
+    xtitre = 20;
+    ytitre = 12.8;
+    ctxfontitre = 10;
+    texttitre1 = "Evolution de la quantité de “Oh My God” au fil des saisons pour chaque personnage";
+    texttitre2 = ""
+
+    lineWidthsaison = 0.4;
+    xsaison = 327.7;
+    ysaison = 272;
+    ctxfontsaison = 10;
+    
+    lineWidthquantite = 0.4;
+    xquantite = -30;
+    yquantite = 4.25;
+    translatexquantite = -85.1;
+    translateyquantite = 5.1;
+    ctxfontquantite = 10;
 
 
 
 
   }else if(tailleTablette.matches) {
-    fenetre.style.width = "425px";
-    fenetre.style.margin = "auto";
+    /*fenetre.style.width = "425px";
+    fenetre.style.margin = "40px 70px";
 
     width = canvas.width = fenetre.offsetWidth;
     height = canvas.height = fenetre.offsetHeight;
@@ -334,9 +417,99 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
     yquantite = 10;
     translatexquantite = -200;
     translateyquantite = 12;
-    ctxfontquantite = 16;
+    ctxfontquantite = 16;*/
+
+
+    fenetre.style.width = "425px";
+    fenetre.style.height = "320px";
+    fenetre.style.margin = "40px 70px";
+
+    width = canvas.width = fenetre.offsetWidth;
+    height = canvas.height = fenetre.offsetHeight;
+    ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#f2f2f2';
+    ctx.fillRect(0,0,width,height);
+
+
+    basePoint = 278.7;
+    xPoint = 29;
+    multiplicateurPoint = 5.8;
+    ajoutxPoint = 40.6;
+
+    xGrilleVertical = 29;
+    baseGrilleVertical = 283.6;
+    finGrilleVertical = 21.3;
+    lineWidthGrilleVertical = 0.1;
+    ajoutxGrilleVertical = 40.6;  
+
+    yGrilleHorizontal = 283.6;
+    baseGrilleHorizontal = 29;
+    finGrilleHorizontal=394.2;
+    lineWidthGrilleHorizontal = 0.1;
+    ajoutyGrilleHorizontal = 29;  
+
+    yAbsisse = 283.6;
+    baseAbsisse = 29;
+    finAbsisse = 394.2;
+    lineWidthAbsisse = 0.7;
+    ajoutfinAbsisse = 4.8;
+
+    xOrdonnee = 29;
+    baseOrdonnee = 283.6;
+    finOrdonnee = 22.7;
+    lineWidthOrdonnee = 0.7;
+    ajoutxOrdonnee = 4.8;
+
+    xUniteAbcisse = 29;
+    baseUniteAbcisse = 283.6;
+    lineWidthUniteAbcisse = 1;
+    ajoutbaseUniteAbcisse = 4.8;
+    ajoutxUniteAbcisse = 40.6;
+
+    xUniteOrdonnee = 29;
+    baseUniteOrdonnee=283.6;
+    lineWidth1UniteOrdonnee = 1;
+    lineWidth2UniteOrdonnee = 0.5;
+    ajoutbaseUniteOrdonnee = 5.8;
+    ajoutx1UniteOrdonnee = 4.8;
+    ajoutx2UniteOrdonnee = 2.4;
+
+    xNumberOrdonnee = 13;
+    baseNumberOrdonnee = 286;
+    lineWidthNumberOrdonnee = 0.5;
+    ajoutbaseNumberOrdonnee = 29;
+    ctxfontNumberOrdonnee = 11;
+
+    xNumberAbcisse = 27;
+    baseNumberAbcisse = 299;
+    lineWidthNumberAbcisse = 0.5;
+    ajoutx1NumberAbcisse = 38.65;
+    ajoutx2NumberAbcisse = 40.5; 
+    ctxfontNumberAbcisse = 13;  
+
+    lineWidthtitre = 0.5;
+    xtitre = 25;
+    ytitre = 14.5;
+    ctxfontitre = 11;
+    texttitre1 = "Evolution de la quantité de “Oh My God” au fil des saisons pour chaque personnage";
+    texttitre2 = ""
+
+    lineWidthsaison = 0.5;
+    xsaison = 372;
+    ysaison = 308;
+    ctxfontsaison = 11;
+    
+    lineWidthquantite = 0.5;
+    xquantite = -30;
+    yquantite = 4.8;
+    translatexquantite = -96.6;
+    translateyquantite = 5.8;
+    ctxfontquantite = 11;
 
   } else {
+    fenetre.style.margin = "0 70px";
+
     width = canvas.width = fenetre.offsetWidth;
     height = canvas.height = fenetre.offsetHeight;
     ctx = canvas.getContext('2d');
@@ -392,12 +565,14 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
     baseNumberOrdonnee = 592;
     lineWidthNumberOrdonnee = 1.1;
     ajoutbaseNumberOrdonnee = 60;
+    ctxfontNumberOrdonnee = 14;
 
     xNumberAbcisse = 57;
     baseNumberAbcisse = 610;
     lineWidthNumberAbcisse = 1.1;
     ajoutx1NumberAbcisse = 80;
-    ajoutx2NumberAbcisse = 83.9;  
+    ajoutx2NumberAbcisse = 83.9; 
+    ctxfontNumberAbcisse = 16;  
 
     lineWidthtitre = 1;
     xtitre = 100;
@@ -588,13 +763,13 @@ function NumberAbcisse(){
     if(z>8){
       text = z.toString();
       ctx.lineWidth=lineWidthNumberAbcisse.toString();
-      ctx.font = '16px serif';
+      ctx.font =  ctxfontNumberAbcisse.toString() +'px serif';
       ctx.strokeText(text, x, base);
       x = x + ajoutx1NumberAbcisse;
     }else{
       text = z.toString();
       ctx.lineWidth=lineWidthNumberAbcisse.toString();
-      ctx.font = '16px serif';
+      ctx.font = ctxfontNumberAbcisse.toString() + 'px serif';
       ctx.strokeText(text, x, base);
       x = x + ajoutx2NumberAbcisse;
     }
@@ -609,7 +784,7 @@ function NumberOrdonnee(){
     if(z%5==0){
       text = z.toString();
       ctx.lineWidth=lineWidthNumberOrdonnee.toString();
-      ctx.font = '14px serif';
+      ctx.font = ctxfontNumberOrdonnee.toString() + 'px serif';
       ctx.strokeText(text,x,base);
       base = base - ajoutbaseNumberOrdonnee;
     }

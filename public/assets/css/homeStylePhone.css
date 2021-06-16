@@ -103,11 +103,14 @@
     }
     #books{
         position: relative;
-        top: 50px;         /* Pour ajouter une indication au dessus */
-        overflow: hidden;
+        top: auto;
+        margin-top: 50px;         /* Pour ajouter une indication au dessus */
+        overflow-x: hidden;
     }
     #books #dataBooks{
         margin-top: 80px;
+        top: auto;
+        margin: 55px 0;
     }
     #books #elePorte #verrou{
         height: 100px;
@@ -189,6 +192,7 @@
         flex-direction: column-reverse;
         margin-top: 250px;
         overflow: hidden;
+        height: auto;
     }
     #persos > .scotch{
         width: 300px;
