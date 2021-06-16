@@ -62,6 +62,14 @@ const video = player.querySelector('.viewer');
 const pause = document.querySelector('#pause');
 
 pause.style.display = "flex";
+if (screen.width < 425){
+  document.querySelector("#pauseImg").style.display = "none";
+  let barre1 = document.createElement('span');
+  let barre2 = document.createElement('span');
+  pause.appendChild(barre1);
+  pause.appendChild(barre2);
+}
+console.log(screen.width);
 
 function togglePlay() {
   const method = video.paused ? 'play' : 'pause';

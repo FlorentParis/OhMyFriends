@@ -57,7 +57,7 @@
             <img src="{{ asset('assets/img/cadre.png') }}" alt="">
             <div id="player">
                 <div id="pause">
-                    <img src="{{ asset('assets/img/Logo.png') }}" alt="">
+                    <img id="pauseImg" src="{{ asset('assets/img/Logo.png') }}" alt="">
                 </div>
                 <video class="player__video viewer" src="{{ asset('assets/video/compilOMG.mp4') }}"></video>
             </div>
