@@ -245,6 +245,9 @@
             </div>
         </div>
     </section>
+    <!-- Audio MP3 -->
+    <audio src="{{ asset('assets/sound/Mon_Audio.mp3') }}"></audio>
+    <audio src="{{ asset('assets/sound/Mon_Audio1.mp3') }}"></audio>
     <!-- Footer -->
     <footer>
         <div>

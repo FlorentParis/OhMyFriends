@@ -153,6 +153,15 @@ cache.addEventListener("click", () => {
   }
 });
 
+/* Sound MP3 Effects */
+let audios = document.querySelectorAll("audio");
+bouton.addEventListener('click', () => {
+  audios[0].play();
+});
+boule.addEventListener('click', () => {
+  audios[1].play();
+});
+
 /*Canvas OMG Personnage*/
 /*Initialisation des varaibles et récupérations des éléments*/
 const canvas = document.querySelector('#myCanvas');
