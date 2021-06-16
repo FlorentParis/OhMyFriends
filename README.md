@@ -8,7 +8,6 @@
 * [Technologies](#technologies-)
 * [Les differentes versions](#les-différentes-versions-)
 * [Présentation de la team](#présentation-de-la-team-)
-</br>
 
 ## Présentation du Projet :
 
