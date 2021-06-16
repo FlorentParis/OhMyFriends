@@ -19,7 +19,7 @@ class HomeController extends Controller
             'audienceSeason'=>self::getAudienceSeason()
         ];
         $data = json_encode($data);
-        return view('home', compact('data'));
+        return view('index', compact('data'));
     }
 
     //retourne un tableau de chaque somme d'omg par saison

@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'home']);
+
+Route::get('/404', function () {
+    return view('404');
 });
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'home']);
+Route::get('/three', function () {
+    return view('three');
+});
 
 //Route Test pour la récup des données en json
 Route::get('/test', [\App\Http\Controllers\testController::class, 'test']);
