@@ -1,12 +1,19 @@
 @media (max-width: 768px){
+    #cliquez{
+        display: none;
+    }
     /* Postit */
     .postit:first-of-type{
         left: calc(100% - 300px);
+        top: 250px;
     }
     #books .postit{
         left: calc(100% - 300px);
     }
     /* DataBooks */
+    #mmmh{
+        left: 55vw;
+    }
     #dataBooks div:nth-of-type(2) {
         top: -10px;
         left: -60px;

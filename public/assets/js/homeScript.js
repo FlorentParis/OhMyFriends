@@ -263,7 +263,6 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
 
     fenetre.style.width = "375px";
     fenetre.style.height = "280px";
-    fenetre.style.margin = "0 70px";
 
 
     width = canvas.width = fenetre.offsetWidth;

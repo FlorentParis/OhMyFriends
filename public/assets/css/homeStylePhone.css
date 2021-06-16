@@ -89,7 +89,8 @@
     }
     #horloge{
         padding: 50px 25px;
-        margin-top: 150px;      /* Pour ajouter une indication au dessus */
+        margin-top: 150px;
+        margin: 0;
     }
     .vis{
         width: 12px;
@@ -115,13 +116,15 @@
     #books{
         position: relative;
         top: auto;
-        margin-top: 50px;         /* Pour ajouter une indication au dessus */
         overflow-x: hidden;
     }
     #books #dataBooks{
         margin-top: 80px;
         top: auto;
         margin: 55px 0;
+    }
+    #mmmh{
+        display: none;
     }
     #books #elePorte #verrou{
         height: 100px;
@@ -201,7 +204,7 @@
     }
     #persos{
         flex-direction: column-reverse;
-        margin-top: 250px;
+        margin-top: 50px;
         overflow: visible;
         height: auto;
     }
@@ -224,7 +227,7 @@
         grid-template-columns: 1fr 1fr;
         width: 375px;
         left: 50%;
-        top: 535px;
+        top: 635px;
     }
     #legende .legendeCase{
         align-items: center;
