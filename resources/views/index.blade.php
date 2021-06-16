@@ -67,6 +67,9 @@
         <div id="btnScroll">
             <span>Scroll to continue</span>
         </div>
+        <div id="cliquez">
+            <img src="{{ asset('assets/img/cliquez.png') }}" alt="">
+        </div>
         <div class="gond">
             <div class="vis">
                 <span class="trou_vis">+</span>
@@ -78,6 +81,9 @@
     </section>
     <!-- Horloge : Représentation Audience Moyenne, OMG en Millions dans les livres et OMG dans la saison choisie -->
     <section id="horlogeContainer">
+        <div id="choisissez">
+            <img src="{{ asset('assets/img/choisissez.png') }}" alt="">
+        </div>
         <div id="horloge">
             <div>
                 <div id="montre">
@@ -143,6 +149,9 @@
     <!-- Section Books : Verrou, poignée, post-it et représentation visuel de la moyenne des omg/saison et omg dans les livres -->
     <section id="books">
         <div id="elePorte">
+            <div id="mmmh">
+                <img src="{{ asset('assets/img/mmmh.png') }}" alt="">
+            </div>
             <div id="verrou">
                 <div id="verrouContent">
                     <div id="bouton">
