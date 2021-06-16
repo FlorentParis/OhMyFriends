@@ -738,7 +738,7 @@ nav{
     flex-direction: column;
     position: relative;
     height: 700px;
-    overflow: hidden;
+    overflowY: hidden;
     margin-top: 150px;
 }
 #persos > #dataPersos{
@@ -793,12 +793,15 @@ nav{
     transform: rotate(225deg);
 }
 #legende{
+    position: absolute;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 880px;
     background-color: #F2F2F2;
     padding: 5px 0;
+    left : 70px;
+    top: 685px;
 }
 #legende .lengendeCase{
     display: flex;
