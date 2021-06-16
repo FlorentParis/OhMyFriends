@@ -1,0 +1,93 @@
+@import url("./fonts.css");
+body{
+    background-color: #9B81BA;
+}
+#retour{
+    position: fixed;
+    padding: 30px 50px;
+    z-index: 12;
+    font-family: "Rock Salt";
+    font-size: 18px;
+    color: #FEE565;
+    letter-spacing: 20%;
+}
+a{
+    color: #FEE565;
+    text-decoration: none;
+}
+#cadre{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cadre > img:first-of-type{
+    position: relative;
+    width: 42vw;
+    transform: rotateZ(90deg);
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
+}
+#cadre > img:last-of-type{
+    position: absolute;
+    width: 3vw;
+    border-radius: 100%;
+    filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
+}
+.animJ{
+    animation: animJuda 3s;
+}
+@keyframes animJuda{
+    0%{
+        transform: scale(1) ease;
+        transform-origin: 50% 36%;
+        transform-origin: 50% 36%;
+    }
+    10%{
+        transform: scale(1.2) ease;
+        transform-origin: 50% 36%;
+    }
+    20%{
+        transform: scale(1.4) ease;
+        transform-origin: 50% 36%;
+    }
+    36%{
+        transform: scale(1.6) ease;
+        transform-origin: 50% 36%;
+    }
+    40%{
+        transform: scale(1.8) ease;
+        transform-origin: 50% 36%;
+    }
+    50%{
+        transform: scale(2) ease;
+        transform-origin: 50% 36%;
+    }
+    60%{
+        transform: scale(2.2) ease;
+        transform-origin: 50% 36%;
+    }
+    70%{
+        transform: scale(2.4) ease;
+        transform-origin: 50% 36%;
+    }
+    80%{
+        transform: scale(2.6);
+        transform-origin: 50% 36%;
+    }
+    90%{
+        transform: scale(2.8) ease;
+        transform-origin: 50% 36%;
+    }
+    100%{
+        transform: scale(3) ease;
+        transform-origin: 50% 36%;
+    }
+}
+body > div > #erreur{
+    font-family: "Rock Salt";
+    font-size: 5vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    line-height: 120px;
+}
