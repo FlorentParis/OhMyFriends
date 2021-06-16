@@ -149,7 +149,6 @@ cache.addEventListener("click", () => {
 /*Initialisation des varaibles et récupérations des éléments*/
 const canvas = document.querySelector('#myCanvas');
 const fenetre = document.querySelector('#dataPersos');
-const legendperso = document.querySelector('#legende');
 /*const width = canvas.width = fenetre.offsetWidth;
 const height = canvas.height = fenetre.offsetHeight;
 const ctx = canvas.getContext('2d');
@@ -248,6 +247,7 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
     fenetre.style.width = "375px";
     fenetre.style.height = "280px";
     fenetre.style.margin = "0 70px";
+
 
     width = canvas.width = fenetre.offsetWidth;
     height = canvas.height = fenetre.offsetHeight;

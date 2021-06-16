@@ -23,8 +23,6 @@
         <p id="erreur">404</p>
     </div>
 
-    <!-- Fichier JS Source-->
-    <script src="{{ asset('assets/js/three.js/build/three.js') }}"></script>
     <!-- Fichier JS-->
     <script type="module" src="{{ asset('assets/js/404.js') }}"></script>
 </body>

@@ -205,6 +205,32 @@
                 <p>Add suitable fallback here.</p>
             </canvas>
         </div>
+        <div id="legende">
+            <span class="legendeCase">
+                <img src="{{ asset('assets/img/leg1.png') }}" alt="">
+                <span>Phoebe</span>
+            </span>
+            <span class="legendeCase">
+                <img src="{{ asset('assets/img/leg2.png') }}" alt="">
+                <span>Joey</span>
+            </span>
+            <span class="legendeCase">
+                <img src="{{ asset('assets/img/leg3.png') }}" alt="">
+                <span>Chandler</span>
+            </span>
+            <span class="legendeCase">
+                <img src="{{ asset('assets/img/leg4.png') }}" alt="">
+                <span>Ross</span>
+            </span>
+            <span class="legendeCase">
+                <img src="{{ asset('assets/img/leg5.png') }}" alt="">
+                <span>Monica</span>
+            </span>
+            <span class="legendeCase">
+                <img src="{{ asset('assets/img/leg6.png') }}" alt="">
+                <span>Rachel</span>
+            </span>
+        </div>
         <div id="photo">
             <div class="scotch"></div>
             <div class="scotch"></div>

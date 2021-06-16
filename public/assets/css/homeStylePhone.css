@@ -191,7 +191,7 @@
     #persos{
         flex-direction: column-reverse;
         margin-top: 250px;
-        overflow: hidden;
+        overflow: visible;
         height: auto;
     }
     #persos > .scotch{
@@ -207,10 +207,21 @@
         align-self: center;
         margin-top: 100px;
     }
+    #legende{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 375px;
+        left: 0;
+        top: 535px;
+    }
+    #legende .legendeCase{
+        align-items: center;
+        padding-bottom: 10px;
+    }
     #photo{
         position: static;
         display: flex;
-        align-self: flex-end;
+        align-self: center;
         padding-top: 50px;
     }
     #photo > .scotch:nth-of-type(1){
@@ -234,6 +245,7 @@
     footer{
         display: flex;
         flex-direction: column;
+        margin-top: 330px;
     }
     footer > div:first-of-type{
         padding-top: 20px;
