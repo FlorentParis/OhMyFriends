@@ -30,7 +30,6 @@ Par le biais d'une étude en DataViz, le projet permettra de centraliser des chi
 
 Un journal de bord, mis à jour quotidiennement, a permis de suivre notre avancement jour par jour. </br>
 [Lien vers notre Journal de Bord](https://docs.google.com/document/d/1SVluB98nolXFdN9Bu8X5h2iSZgUTnhcPCAZzIve_FHQ/edit?usp=sharing)
-</br>
 
 ## Technologies :
 
@@ -42,7 +41,6 @@ Un journal de bord, mis à jour quotidiennement, a permis de suivre notre avance
 * Laravel
 * PHP
 * MySQL
-</br>
 
 ## Les différentes versions :
 
@@ -58,7 +56,6 @@ Un journal de bord, mis à jour quotidiennement, a permis de suivre notre avance
 
 #### V3 :
 * Transformation de notre V1 vers la 3D.
-</br>
 
 ## Présentation de la team :
 
