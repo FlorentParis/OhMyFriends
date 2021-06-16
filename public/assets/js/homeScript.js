@@ -162,9 +162,6 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
 
     fenetre.style.width = "375px";
 
-    fenetre.style.marginLeft = "auto";
-    fenetre.style.marginRight = "auto";
-
     
     width = canvas.width = fenetre.offsetWidth;
     height = canvas.height = fenetre.offsetHeight;
@@ -253,7 +250,6 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
 
   }else if(tailleTablette.matches) {
     fenetre.style.width = "425px";
-    fenetre.style.margin = "auto";
 
     width = canvas.width = fenetre.offsetWidth;
     height = canvas.height = fenetre.offsetHeight;
@@ -337,6 +333,8 @@ function responsiveCanvas(tailleTelephone, tailleTablette) {
     ctxfontquantite = 16;
 
   } else {
+    fenetre.style.widthmargin = "0 70px";
+
     width = canvas.width = fenetre.offsetWidth;
     height = canvas.height = fenetre.offsetHeight;
     ctx = canvas.getContext('2d');
