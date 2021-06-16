@@ -735,6 +735,7 @@ nav{
 /* Persos */
 #persos{
     display: flex;
+    flex-direction: column;
     position: relative;
     height: 700px;
     overflow: hidden;
@@ -790,6 +791,21 @@ nav{
     background-color: #fff;
     opacity: 0.35;
     transform: rotate(225deg);
+}
+#legende{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 880px;
+    background-color: #F2F2F2;
+    padding: 5px 0;
+}
+#legende .lengendeCase{
+    display: flex;
+    flex-direction: column;
+}
+#legende .lengendeCase img{
+    height: 70px;
 }
 /* Footer */
 footer{
