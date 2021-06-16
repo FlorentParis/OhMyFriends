@@ -30,6 +30,16 @@
     #persos > #dataPersos{
         top: 260px;
     }
+    #legende{
+        top: 865px;
+    }
+    #legende .legendeCase img{
+        height: 55px;
+        width: 50px;
+    } 
+    #legende .legendeCase span{
+        font-size: 12px;
+    }
     #photo{
         right: 60px;
         top: 0;

@@ -53,6 +53,17 @@
     #persos #dataPersos{
         position: relative;
     }
+    #legende{
+        width: 425px;
+        top: 385px;
+    }
+    #legende .legendeCase img{
+        height: 55px;
+        width: 50px;
+    } 
+    #legende .legendeCase span{
+        font-size: 12px;
+    }
     #photo{
         top: 100px;
         right: 80px;

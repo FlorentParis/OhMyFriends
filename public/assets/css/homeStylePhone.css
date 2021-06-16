@@ -209,9 +209,10 @@
     }
     #legende{
         display: grid;
+        transform: translateX(-50%);
         grid-template-columns: 1fr 1fr;
         width: 375px;
-        left: 0;
+        left: 50%;
         top: 535px;
     }
     #legende .legendeCase{
