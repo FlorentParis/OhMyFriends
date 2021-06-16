@@ -237,7 +237,6 @@
         position: static;
         display: flex;
         align-self: center;
-        padding-top: 50px;
     }
     #photo > .scotch:nth-of-type(1){
         left: 250px;
