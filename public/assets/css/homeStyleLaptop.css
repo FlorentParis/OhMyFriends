@@ -46,9 +46,12 @@
         margin-top: 50px;
         margin-bottom: 150px;
     }
-    #persos .scotch{
+    #persos > .scotch{
+        position: absolute;
+        top: 50px;
         left: 175px;
         width: 220px;
+        height: 30px;
     }
     #persos #dataPersos{
         position: relative;

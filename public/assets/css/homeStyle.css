@@ -801,6 +801,7 @@ nav{
     left : 70px;
     top: 685px;
     padding-bottom: 15px;
+    z-index: 2;
 }
 #legende .legendeCase{
     display: flex;

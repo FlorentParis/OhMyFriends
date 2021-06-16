@@ -18,20 +18,19 @@
     /* DataPersos */
     #persos{
         justify-content: center;
-        height: 900px;
+        height: 410px;
         margin-top: 0;
     }
     #persos > .scotch{
         width: 180px;
         height: 35px;
-        left: auto;
-        top: 275px;
+        top: 525px;
     }
     #persos > #dataPersos{
         top: 260px;
     }
     #legende{
-        top: 865px;
+        top: 605px;
     }
     #legende .legendeCase img{
         height: 55px;
@@ -52,6 +51,9 @@
         left: 220px;
     }
     /* Footer */
+    footer {
+        margin-top: 310px;
+    }
     footer > div:last-of-type > p{
         line-height: 15px;
     }
